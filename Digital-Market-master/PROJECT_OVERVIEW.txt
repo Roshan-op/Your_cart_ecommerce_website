@@ -1,0 +1,294 @@
+PROJECT OVERVIEW — Digital Market
+Date: 2026-03-27
+Prepared for: Proposal / Technical Appendix
+
+1. Executive summary
+--------------------
+Digital Market is a full-stack, demo e-commerce application composed of a Django REST backend and a Create-React-App (CRA) frontend. The repository contains product data (CSV), an item-to-item recommendation component driven by a precomputed similarity matrix, user authentication (JWT), product and order management endpoints, and a React + Redux storefront with cart and checkout flows.
+
+This document summarizes architecture, data, code locations, the current recommendation algorithm in use, how data is ingested, and concrete options for improving recommendation quality, scaling, and evaluation — suitable for inclusion in a project proposal.
+
+2. High-level architecture
+--------------------------
+- Frontend: React (CRA) + Redux, React-Bootstrap UI components.
+  - Location: backend/frontend/
+  - Entry: backend/frontend/src/App.js
+  - Key UI components: Header (backend/frontend/src/components/Header.js), Product card (backend/frontend/src/components/Product.js), Cart screen (backend/frontend/src/screens/CartScreen.js).
+
+- Backend: Django + Django REST Framework + djangorestframework-simplejwt for JWT auth.
+  - Location: backend/
+  - Core app: backend/base/
+  - Key views: backend/base/views/product_views.py, backend/base/views/user_views.py
+  - Models: backend/base/models.py
+  - DB: SQLite for development (backend/db.sqlite3)
+
+- Data: CSV source at backend/data.csv (product dataset, ~194 rows in the included dataset); a precomputed similarity matrix is expected at backend/similarity9.pkl.
+
+- Utilities: a repository checkpoint tool at checkpoint.py (at repo root) for creating/restoring zip snapshots; a management command create_accounts to add/update superuser and vendor accounts at backend/base/management/commands/create_accounts.py.
+
+3. Code & file map (most relevant files)
+------------------------------------------
+- backend/manage.py
+- backend/requirements.txt  (Django 4.1.6, DRF 3.14, simplejwt 5.2.2, Pillow, etc.)
+- backend/data.csv  (product dataset)
+- backend/similarity9.pkl  (precomputed NxN similarity matrix)  [binary pickle file]
+- backend/base/models.py  (Product, Review, Order, OrderItem, ShippingAddress)
+- backend/base/views/product_views.py  (GET /api/products, GET /api/products/<id>/recommend/ etc.)
+- backend/base/views/user_views.py  (JWT login + user management)
+- backend/base/management/commands/create_accounts.py  (create/update admin + vendor)
+- backend/frontend/src/ (React app)
+  - App.js (routes)
+  - components/Header.js
+  - components/Product.js
+  - screens/CartScreen.js, HomeScreen.js, ProductScreen.js
+  - actions/, reducers/ (Redux flow) — e.g. productActions.js calls /api/products and /api/products/<id>/recommend/
+
+4. Data model (backend/base/models.py)
+--------------------------------------
+Important model fields (Product primary attributes):
+- `user` (FK to auth.User) — owner/vendor
+- `name` (CharField)
+- `image` (ImageField)
+- `brand` (CharField)
+- `category` (CharField)
+- `description` (TextField)
+- `rating` (DecimalField)
+- `numReviews` (IntegerField)
+- `price` (DecimalField)
+- `countInStock` (IntegerField)
+- `_id` (AutoField primary key; 1-based incremental)
+
+Reviews, Orders, OrderItems and ShippingAddress are implemented in the same file and used by order flows.
+
+5. Authentication & permissions
+--------------------------------
+- Authentication uses JWT via djangorestframework-simplejwt.
+  - The login endpoint is mapped to `/api/users/login/` and implemented with a custom serializer `MyTokenObtainPairSerializer` that extends SimpleJWT to embed user fields into the token response. See backend/base/views/user_views.py and backend/base/urls/user_urls.py.
+- Protected endpoints use DRF permission classes (`IsAuthenticated`, `IsAdminUser`) in view decorators.
+
+6. Recommendation implementation (current)
+------------------------------------------
+What the repo contains:
+- A precomputed similarity matrix file (`similarity9.pkl`) is loaded at module import in `backend/base/views/product_views.py`:
+
+  similarity = pickle.load(open('similarity9.pkl', 'rb'))
+
+- The `recommend` view function (GET `/api/products/<pk>/recommend/`) does the following:
+  1. Load the Product by primary key `_id=pk`.
+  2. Map product `_id` to a zero-based index via `idx = product._id - 1` (this assumes the `similarity` matrix rows/columns align with product dataset order and that `_id` increments starting at 1 in that same order).
+  3. Fetch the `distances` row: `distances = similarity[idx]` (an array-like row of similarity scores between this product and all products).
+  4. Sort enumerated distances descending, skip the first element (likely the product itself at highest similarity), and choose the next top-k indices: `product_indices = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:5]` (returns 4 recommended indices).
+  5. Map each index back to product `_id` with `pid = i + 1` and fetch the corresponding Product objects to return serialized results.
+
+Important notes and constraints about the current approach:
+- `similarity9.pkl` is not generated by any script currently present in repo (no explicit code found that creates it). The system expects the matrix to be aligned to product ordering in the dataset. If dataset order or DB `_id` assignment changes, the mapping will break.
+- The algorithm uses a precomputed item-item similarity matrix and performs an O(n) lookup per request (fetch row + sort top-k). This is inexpensive at query time but requires an O(n^2) precomputation and O(n^2) storage for the matrix.
+- The code uses raw similarity values (bigger is more similar) and picks top scores; there is no thresholding, diversification, or business-rule filtering (e.g., stock availability, vendor restrictions) in the provided view.
+
+7. How `similarity9.pkl` could have been built (recommended reproduction)
+-------------------------------------------------------------------------
+There is no creation script in the repo. A common, practical way to produce such a matrix for content-based recommendations is:
+
+- Build a product text field to vectorize, e.g. combine fields: `names + brand + category + description`.
+- Vectorize the text using TF-IDF or another text-vectorizer: `TfidfVectorizer(stop_words='english')`.
+- Compute cosine similarity between vectors to get an NxN matrix.
+
+Example (python, requires scikit-learn & pandas):
+
+```python
+import pandas as pd
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# load original CSV (ensure ordering matches DB import order)
+df = pd.read_csv('data.csv')
+# assemble text
+text = (
+    df['names'].fillna('') + ' ' + df['brand'].fillna('') + ' ' + df['category'].fillna('') + ' ' + df['description'].fillna('')
+)
+
+vectorizer = TfidfVectorizer(max_features=20000, stop_words='english')
+X = vectorizer.fit_transform(text)
+
+# cosine similarity (dense NxN may be large for big catalogs)
+sim = cosine_similarity(X)
+
+# save
+with open('similarity9.pkl', 'wb') as f:
+    pickle.dump(sim, f)
+```
+
+Mathematics: cosine similarity between two TF-IDF vectors $\mathbf{u}$ and $\mathbf{v}$ is computed as:
+
+$\displaystyle \text{sim}(\mathbf{u},\mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\|\,\|\mathbf{v}\|}$
+
+Notes / caveats:
+- For large catalogs ($n$ in tens/hundreds of thousands), storing full dense $n\times n$ matrices is infeasible (memory and compute). Use Approximate Nearest Neighbors (ANN) libraries (FAISS, Annoy) or compute top-k neighbors during precomputation and store only sparse neighbor lists.
+- Keep an explicit mapping between dataset row index and `Product._id` to avoid brittle assumptions. Example: create and save `index_to_product_id.json` when generating similarity matrix, then use that mapping in `recommend()`.
+
+8. Alternative / improved recommendation approaches (detailed)
+-------------------------------------------------------------
+Below are options ordered by increasing complexity and quality.
+
+A) Tuned content-based TF-IDF + cosine (current approach, explicit mapping)
+- Vectorize combined product text (TF-IDF) or categorical features (one-hot / embedding) and compute cosine similarity.
+- Pros: simple, interpretable, no user history required.
+- Cons: cold-start for new products, misses collaborative signals.
+
+B) Item-based collaborative filtering
+- Build user-item interactions (ratings, purchase events) matrix $R$ and compute item-item similarities using cosine or Pearson correlation on columns of $R$.
+- Pros: captures real user behavior.
+- Cons: requires sufficient historical interactions.
+
+C) Matrix factorization (ALS or SVD)
+- Factorize user-item matrix $R \approx U V^T$. Use products' latent vectors to compute similarity; this supports recommendation for users and items.
+- Libraries: implicit (ALS for implicit feedback), Surprise (explicit ratings), LightFM.
+
+D) Embedding-based content representations (modern)
+- Use pretrained language models (SentenceTransformers/BERT) to embed product descriptions and compute similarity in embedding space. Optionally fine-tune with product titles.
+- Compute ANN index (FAISS) for fast nearest-neighbor search.
+- Pros: better semantic matching than TF-IDF.
+- Cons: heavier compute; model / GPU needed for indexing training.
+
+E) Hybrid methods
+- Combine content-based (text) and collaborative signals (interactions) using weighted scoring or learning-to-rank models.
+- Use features such as brand, category, price, availability, vendor to filter or re-rank results.
+
+F) Production concerns
+- Precompute top-k neighbors (e.g., top-50 per item) and store as JSON or in DB for fast lookup.
+- Use incremental updates: compute embeddings for new products and query ANN to fill neighbor lists rather than recomputing full NxN.
+- Cache recommendations per product in Redis with TTL.
+
+9. Evaluation & metrics (how to measure)
+----------------------------------------
+Offline metrics and approaches:
+- Holdout a set of interactions (or simulated co-purchase pairs) and measure top-k metrics:
+  - Precision@K, Recall@K
+  - Mean Average Precision (MAP)
+  - Normalized Discounted Cumulative Gain (NDCG)
+
+Formulas:
+- Precision@K for a query set $Q$:
+  $\text{Precision@K} = \frac{1}{|Q|} \sum_{q \in Q} \frac{|\text{relevant}_q \cap \text{topK}_q|}{K}$
+
+- NDCG@K:
+  $\text{NDCG}@K = \frac{1}{|Q|} \sum_{q\in Q} \frac{\sum_{i=1}^{K} \frac{2^{rel_{q,i}}-1}{\log_2(i+1)}}{\text{IDCG}_q}$
+
+A/B testing:
+- Deploy alternate recommender (e.g., baseline TF-IDF vs. new embedding model), randomize users, and measure online metrics such as click-through rate (CTR), add-to-cart rate, and conversion rate.
+
+10. Reproducible script to regenerate similarity (recommended)
+-------------------------------------------------------------
+- Place a script at backend/scripts/build_similarity.py (example provided below). Ensure you save a mapping file `index_to_product_id.json` to avoid brittle reliance on `_id` positions.
+
+Example steps inside script:
+1. Load `data.csv` (ensure same ordering used when DB reset/import is used).
+2. Create combined text field.
+3. Fit TF-IDF (or SentenceTransformer embedder).
+4. Compute pairwise similarities or top-k neighbors via ANN.
+5. Save either dense pickle (for small datasets) or per-item neighbor lists + index mapping.
+
+11. How the current `recommend()` view interacts with this data
+----------------------------------------------------------------
+- Calls: frontend action `listProductRecommend(id)` (frontend/frontend/src/actions/productActions.js) does a GET to `/api/products/{id}/recommend/` and stores results in Redux slice `productListRecommend`.
+- The API returns serialized Product objects as implemented by `ProductSerializer` (see backend/base/serializer.py).
+- The front-end uses these recommended products on product detail pages.
+
+12. Operational notes and limitations (current repo)
+----------------------------------------------------
+- `similarity9.pkl` is required by `product_views.recommend()` but the repo lacks a script to generate it; you should produce and commit it or provide a regeneration script.
+- The mapping used in recommend() assumes `Product._id` equals rowIndex+1. If products are inserted/deleted in a different order, the alignment breaks. Recommendation: persist explicit mapping when building the similarity asset.
+- Currently, recommend() performs no post-filtering (e.g., out-of-stock removal, vendor filtering, safety/content rules). Add business-logic filtering as needed.
+
+13. Scalability & deployment recommendations
+--------------------------------------------
+- Small dataset (hundreds to low thousands of items): precompute and store dense similarity matrix or per-item neighbor lists; lookup in memory or from a local pickle is fine.
+- Medium/Large catalog (10k+ items): use embedding + ANN (FAISS) and store only per-item top-k neighbor lists; compute embeddings offline, store to object storage (S3) and load into memory or serve via a microservice.
+- Latency optimization: compute neighbors offline (batch), store as compressed neighbor lists (e.g., top-50) in a DB table or Redis; explore caching per-product recommendations.
+
+14. Security & roles
+---------------------
+- Admin (superuser) and vendor roles: `create_accounts` management command can create/update users. The backend enforces permissions for product create/update/delete with checks in `product_views`.
+- JWT tokens used in front-end API calls via `Authorization: Bearer <token>` header.
+
+15. How to run & developer notes
+--------------------------------
+Backend (development):
+
+```powershell
+cd "D:\your cart\Digital-Market-master\backend"
+# activate your venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+Frontend:
+
+```powershell
+cd "D:\your cart\Digital-Market-master\backend\frontend"
+npm install
+npm start
+```
+
+Key dev tasks you might include in the proposal:
+- Add `backend/scripts/build_similarity.py` to regenerate similarity asset reliably and produce `index_to_product_id.json`.
+- Replace dense matrix with ANN-based neighbor extraction for scalability.
+- Add unit tests and offline evaluation scaffolding (holdout dataset + ranking metric calculations).
+
+16. Appendix: recommended scripts (sketch)
+------------------------------------------
+A simple TF-IDF build (sketch):
+
+```python
+# backend/scripts/build_similarity_tfidf.py
+import pandas as pd
+import pickle
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+df = pd.read_csv('../data.csv')
+text = (df['names'].fillna('') + ' ' + df['brand'].fillna('') + ' ' + df['category'].fillna('') + ' ' + df['description'].fillna(''))
+vec = TfidfVectorizer(stop_words='english', max_features=20000)
+X = vec.fit_transform(text)
+S = cosine_similarity(X)
+with open('../similarity9.pkl','wb') as f:
+    pickle.dump(S, f)
+# Optionally save map: index -> original csv _id
+import json
+mapping = {i: int(df.iloc[i]['_id']) for i in range(len(df))}
+with open('../similarity_index_map.json','w') as f:
+    json.dump(mapping, f)
+```
+
+17. Next recommended steps (proposal summary)
+---------------------------------------------
+- Add a reproducible similarity-generation script and commit the produced artifact(s) together with a mapping file.
+- Replace brittle index-based mapping in `recommend()` with a robust mapping lookup (read `similarity_index_map.json` or store neighbor lists keyed by `_id`).
+- Evaluate TF-IDF baseline against an embedding model (SentenceTransformer) and present offline metrics (Precision@K, NDCG@K) in your proposal.
+- For production, recommend an ANN store (FAISS) + scheduled reindex and a per-item top-k cache in Redis.
+
+18. Contact / points to edit in repo
+------------------------------------
+If you want, I can:
+- Add `backend/scripts/build_similarity.py` that creates `similarity9.pkl` and `similarity_index_map.json` (recommended),
+- Update `backend/base/views/product_views.py` to load the index map and use it instead of `product._id - 1`,
+- Add a unit test or evaluation script under `backend/eval/` to compute precision@K on a holdout set.
+
+---
+
+This file was generated from a static repository scan (2026-03-27). I inspected:
+- backend/base/views/product_views.py (recommend implementation),
+- backend/base/models.py (Product/Review/Order models),
+- backend/data.csv (product dataset schema),
+- backend/requirements.txt and backend/frontend/package.json
+- checkpoint.py and create_accounts management command
+
+If you want, I can now:
+- Add a reproducible `build_similarity.py` script and commit it,
+- Update `recommend()` to use a robust mapping and simple post-filters (stock / vendor),
+- Or produce a short one-page summary (Word/PDF) tuned for your proposal formatting.
+
+End of document.
