@@ -78,6 +78,13 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Backups & Large files
+backups/
+*.zip
+*.rar
+*.7z
+*.tar.gz
 *.swp
 *~
 
