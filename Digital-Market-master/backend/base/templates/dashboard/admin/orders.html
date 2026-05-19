@@ -1,0 +1,300 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Orders - Admin Dashboard{% endblock %}
+
+{% block extra_css %}
+<style>
+    .page-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .search-box {
+        flex: 1;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: white;
+        padding: 10px 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+
+    .search-box input {
+        border: none;
+        outline: none;
+        background: transparent;
+        flex: 1;
+        font-size: 14px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        border: 1px solid #e5e7eb;
+        background: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s;
+    }
+
+    .filter-btn.active {
+        background: #1e3a8a;
+        color: white;
+        border-color: #1e3a8a;
+    }
+
+    .table-responsive {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead th {
+        background: #f9fafb;
+        padding: 16px;
+        text-align: left;
+        font-size: 12px;
+        font-weight: 600;
+        color: #6b7280;
+        border-bottom: 1px solid #e5e7eb;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    tbody td {
+        padding: 16px;
+        border-bottom: 1px solid #f3f4f6;
+        font-size: 14px;
+        color: #1f2937;
+    }
+
+    tbody tr:hover {
+        background: #f9fafb;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .status-delivered {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    .status-pending {
+        background: #fef3c7;
+        color: #d97706;
+    }
+
+    .status-canceled {
+        background: #fee2e2;
+        color: #dc2626;
+    }
+
+    .status-paid {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    .status-unpaid {
+        background: #fee2e2;
+        color: #dc2626;
+    }
+
+    .payment-method {
+        font-size: 13px;
+        color: #6b7280;
+        background: #f3f4f6;
+        padding: 4px 8px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .action-menu {
+        position: relative;
+    }
+
+    .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        color: #9ca3af;
+        transition: color 0.2s;
+    }
+
+    .action-btn:hover {
+        color: #1f2937;
+    }
+
+    .action-dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        min-width: 150px;
+        z-index: 100;
+    }
+
+    .action-menu:hover .action-dropdown {
+        display: block;
+    }
+
+    .action-dropdown a {
+        display: block;
+        padding: 10px 15px;
+        color: #1f2937;
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid #f3f4f6;
+        transition: background 0.2s;
+    }
+
+    .action-dropdown a:last-child {
+        border-bottom: none;
+    }
+
+    .action-dropdown a:hover {
+        background: #f9fafb;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        padding: 8px 12px;
+        border: 1px solid #e5e7eb;
+        background: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .pagination button.active {
+        background: #1e3a8a;
+        color: white;
+        border-color: #1e3a8a;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">Orders</h1>
+    <p class="page-subtitle">Manage all customer orders</p>
+</div>
+
+<div class="page-controls">
+    <div class="search-box">
+        <i class="fas fa-search" style="color: #9ca3af;"></i>
+        <input type="text" placeholder="Search by order ID...">
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn {% if status_filter == 'all' %}active{% endif %}">This week</button>
+        <button class="filter-btn">All</button>
+        <button class="filter-btn">Delivered</button>
+        <button class="filter-btn">Pending</button>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Order ID</th>
+                <th>Purchase Date</th>
+                <th>Amount</th>
+                <th>Tracking</th>
+                <th>Status</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>
+                    {% for item in order.orderitem_set.all %}
+                        {% if forloop.first %}{{ item.name }}{% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for item in order.orderitem_set.all %}
+                        {% if forloop.first %}{{ item.qty }}{% endif %}
+                    {% endfor %}
+                </td>
+                <td>#{{ order.display_id }}</td>
+                <td>{{ order.createdAt|date:"M d, Y" }}</td>
+                <td>${{ order.totalPrice|floatformat:2 }}</td>
+                <td>TRACKING123</td>
+                <td>
+                    {% if order.isDelivered %}
+                        <span class="status-badge status-delivered">Delivered</span>
+                    {% else %}
+                        <span class="status-badge status-pending">Pending</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if order.ispaid %}
+                        <span class="status-badge status-paid">Paid</span>
+                    {% else %}
+                        <span class="status-badge status-unpaid">Unpaid</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <div class="action-menu">
+                        <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                        <div class="action-dropdown">
+                            <a href="#">View Order Details</a>
+                            <a href="#">Mark as Delivered</a>
+                            <a href="#">Mark as Paid</a>
+                            <a href="#" style="color: #ef4444;">Cancel Order</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <button>←</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>→</button>
+</div>
+
+{% endblock %}

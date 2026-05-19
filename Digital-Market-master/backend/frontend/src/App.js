@@ -1,16 +1,24 @@
-import { Container } from "react-bootstrap";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomeScreen from "./screens/HomeScreen";
-import CartScreen from "./screens/CartScreen";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import ProductScreen from "./screens/ProductScreen";
-import LoginScreen from "./screens/LoginScreen";
-import RegisterScreen from "./screens/RegisterScreen";
-import ProfileScreen from "./screens/ProfileScreen";
-import ShippingScreen from "./screens/ShippingScreen";
-import PaymentScreen from "./screens/PaymentScreen";
-import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+
+// Context Providers
+import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
+import { WishlistProvider } from "./context/WishlistContext";
+
+// Modern UI/UX Pages
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import LoginPage from "./pages/LoginPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import AdminPanelEnhanced from "./pages/AdminPanelEnhanced";
+import CustomerPanel from "./pages/CustomerPanel";
+import VendorPanel from "./pages/VendorPanelEnhanced";
+
+// Fallback to old screens for order tracking
 import OrderScreen from "./screens/OrderScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
@@ -20,30 +28,36 @@ import OrderListScreen from "./screens/OrderListScreen";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <main className="py-3">
-        <Container>
-          <Route path="/" component={HomeScreen} exact />
-          <Route path="/product/:id" component={ProductScreen} />
-          <Route path="/login" component={LoginScreen} />
-          <Route path="/register" component={RegisterScreen} />
-          <Route path="/profile" component={ProfileScreen} />
-          <Route path="/shipping" component={ShippingScreen} />
-          <Route path="/cart/:id?" component={CartScreen} />
-          <Route path="/placeorder" component={PlaceOrderScreen} />
-          <Route path="/order/:id" component={OrderScreen} />
-          <Route path="/payment" component={PaymentScreen} />
-          <Route path="/admin/userlist" component={UserListScreen} />
-          <Route path="/admin/user/:id/edit" component={UserEditScreen} />
-          <Route path="/admin/productlist" component={ProductListScreen} />
-          <Route path="/admin/orderlist" component={OrderListScreen} />
-          <Route path="/admin/product/:id/edit" component={ProductEditScreen} />
-          
-        </Container>
-      </main>
-      <Footer />
-    </Router>
+    <AuthProvider>
+      <CartProvider>
+        <WishlistProvider>
+          <Router>
+            {/* Modern UI/UX Routing */}
+            <Route path="/" component={HomePage} exact />
+            <Route path="/shop" component={ShopPage} />
+            <Route path="/product/:id" component={ProductDetailPage} />
+            <Route path="/cart" component={CartPage} />
+            <Route path="/checkout" component={CheckoutPage} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/contact" component={ContactPage} />
+            <Route path="/account" component={CustomerPanel} />
+            <Route path="/admin" component={AdminPanelEnhanced} />
+            <Route path="/vendor" component={VendorPanel} />
+
+            {/* Order Tracking */}
+            <Route path="/order/:id" component={OrderScreen} />
+            
+            {/* Admin Routes */}
+            <Route path="/admin/userlist" component={UserListScreen} />
+            <Route path="/admin/user/:id/edit" component={UserEditScreen} />
+            <Route path="/admin/productlist" component={ProductListScreen} />
+            <Route path="/admin/orderlist" component={OrderListScreen} />
+            <Route path="/admin/product/:id/edit" component={ProductEditScreen} />
+          </Router>
+        </WishlistProvider>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

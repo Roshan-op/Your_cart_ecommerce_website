@@ -1,0 +1,323 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Vendor Dashboard{% endblock %}
+
+{% block extra_css %}
+<style>
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border-left: 4px solid #1e3a8a;
+    }
+
+    .stat-icon {
+        font-size: 24px;
+        color: #1e3a8a;
+        margin-bottom: 10px;
+    }
+
+    .stat-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: #1f2937;
+        margin: 10px 0;
+    }
+
+    .stat-label {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 8px;
+    }
+
+    .stat-growth {
+        font-size: 12px;
+        color: #10b981;
+        font-weight: 500;
+    }
+
+    .stat-growth.negative {
+        color: #ef4444;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .table-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    .table-header {
+        background: #f9fafb;
+        padding: 20px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .table-header h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1f2937;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead th {
+        background: #f9fafb;
+        padding: 16px;
+        text-align: left;
+        font-size: 12px;
+        font-weight: 600;
+        color: #6b7280;
+        border-bottom: 1px solid #e5e7eb;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    tbody td {
+        padding: 16px;
+        border-bottom: 1px solid #f3f4f6;
+        font-size: 14px;
+        color: #1f2937;
+    }
+
+    tbody tr:hover {
+        background: #f9fafb;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .status-delivered {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    .status-pending {
+        background: #fef3c7;
+        color: #d97706;
+    }
+
+    .status-processing {
+        background: #dbeafe;
+        color: #1e40af;
+    }
+
+    .sales-chart {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .quick-stats {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .quick-stat {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .quick-stat:last-child {
+        border-bottom: none;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .action-buttons button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        background: #f3f4f6;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        transition: background 0.2s;
+        color: #374151;
+    }
+
+    .action-buttons button:hover {
+        background: #e5e7eb;
+    }
+
+    .action-buttons button.primary {
+        background: #1e3a8a;
+        color: white;
+    }
+
+    .action-buttons button.primary:hover {
+        background: #1e40af;
+    }
+
+    @media (max-width: 1024px) {
+        .content-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">Welcome back, {{ request.user.first_name|default:request.user.username }}!</h1>
+    <p class="page-subtitle">Here's your store performance overview</p>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-shopping-cart"></i></div>
+        <div class="stat-label">Total Sales</div>
+        <div class="stat-value">{{ total_sales|default:"$0" }}</div>
+        <div class="stat-growth">
+            <i class="fas fa-arrow-up"></i> 12% from last week
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+        <div class="stat-label">Total Revenue</div>
+        <div class="stat-value">{{ total_revenue|default:"$0" }}</div>
+        <div class="stat-growth">
+            <i class="fas fa-arrow-up"></i> 8% from last week
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-box"></i></div>
+        <div class="stat-label">Total Products</div>
+        <div class="stat-value">{{ total_products|default:"0" }}</div>
+        <div class="stat-growth">
+            <i class="fas fa-arrow-right"></i> 2 new items
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-BarChart"></i></div>
+        <div class="stat-label">Weekly Sales</div>
+        <div class="stat-value">{{ weekly_sales|default:"$0" }}</div>
+        <div class="stat-growth">
+            <i class="fas fa-arrow-up"></i> 15% this week
+        </div>
+    </div>
+</div>
+
+<div class="content-grid">
+    <div class="table-card">
+        <div class="table-header">
+            <h3>Recent Orders</h3>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in recent_orders %}
+                    <tr>
+                        <td>
+                            {% for item in order.orderitem_set.all %}
+                                {% if forloop.first %}{{ item.name|truncatewords:2 }}{% endif %}
+                            {% endfor %}
+                        </td>
+                        <td>#{{ order.display_id }}</td>
+                        <td>{{ order.createdAt|date:"M d, Y" }}</td>
+                        <td>${{ order.totalPrice|floatformat:2 }}</td>
+                        <td>
+                            {% if order.isDelivered %}
+                                <span class="status-badge status-delivered">Delivered</span>
+                            {% elif order.isPaid %}
+                                <span class="status-badge status-processing">Processing</span>
+                            {% else %}
+                                <span class="status-badge status-pending">Pending</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="quick-stats">
+            <div style="margin-bottom: 15px;">
+                <h3 style="margin: 0; font-size: 14px; font-weight: 600; color: #1f2937;">Quick Actions</h3>
+            </div>
+            <div class="action-buttons">
+                <button class="primary"><i class="fas fa-plus"></i> Add Product</button>
+                <button><i class="fas fa-edit"></i> Edit Store</button>
+            </div>
+            <div class="action-buttons">
+                <button><i class="fas fa-chart-line"></i> View Analytics</button>
+                <button><i class="fas fa-cog"></i> Settings</button>
+            </div>
+        </div>
+
+        <div class="quick-stats">
+            <h3 style="margin: 0 0 15px 0; font-size: 14px; font-weight: 600; color: #1f2937;">Store Stats</h3>
+            <div class="quick-stat">
+                <span style="color: #6b7280;">Active Products</span>
+                <span style="font-weight: 600; color: #1e3a8a;">{{ active_products|default:"0" }}</span>
+            </div>
+            <div class="quick-stat">
+                <span style="color: #6b7280;">Pending Orders</span>
+                <span style="font-weight: 600; color: #f59e0b;">{{ pending_count|default:"0" }}</span>
+            </div>
+            <div class="quick-stat">
+                <span style="color: #6b7280;">Total Customers</span>
+                <span style="font-weight: 600; color: #10b981;">{{ customer_count|default:"0" }}</span>
+            </div>
+            <div class="quick-stat">
+                <span style="color: #6b7280;">Average Rating</span>
+                <span style="font-weight: 600; color: #1e3a8a;">{{ avg_rating|floatformat:1|default:"0.0" }} ★</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

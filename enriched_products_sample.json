@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "original_name": "Men's Shoes",
+    "name": "Nike Classic Green & Black Athletic Running Shoes for Men",
+    "brand": "Nike",
+    "category": "Footwear",
+    "description": {
+      "short": "Professional-grade running shoes designed with breathable mesh and responsive cushioning for everyday performance.",
+      "detailed": "Experience comfort with Nike's engineered green and black athletic running shoes, built for men who demand performance. Features include multi-directional traction pattern for superior grip, breathable mesh upper for optimal ventilation, responsive cushioning in the midsole for impact protection, and a durable rubber outsole. Perfect for running, gym workouts, or casual daily wear. The color combination offers sleek styling that pairs well with athletic and casual wardrobes.",
+      "highlights": [
+        "Breathable mesh upper for superior ventilation",
+        "Responsive cushioning technology for impact protection",
+        "Multi-directional traction pattern for grip",
+        "Durable rubber outsole",
+        "Lightweight construction for performance"
+      ]
+    },
+    "images": [
+      "/images/nike_athletic_shoes_green_black_01.jpg",
+      "/images/nike_athletic_shoes_lifestyle.jpg",
+      "/images/nike_athletic_shoes_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+      "colors": ["Green & Black", "Black & White", "Grey & White"],
+      "other": {}
+    },
+    "tags": ["running shoes", "nike", "mens footwear", "athletic shoes", "workout", "cushioned", "breathable"],
+    "price": "10.00",
+    "stock": 8,
+    "image_file": "green_and_black_athletic_shoes.jpg"
+  },
+  {
+    "id": 2,
+    "original_name": "Men's jacket",
+    "name": "Denim Classic Green Jacket for Men",
+    "brand": "Denim",
+    "category": "Clothing - Outerwear",
+    "description": {
+      "short": "Timeless denim jacket in vibrant green, perfect for layering and creating versatile looks for any season.",
+      "detailed": "A staple wardrobe essential, this classic denim jacket in eye-catching green offers durability and style. Constructed from high-quality denim fabric, it features a traditional button-front design, multiple functional pockets for storage, and a comfortable fit. The jacket works perfectly as a layering piece over t-shirts, hoodies, or sweaters. Ideal for casual outings, weekend adventures, or adding an edge to your everyday style. Easy to care for and built to last for years.",
+      "highlights": [
+        "Premium quality denim construction",
+        "Button-front closure",
+        "Multiple functional pockets",
+        "Comfortable relaxed fit",
+        "Versatile green color for easy styling",
+        "Durable seams for longevity"
+      ]
+    },
+    "images": [
+      "/images/denim_green_jacket_mens_01.jpg",
+      "/images/denim_green_jacket_lifestyle.jpg",
+      "/images/denim_green_jacket_detail.jpg"
+    ],
+    "variants": {
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Green", "Blue", "Black", "Light Blue"],
+      "other": {}
+    },
+    "tags": ["denim jacket", "mens outerwear", "casual", "layering", "green", "versatile", "everyday"],
+    "price": "10.00",
+    "stock": 10,
+    "image_file": "green_jacket_for_man.jpg"
+  },
+  {
+    "id": 3,
+    "original_name": "Men's Shoes",
+    "name": "Caliber Premium Green Leather Dress Shoes for Men",
+    "brand": "Caliber",
+    "category": "Footwear",
+    "description": {
+      "short": "Premium green leather shoes offering sophistication and comfort for professional and casual occasions.",
+      "detailed": "Elevate your footwear collection with Caliber's premium green leather shoes. Handcrafted from genuine full-grain leather, these shoes deliver both style and durability. The sleek design works for business settings, weekend outings, or casual dress-up occasions. Features include a cushioned insole for all-day comfort, genuine leather construction, and a polished finish. The unique green hue makes a statement while remaining versatile enough to pair with multiple outfits. Built to last with proper care.",
+      "highlights": [
+        "Genuine full-grain leather upper",
+        "Cushioned insole for all-day comfort",
+        "Premium construction and finish",
+        "Versatile green color",
+        "Professional and casual styling options",
+        "Durable rubber sole for traction"
+      ]
+    },
+    "images": [
+      "/images/caliber_green_leather_shoes_mens_01.jpg",
+      "/images/caliber_green_leather_shoes_lifestyle.jpg",
+      "/images/caliber_green_leather_shoes_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+      "colors": ["Green", "Brown", "Black", "Tan"],
+      "other": {}
+    },
+    "tags": ["leather shoes", "mens footwear", "professional", "dress shoes", "green", "premium", "comfortable"],
+    "price": "20.00",
+    "stock": 9,
+    "image_file": "green_leateher_shoes.jpg"
+  },
+  {
+    "id": 4,
+    "original_name": "Alarm Clock",
+    "name": "Fossils Grey Analog Alarm Clock with Loud Bell",
+    "brand": "Fossils",
+    "category": "Home & Office",
+    "description": {
+      "short": "Classic dual-bell alarm clock in grey with loud alarm and easy-to-read face for reliable wake-ups.",
+      "detailed": "Never sleep through an alarm with this traditional Fossils grey alarm clock. This reliable timepiece features the iconic dual-bell design that guarantees you'll wake up on time. The large, easy-to-read analog face provides clear visibility from across the room. A simple lever on the back controls the alarm with a deafening ring that ensures even heavy sleepers won't miss their alarm. Small footprint design fits perfectly on nightstands, desks, or shelves. Powered by standard batteries, making it portable and easy to set up anywhere.",
+      "highlights": [
+        "Loud dual-bell alarm system",
+        "Easy-to-read analog display",
+        "Compact tabletop design",
+        "Simple hour/minute adjustment",
+        "Classic grey color",
+        "Battery-powered operation"
+      ]
+    },
+    "images": [
+      "/images/fossils_grey_alarm_clock_01.jpg",
+      "/images/fossils_grey_alarm_clock_bedside.jpg",
+      "/images/fossils_grey_alarm_clock_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [],
+      "colors": ["Grey", "Black", "White"],
+      "other": {}
+    },
+    "tags": ["alarm clock", "bedside", "grey", "analog", "loud alarm", "home decor", "reliable"],
+    "price": "10.00",
+    "stock": 10,
+    "image_file": "grey_alram_clock.jpg"
+  },
+  {
+    "id": 5,
+    "original_name": "Men's Shoes",
+    "name": "Nike Grey & White Performance Running Shoes for Men",
+    "brand": "Nike",
+    "category": "Footwear",
+    "description": {
+      "short": "High-performance running shoes from Nike combining grey and white colorway with advanced cushioning technology.",
+      "detailed": "Made for serious runners and fitness enthusiasts, these Nike grey and white running shoes deliver exceptional performance and comfort. Engineered with Nike's latest cushioning technology to reduce impact during intense workouts. The breathable mesh upper keeps feet cool and dry, while the responsive midsole provides energy return with every stride. The slip-resistant rubber outsole ensures stability on various surfaces. Perfect for track training, road running, or daily gym sessions. The neutral color palette makes them easy to pair with athletic wear.",
+      "highlights": [
+        "Advanced cushioning technology for impact protection",
+        "Breathable mesh upper construction",
+        "Responsive midsole for energy return",
+        "Slip-resistant rubber outsole",
+        "Lightweight design for speed",
+        "Neutral grey and white colorway"
+      ]
+    },
+    "images": [
+      "/images/nike_running_shoes_grey_white_01.jpg",
+      "/images/nike_running_shoes_track.jpg",
+      "/images/nike_running_shoes_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+      "colors": ["Grey & White", "Black & White", "Blue & White"],
+      "other": {}
+    },
+    "tags": ["running shoes", "nike", "performance", "grey", "mens footwear", "athletic", "comfortable"],
+    "price": "20.00",
+    "stock": 10,
+    "image_file": "grey_and_white_addidas_shoes.jpg"
+  },
+  {
+    "id": 6,
+    "original_name": "Men's Hoodies",
+    "name": "Huba Premium Grey Hoodie for Men",
+    "brand": "Huba",
+    "category": "Clothing - Tops",
+    "description": {
+      "short": "Comfortable casual grey hoodie perfect for layering and everyday wear with modern urban style.",
+      "detailed": "Stay warm and stylish with Huba's premium grey hoodie designed for modern men. Crafted from soft, breathable cotton-blend fabric that provides exceptional comfort in any weather. Features include a spacious kangaroo pocket for hands or storage, adjustable drawstring hood for personalized fit, and ribbed cuffs for a tailored look. The relaxed fit allows for easy movement and layering over t-shirts or thermal tops. Machine washable and maintains its shape and color after repeated wear. Perfect for casual outings, workouts, or relaxing at home.",
+      "highlights": [
+        "Soft cotton-blend fabric",
+        "Spacious kangaroo pocket",
+        "Adjustable drawstring hood",
+        "Ribbed cuffs and hem",
+        "Relaxed comfortable fit",
+        "Easy care and machine washable"
+      ]
+    },
+    "images": [
+      "/images/huba_grey_hoodie_mens_01.jpg",
+      "/images/huba_grey_hoodie_lifestyle.jpg",
+      "/images/huba_grey_hoodie_detail.jpg"
+    ],
+    "variants": {
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Grey", "Black", "Navy", "Charcoal"],
+      "other": {}
+    },
+    "tags": ["hoodie", "mens clothing", "casual", "grey", "comfortable", "layering", "urban"],
+    "price": "10.00",
+    "stock": 10,
+    "image_file": "grey_hoodie.jpg"
+  },
+  {
+    "id": 7,
+    "original_name": "Body Bag",
+    "name": "Timberland Premium Grey Leather Crossbody Bag",
+    "brand": "Timberland",
+    "category": "Bags & Accessories",
+    "description": {
+      "short": "Sophisticated grey leather crossbody bag from Timberland, perfect for travel, work, or daily adventures.",
+      "detailed": "This stylish grey leather crossbody bag from Timberland combines functionality with premium aesthetics. Made from genuine, durable leather that improves with age, it's built to last for years. Multiple interior compartments keep your essentials organized, while the adjustable crossbody strap allows for comfortable carrying. The compact size is ideal for carrying a phone, wallet, keys, and small personal items. Works perfectly for travel, commuting, or weekend outings. Authentic Timberland craftsmanship ensures quality construction.",
+      "highlights": [
+        "Genuine quality leather construction",
+        "Multiple interior compartments",
+        "Adjustable crossbody strap",
+        "Premium hardware and stitching",
+        "Compact functional design",
+        "Improves with age and use",
+        "Suitable for men and women"
+      ]
+    },
+    "images": [
+      "/images/timberland_grey_crossbody_bag_01.jpg",
+      "/images/timberland_grey_crossbody_bag_lifestyle.jpg",
+      "/images/timberland_grey_crossbody_bag_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [],
+      "colors": ["Grey", "Brown", "Black", "Tan"],
+      "other": {
+        "strap_type": ["Adjustable Crossbody"]
+      }
+    },
+    "tags": ["crossbody bag", "leather bag", "timberland", "travel", "grey", "unisex", "professional"],
+    "price": "20.00",
+    "stock": 10,
+    "image_file": "grey_leather_cross_body_bag.jpg"
+  },
+  {
+    "id": 8,
+    "original_name": "Men's Shoes",
+    "name": "Nike Grey Running Shoes - Performance Track Edition",
+    "brand": "Nike",
+    "category": "Footwear",
+    "description": {
+      "short": "Professional grey running shoes engineered for serious athletes seeking speed and comfort on the track.",
+      "detailed": "Designed for runners who take their performance seriously. Nike's grey running shoes feature state-of-the-art cushioning technology that absorbs impact while providing responsive feedback. The lightweight mesh construction minimizes fatigue during long distance running. Strategic flex grooves in the sole enhance natural foot movement. Ideal for track training, road races, or daily marathon training. Trusted by professional athletes and running enthusiasts worldwide. These shoes have earned a 4-star rating from verified users.",
+      "highlights": [
+        "Advanced impact cushioning technology",
+        "Lightweight mesh upper",
+        "Responsive sole with flex grooves",
+        "Professional-grade construction",
+        "Enhanced breathability",
+        "Proven track performance"
+      ]
+    },
+    "images": [
+      "/images/nike_grey_running_shoes_01.jpg",
+      "/images/nike_grey_running_shoes_track.jpg",
+      "/images/nike_grey_running_shoes_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+      "colors": ["Grey", "Grey & Black", "Dark Grey"],
+      "other": {}
+    },
+    "tags": ["running shoes", "nike", "track", "performance", "grey", "professional", "lightweight"],
+    "price": "10.00",
+    "stock": 10,
+    "rating": 4,
+    "numReviews": 1,
+    "image_file": "grey_running_shoes.jpg"
+  },
+  {
+    "id": 9,
+    "original_name": "Hand Bracelet",
+    "name": "Fossils Classic Hand Bracelet - Unisex Design",
+    "brand": "Fossils",
+    "category": "Jewelry & Accessories",
+    "description": {
+      "short": "Elegant hand bracelet from Fossils, versatile unisex design suitable for both men and women.",
+      "detailed": "Add sophistication to your wrist with this classic hand bracelet from Fossils. The timeless design appeals to both men and women, making it a versatile addition to any jewelry collection. Crafted with attention to detail, it features quality materials and elegant finishing. Perfect for everyday wear or as a statement piece for special occasions. Adjustable fit ensures comfort for various wrist sizes. Pairs well with other accessories for a coordinated look.",
+      "highlights": [
+        "Unisex timeless design",
+        "Quality crafted materials",
+        "Adjustable fit for comfort",
+        "Versatile for everyday or occasions",
+        "Elegant finishing",
+        "Suitable for all ages"
+      ]
+    },
+    "images": [
+      "/images/fossils_hand_bracelet_01.jpg",
+      "/images/fossils_hand_bracelet_styled.jpg",
+      "/images/fossils_hand_bracelet_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [],
+      "colors": ["Silver", "Gold", "Bronze"],
+      "other": {
+        "adjustability": ["One Size Fits All"]
+      }
+    },
+    "tags": ["hand bracelet", "fossils", "jewelry", "unisex", "accessories", "elegant", "timeless"],
+    "price": "10.00",
+    "stock": 10,
+    "image_file": "hand_bracelets.jpg"
+  },
+  {
+    "id": 10,
+    "original_name": "Handbag",
+    "name": "Timberland Premium Handbag for Women",
+    "brand": "Timberland",
+    "category": "Bags & Accessories",
+    "description": {
+      "short": "Sophisticated leather handbag from Timberland, designed with functionality and elegance for modern women.",
+      "detailed": "Elevate your accessory game with Timberland's premium handbag. Crafted from genuine leather, this versatile bag combines style with practicality. Multiple compartments keep your belongings organized and easily accessible. The sturdy handles provide comfortable carrying, while the structured design maintains its shape even when full. Ideal for work, shopping, or weekend outings. Available in timeless colors that complement any wardrobe. Timberland's quality craftsmanship ensures durability and longevity.",
+      "highlights": [
+        "Genuine leather construction",
+        "Multiple interior compartments",
+        "Sturdy carrying handles",
+        "Structured shape design",
+        "Premium finishing and hardware",
+        "Timeless color options"
+      ]
+    },
+    "images": [
+      "/images/timberland_handbag_women_01.jpg",
+      "/images/timberland_handbag_lifestyle.jpg",
+      "/images/timberland_handbag_detail.jpg"
+    ],
+    "variants": {
+      "sizes": [],
+      "colors": ["Black", "Brown", "Tan", "Cognac"],
+      "other": {}
+    },
+    "tags": ["handbag", "womens bag", "leather", "timberland", "professional", "versatile", "premium"],
+    "price": "10.00",
+    "stock": 10,
+    "image_file": "handbag_for_ladies.jpg"
+  }
+]

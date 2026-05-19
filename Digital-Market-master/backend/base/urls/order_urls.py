@@ -6,6 +6,7 @@ urlpatterns = [
     path('',views.getOrders,name='orders'),
     path('add/',views.addOrderItems,name='orders-add'),
     path('myorders/',views.getMyOrders,name='myorders'),
+    path('verify-khalti/',views.verifyKhaltiPayment,name='verify-khalti'),
 
     path('<str:pk>/deliver/',views.updateOrderToDelivered,name='order-deliver'),
     path('<str:pk>/',views.getOrderById,name='user-order'),

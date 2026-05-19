@@ -13,13 +13,19 @@ export const cartReducer = (
   switch (action.type) {
     case CART_ADD_ITEM:
       const item = action.payload;
-      const existItem = state.cartItems.find((x) => x.product === item.product);
+      const existItem = state.cartItems.find((x) => 
+        x.product === item.product && 
+        x.selectedSize === item.selectedSize && 
+        x.selectedGender === item.selectedGender
+      );
 
       if (existItem) {
         return {
           ...state,
           cartItems: state.cartItems.map((x) =>
-            x.product === existItem.product ? item : x
+            (x.product === item.product && x.selectedSize === item.selectedSize && x.selectedGender === item.selectedGender)
+              ? { ...item, qty: x.qty + item.qty }
+              : x
           ),
         };
       } else {

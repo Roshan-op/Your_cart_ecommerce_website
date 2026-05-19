@@ -1,0 +1,2652 @@
+{
+  "metadata": {
+    "batch_number": 2,
+    "products_count": 50,
+    "id_range": "51-100"
+  },
+  "products": [
+    {
+      "id": 51,
+      "original_name": "Alarm Clock",
+      "name": "Fossils Alarm Clock",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "White mini Bell Alarm Clock for Sleepy Heads, alram clock , clock This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/alarm_clock_01.jpg",
+        "/images/alarm_clock_lifestyle.jpg",
+        "/images/alarm_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_mini_bell_alram_clock.jpg"
+    },
+    {
+      "id": 52,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "White Nike Running Shoe for MEN, mens shoes ,mens footwears, This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "8.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_nike_running_shoes.jpg"
+    },
+    {
+      "id": 53,
+      "original_name": "PS-4 Console",
+      "name": "Logitech PS-4 Console",
+      "brand": "Logitech",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Logitech technology product featuring modern features and performance.",
+        "detailed": "White PS-4 Console for Gamers,electronics, gagets This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/ps-4_console_01.jpg",
+        "/images/ps-4_console_lifestyle.jpg",
+        "/images/ps-4_console_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "logitech",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_ps4_console.jpg"
+    },
+    {
+      "id": 54,
+      "original_name": "Hoodie",
+      "name": "Huba Hoodie - Hoodie for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "White Pull Over Hoodie for MEN, hoodie, mens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie_01.jpg",
+        "/images/hoodie_lifestyle.jpg",
+        "/images/hoodie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_pull_over_hoodie.jpg"
+    },
+    {
+      "id": 55,
+      "original_name": "Wall Clock",
+      "name": "Fossils Wall Clock",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "White Wall Clock for interior design of house, clock  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/wall_clock_01.jpg",
+        "/images/wall_clock_lifestyle.jpg",
+        "/images/wall_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_wall_clock.jpg"
+    },
+    {
+      "id": 56,
+      "original_name": "Headphones",
+      "name": "Logitech Headphones",
+      "brand": "Logitech",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Logitech technology product featuring modern features and performance.",
+        "detailed": "Wired Black Gaming Headphones for Gamers out Here,electronics, gagets, headphone This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/headphones_01.jpg",
+        "/images/headphones_lifestyle.jpg",
+        "/images/headphones_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "logitech",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "17.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "wired_black_gaming_headphones.jpg"
+    },
+    {
+      "id": 57,
+      "original_name": "Headphone",
+      "name": "Boat Headphone - Electronics for Professional Use",
+      "brand": "Boat",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Boat technology product featuring modern features and performance.",
+        "detailed": "Wired Silver and Brown Headphone for music lovers,headphones ,electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/headphone_01.jpg",
+        "/images/headphone_lifestyle.jpg",
+        "/images/headphone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "boat",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "wired_silver_and_brown_headphone.jpg"
+    },
+    {
+      "id": 58,
+      "original_name": "Headphone",
+      "name": "Boat Headphone - Electronics for Professional Use",
+      "brand": "Boat",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Boat technology product featuring modern features and performance.",
+        "detailed": "Wireless Bluetooth  Headphone ,electronics, headphones This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/headphone_01.jpg",
+        "/images/headphone_lifestyle.jpg",
+        "/images/headphone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "boat",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "wireless_headphone.jpg"
+    },
+    {
+      "id": 59,
+      "original_name": "Women's shoes",
+      "name": "Caliber Women's shoes",
+      "brand": "Caliber",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from caliber combining style and comfort for everyday wear.",
+        "detailed": " Brown Leather peep Toe Heeled Shoes for WOMEN, womens footwear , shoes This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_shoes_01.jpg",
+        "/images/women's_shoes_lifestyle.jpg",
+        "/images/women's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "caliber",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "23.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "women_brown_leather_peep_toe_heeled_shoes.jpg"
+    },
+    {
+      "id": 60,
+      "original_name": "Women's shoes",
+      "name": "No Brand Women's shoes",
+      "brand": "No Brand ",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from No Brand  combining style and comfort for everyday wear.",
+        "detailed": " White and Silver peep toe Pumps for women , womens footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_shoes_01.jpg",
+        "/images/women's_shoes_lifestyle.jpg",
+        "/images/women's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "no brand ",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "women_white_and_silver_peep_toe_pumps.jpg"
+    },
+    {
+      "id": 61,
+      "original_name": "Digital Clock",
+      "name": "Fossils, Watch Digital Clock",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Wooden Brown Digital Clock for sleepy head, digital clock  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/digital_clock_01.jpg",
+        "/images/digital_clock_lifestyle.jpg",
+        "/images/digital_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "wooden_brown_digital_clock.jpg"
+    },
+    {
+      "id": 62,
+      "original_name": "Hoodie",
+      "name": "No Brand Hoodie - Hoodie for Professional Use",
+      "brand": "No Brand ",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable No Brand  garment perfect for casual and professional settings.",
+        "detailed": "Yellow Hoodie for MEN, hoodie , mens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie_01.jpg",
+        "/images/hoodie_lifestyle.jpg",
+        "/images/hoodie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "no brand ",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "yellow_hoodie.jpg"
+    },
+    {
+      "id": 63,
+      "original_name": "Clock",
+      "name": "Boat Clock - Electronics for Professional Use",
+      "brand": "Boat",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable Boat timepiece with classic design and accurate timekeeping.",
+        "detailed": "Yellow Mini Alarm Clock, clock , electronics  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/clock_01.jpg",
+        "/images/clock_lifestyle.jpg",
+        "/images/clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "boat",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "yellow_mini_alram_clock.jpg"
+    },
+    {
+      "id": 64,
+      "original_name": "Hoodie",
+      "name": "Huba Hoodie - Hoodie for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "Yellow Pullover Hoodie for MEN, hoodie , mens wears  This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie_01.jpg",
+        "/images/hoodie_lifestyle.jpg",
+        "/images/hoodie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "yellow_pullover_hoodie.jpg"
+    },
+    {
+      "id": 65,
+      "original_name": "Men's Shoes",
+      "name": "Vans Men's Shoes",
+      "brand": "Vans",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from vans combining style and comfort for everyday wear.",
+        "detailed": "Yellow Vans Shoes for for MEN and WOMEN, shoes , mens footwears , womens footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "vans",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "yellow_vans_shoes.jpg"
+    },
+    {
+      "id": 66,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Analog Black Watch for Classic Men, watch , mens watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "analog_black_watch.jpg"
+    },
+    {
+      "id": 67,
+      "original_name": "Apple Watch",
+      "name": "Apple Watch",
+      "brand": "Apple",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable Apple timepiece with classic design and accurate timekeeping.",
+        "detailed": "Unisex Apple Smart Watch, apple , watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/apple_watch_01.jpg",
+        "/images/apple_watch_lifestyle.jpg",
+        "/images/apple_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "apple",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "apple_watch.jpg"
+    },
+    {
+      "id": 68,
+      "original_name": "Alarm Clock",
+      "name": "Fossils, Watch Alarm Clock",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Black Alarm Clock for Sleepy Head, alram clock This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/alarm_clock_01.jpg",
+        "/images/alarm_clock_lifestyle.jpg",
+        "/images/alarm_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_alram_clock.jpg"
+    },
+    {
+      "id": 69,
+      "original_name": "Digital Clock",
+      "name": "Fossils Digital Clock",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Black and Brown wooden color Digital Clock , clock ,alram clock This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/digital_clock_01.jpg",
+        "/images/digital_clock_lifestyle.jpg",
+        "/images/digital_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 12,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_and_brown_digital_clock.jpg"
+    },
+    {
+      "id": 70,
+      "original_name": "Digital Clock",
+      "name": "Casio Digital Clock",
+      "brand": "Casio",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable Casio timepiece with classic design and accurate timekeeping.",
+        "detailed": "Black and Silver Digital Clock for Interior Design, clock ,digital clock  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/digital_clock_01.jpg",
+        "/images/digital_clock_lifestyle.jpg",
+        "/images/digital_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "casio",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_and_silver_digital_clock.jpg"
+    },
+    {
+      "id": 71,
+      "original_name": "DSLR Camera",
+      "name": "Canon DSLR Camera",
+      "brand": "Canon",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced canon technology product featuring modern features and performance.",
+        "detailed": "Black Color Cannon DSLR Camera for Photography, camera  This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/dslr_camera_01.jpg",
+        "/images/dslr_camera_lifestyle.jpg",
+        "/images/dslr_camera_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "canon",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_cannon_dslr_camera.jpg"
+    },
+    {
+      "id": 72,
+      "original_name": "Men's Shoes",
+      "name": "Converse Men's Shoes",
+      "brand": "Converse",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from converse combining style and comfort for everyday wear.",
+        "detailed": "Black Converse Shoes for both MEN and WOMEN, shoes , mens wears , womens wears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "converse",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_converse_shoes.jpg"
+    },
+    {
+      "id": 73,
+      "original_name": "Sunglasses",
+      "name": "Newmew Sunglasses",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "Black Frame UV-ray Protection  Eyeglasses ,sunglasses This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/sunglasses_01.jpg",
+        "/images/sunglasses_lifestyle.jpg",
+        "/images/sunglasses_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_frame_eyeglasses_Apybuq3.jpg"
+    },
+    {
+      "id": 74,
+      "original_name": "Hoodie ",
+      "name": "Huba Hoodie - Hoodie for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "Black Hoodie Having  White Print in Sleeves, hoodie ,mens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie__01.jpg",
+        "/images/hoodie__lifestyle.jpg",
+        "/images/hoodie__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_hoodie_with_white_print.jpg"
+    },
+    {
+      "id": 75,
+      "original_name": "Leather Bag",
+      "name": "Rhino Leathers Leather Bag",
+      "brand": "Rhino Leathers",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality Rhino Leathers accessories item with excellent functionality.",
+        "detailed": "Black Leather handcarry Bag, bag ,casual This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/leather_bag_01.jpg",
+        "/images/leather_bag_lifestyle.jpg",
+        "/images/leather_bag_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "rhino leathers",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "leather"
+      ],
+      "price": "5.00",
+      "stock": 9,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_leather_bag.jpg"
+    },
+    {
+      "id": 76,
+      "original_name": "Women's shoes",
+      "name": "Timberland Women's shoes",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from timberland combining style and comfort for everyday wear.",
+        "detailed": "Black Leather Boots for Women for Winter, boots , shoes , womens shoes  This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_shoes_01.jpg",
+        "/images/women's_shoes_lifestyle.jpg",
+        "/images/women's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_leather_boots_for_women.jpg"
+    },
+    {
+      "id": 77,
+      "original_name": "women's jackets",
+      "name": "Rhino Leathers women's jackets",
+      "brand": "Rhino Leathers",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Rhino Leathers garment perfect for casual and professional settings.",
+        "detailed": "Black Leather Jacket for Women , jackets womens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_jackets_01.jpg",
+        "/images/women's_jackets_lifestyle.jpg",
+        "/images/women's_jackets_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "rhino leathers",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_leather_jacket_for_women.jpg"
+    },
+    {
+      "id": 78,
+      "original_name": "Men's jacket",
+      "name": "Rhino Leathers Men's jacket",
+      "brand": "Rhino Leathers",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Rhino Leathers garment perfect for casual and professional settings.",
+        "detailed": "Black Leather Zip up Jacket for MEN, jacket , mens wears  This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_jacket_01.jpg",
+        "/images/men's_jacket_lifestyle.jpg",
+        "/images/men's_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "rhino leathers",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 7,
+      "rating": 5,
+      "numReviews": 1,
+      "image_file": "black_leather_zip_up_jacket.jpg"
+    },
+    {
+      "id": 79,
+      "original_name": "Men's jacket",
+      "name": "Rhino Leathers Men's jacket",
+      "brand": "Rhino Leathers",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Rhino Leathers garment perfect for casual and professional settings.",
+        "detailed": "Black Zip up Jackets for MEN, mens wears , jackets This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_jacket_01.jpg",
+        "/images/men's_jacket_lifestyle.jpg",
+        "/images/men's_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "rhino leathers",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_zip_up_jackets.jpg"
+    },
+    {
+      "id": 80,
+      "original_name": "Men's Watch",
+      "name": "Casio Men's Watch",
+      "brand": "Casio",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable Casio timepiece with classic design and accurate timekeeping.",
+        "detailed": "Blacks Analog Watch for classic MEN, casio , mens watch , watch ,classic mens wears This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "casio",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "blacks_analog_watch.jpg"
+    },
+    {
+      "id": 81,
+      "original_name": "Jacket",
+      "name": "Denim Jacket - Jacket for Professional Use",
+      "brand": "Demin",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable DEMIN garment perfect for casual and professional settings.",
+        "detailed": "Blue Denim Jacket for MEN, jackets , mens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/jacket_01.jpg",
+        "/images/jacket_lifestyle.jpg",
+        "/images/jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "demin",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "blue_danim_jacket.jpg"
+    },
+    {
+      "id": 82,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Brown and White Nike Air Max for MEN, shoes , mens footwears, nike This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_and_white_nike_air_max.jpg"
+    },
+    {
+      "id": 83,
+      "original_name": "Leather Bag",
+      "name": "Rhino Leathers Leather Bag",
+      "brand": "Rhino Leathers",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality Rhino Leathers accessories item with excellent functionality.",
+        "detailed": "Brown Carry Leather Bag for classic MEN, bag , leather bag , classic mens This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/leather_bag_01.jpg",
+        "/images/leather_bag_lifestyle.jpg",
+        "/images/leather_bag_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "rhino leathers",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "leather"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_hang_carry_leather_bag.jpg"
+    },
+    {
+      "id": 84,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Black White Red High Top Sneekers, shoes ,sneekers ,nike This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_white_red_high_top_sneeker.jpg"
+    },
+    {
+      "id": 85,
+      "original_name": "Hoodie",
+      "name": "Huba Hoodie - Hoodie for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "Brown Hoodie for MEN, hoodie, mens wears ,huba This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie_01.jpg",
+        "/images/hoodie_lifestyle.jpg",
+        "/images/hoodie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_hoodie.jpg"
+    },
+    {
+      "id": 86,
+      "original_name": "Men's jacket",
+      "name": "Rhino Leathers Men's jacket",
+      "brand": "Rhino Leathers",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Rhino Leathers garment perfect for casual and professional settings.",
+        "detailed": "Brown Jacket for MEN, rhino leathers , jackets , mens wears  This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_jacket_01.jpg",
+        "/images/men's_jacket_lifestyle.jpg",
+        "/images/men's_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "rhino leathers",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_jacket.jpg"
+    },
+    {
+      "id": 87,
+      "original_name": "Men's Jeans",
+      "name": "Poison Jeans Men's Jeans",
+      "brand": "Poison Jeans",
+      "category": "Paints",
+      "description": {
+        "short": "Quality Poison Jeans paints item with excellent functionality.",
+        "detailed": "Black Jeans for MEN, jeans, denim, mens wears ,pant This paints product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_jeans_01.jpg",
+        "/images/men's_jeans_lifestyle.jpg",
+        "/images/men's_jeans_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "paints",
+        "poison jeans",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": -2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_jeans_for_men.jpg"
+    },
+    {
+      "id": 88,
+      "original_name": "Ceramic Bowl",
+      "name": "No Brand Ceramic Bowl",
+      "brand": "No Brand ",
+      "category": "Ceramic",
+      "description": {
+        "short": "Quality No Brand  ceramic item with excellent functionality.",
+        "detailed": "Ceramic Bowl for home decorations This ceramic product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/ceramic_bowl_01.jpg",
+        "/images/ceramic_bowl_lifestyle.jpg",
+        "/images/ceramic_bowl_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "ceramic",
+        "no brand ",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "9.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "ceramic_bowl.jpg"
+    },
+    {
+      "id": 89,
+      "original_name": "Rose Artificial Plant ",
+      "name": "Pot Rose Artificial Plant",
+      "brand": "Pot",
+      "category": "Ceramic",
+      "description": {
+        "short": "Quality pot ceramic item with excellent functionality.",
+        "detailed": "Bengal Blooms Rose Artificial Plant  with Pot This ceramic product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/rose_artificial_plant__01.jpg",
+        "/images/rose_artificial_plant__lifestyle.jpg",
+        "/images/rose_artificial_plant__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "ceramic",
+        "pot",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "vase.jpeg"
+    },
+    {
+      "id": 90,
+      "original_name": "Cargo Paint",
+      "name": "Cargo Paint",
+      "brand": "Paint",
+      "category": "Paints",
+      "description": {
+        "short": "Quality paint paints item with excellent functionality.",
+        "detailed": "Madcaps C38GR30 Men's Cargos This paints product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/cargo_paint_01.jpg",
+        "/images/cargo_paint_lifestyle.jpg",
+        "/images/cargo_paint_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "paints",
+        "paint",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "cargo_paints.jpeg"
+    },
+    {
+      "id": 91,
+      "original_name": "Dumbell for pet",
+      "name": "Dumbell for pet",
+      "brand": "Dumbell",
+      "category": "Workout",
+      "description": {
+        "short": "Quality dumbell workout item with excellent functionality.",
+        "detailed": "Kennel Rubber Dum-bell With Bell - Small Rubber Rubber Toy For Dog\t This workout product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/dumbell_for_pet_01.jpg",
+        "/images/dumbell_for_pet_lifestyle.jpg",
+        "/images/dumbell_for_pet_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "workout",
+        "dumbell",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "dumbel.jpeg"
+    },
+    {
+      "id": 92,
+      "original_name": "Shorts",
+      "name": "Fit Shorts - Workout for Professional Use",
+      "brand": "Fit",
+      "category": "Workout",
+      "description": {
+        "short": "Quality fit workout item with excellent functionality.",
+        "detailed": "Solid Women's Cycling Shorts This workout product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shorts_01.jpg",
+        "/images/shorts_lifestyle.jpg",
+        "/images/shorts_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "workout",
+        "fit",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "legis.jpeg"
+    },
+    {
+      "id": 93,
+      "original_name": "Sofa",
+      "name": "Sofas Sofa - Furniture for Professional Use",
+      "brand": "Sofas",
+      "category": "Furniture",
+      "description": {
+        "short": "Quality sofas furniture item with excellent functionality.",
+        "detailed": "Fab Home Decor Fabric Double Sofa Bed This furniture product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/sofa_01.jpg",
+        "/images/sofa_lifestyle.jpg",
+        "/images/sofa_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "furniture",
+        "sofas",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "sofa.jpeg"
+    },
+    {
+      "id": 94,
+      "original_name": "Women jutti",
+      "name": "Timberland Women jutti",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from timberland combining style and comfort for everyday wear.",
+        "detailed": " Women's Footwear ,AW Bellies This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women_jutti_01.jpg",
+        "/images/women_jutti_lifestyle.jpg",
+        "/images/women_jutti_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shoess.jpeg"
+    },
+    {
+      "id": 95,
+      "original_name": "Women juttii",
+      "name": "Timberland Women juttii",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from timberland combining style and comfort for everyday wear.",
+        "detailed": "Casuals Women's Footwear, Ballerinas This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women_juttii_01.jpg",
+        "/images/women_juttii_lifestyle.jpg",
+        "/images/women_juttii_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shoesss.jpeg"
+    },
+    {
+      "id": 96,
+      "original_name": "Women juttiii",
+      "name": "Timberland Women juttiii",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from timberland combining style and comfort for everyday wear.",
+        "detailed": "Ladela Bellies ,Women's Footwear,Casual This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women_juttiii_01.jpg",
+        "/images/women_juttiii_lifestyle.jpg",
+        "/images/women_juttiii_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shoe.jpeg"
+    },
+    {
+      "id": 97,
+      "original_name": "Men's Watch",
+      "name": "Fossils Men's Watch",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Black and Silver Chorograph watch ,men's wears  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "watch.avif"
+    },
+    {
+      "id": 98,
+      "original_name": "Men's Watch",
+      "name": "Fossils Men's Watch",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "fossils watch black band, men's wear, casual wears This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "fossil_watch_with_black_band.jpg"
+    },
+    {
+      "id": 99,
+      "original_name": "Sunglasses",
+      "name": "Newmew Sunglasses",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "women's  sunglasses, Brown sunglasses, women's wears This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/sunglasses_01.jpg",
+        "/images/sunglasses_lifestyle.jpg",
+        "/images/sunglasses_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_sunglasses.jpg"
+    },
+    {
+      "id": 100,
+      "original_name": "Leather shoes",
+      "name": "Caliber Leather shoes",
+      "brand": "Caliber",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from caliber combining style and comfort for everyday wear.",
+        "detailed": "Brown Leathers lofar shoes ,mens wear This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/leather_shoes_01.jpg",
+        "/images/leather_shoes_lifestyle.jpg",
+        "/images/leather_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "caliber",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "leather"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_leather_loafers_shoes.jpg"
+    }
+  ]
+}

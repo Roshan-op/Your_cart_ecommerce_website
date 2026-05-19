@@ -8,6 +8,32 @@ from django.contrib.auth.hashers import make_password
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import status
+import re
+
+
+def validate_name(name):
+    """
+    Validate user name according to business rules:
+    - Must not be empty
+    - Must not start with a digit
+    - Must only contain letters, spaces, hyphens, and apostrophes
+    - Must be between 2-50 characters
+    
+    Returns: (is_valid, error_message)
+    """
+    if not name or not name.strip():
+        return False, "Name cannot be empty"
+    
+    if re.match(r'^[0-9]', name):
+        return False, "Name cannot start with a number"
+    
+    if not re.match(r"^[a-zA-Z\s'-]+$", name):
+        return False, "Name can only contain letters, spaces, hyphens, and apostrophes"
+    
+    if len(name) < 2 or len(name) > 50:
+        return False, "Name must be between 2 and 50 characters"
+    
+    return True, None
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -26,6 +52,12 @@ class MyTokenObtainPairView(TokenObtainPairView):
 @api_view(['POST'])
 def registerUser(request):
     data = request.data
+    
+    # Validate name
+    is_valid, error_msg = validate_name(data.get('name', ''))
+    if not is_valid:
+        return Response({'detail': error_msg}, status=status.HTTP_400_BAD_REQUEST)
+    
     try:
         user = User.objects.create(
             first_name = data['name'],
@@ -44,9 +76,14 @@ def registerUser(request):
 @permission_classes([IsAuthenticated])
 def updateUserProfile(request):
     user = request.user
+    data = request.data
+    
+    # Validate name
+    is_valid, error_msg = validate_name(data.get('name', ''))
+    if not is_valid:
+        return Response({'detail': error_msg}, status=status.HTTP_400_BAD_REQUEST)
     
     serializer = UserSerializerWithToken(user,many=False)
-    data = request.data
     user.first_name = data['name']
     user.username = data['email']
     user.email = data['email']
@@ -83,8 +120,13 @@ def getUserById(request,pk):
 @permission_classes([IsAdminUser])
 def updateUser(request,pk):
     user = User.objects.get(id=pk)
-    
     data = request.data
+    
+    # Validate name
+    is_valid, error_msg = validate_name(data.get('name', ''))
+    if not is_valid:
+        return Response({'detail': error_msg}, status=status.HTTP_400_BAD_REQUEST)
+    
     print(data)
     user.first_name = data['name']
     user.username = data['email']
@@ -94,7 +136,6 @@ def updateUser(request,pk):
     
     user.save()
     serializer = UserSerializer(user,many=False)
-
 
     return Response(serializer.data)
 

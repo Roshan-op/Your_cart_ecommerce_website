@@ -1,0 +1,739 @@
+{
+  "products_batch_2": [
+    {
+      "id": 21,
+      "original_name": "Women's Shoes",
+      "name": "Vans Slip-On Canvas Shoes for Women",
+      "brand": "Vans",
+      "category": "Footwear",
+      "subcategory": "Casual Shoes",
+      "description": {
+        "short": "Classic Vans slip-on canvas shoes offering effortless style and comfortable all-day wear.",
+        "detailed": "The timeless Vans Slip-On is a wardrobe essential. Made with durable canvas upper and gum rubber sole. Simple yet versatile design pairs with any outfit. Available in multiple colors.",
+        "highlights": [
+          "Durable canvas construction",
+          "Easy slip-on design",
+          "Gum rubber sole",
+          "Comfortable fit",
+          "Available in multiple colors",
+          "Iconic Vans style"
+        ]
+      },
+      "images": [
+        "/images/vans_slipon_womens_01.jpg",
+        "/images/vans_slipon_womens_lifestyle.jpg",
+        "/images/vans_slipon_womens_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [5, 6, 7, 8, 9, 10, 11],
+        "colors": ["Black", "White", "Multi-color", "Blue"],
+        "other": {}
+      },
+      "tags": ["vans", "slip-on", "womens shoes", "casual", "canvas", "classic", "comfortable"],
+      "price": "12.00",
+      "stock": 12,
+      "rating": 5,
+      "numReviews": 2,
+      "image_file": "women_shoe_vans.jpg"
+    },
+    {
+      "id": 22,
+      "original_name": "Apple Watch",
+      "name": "Apple Watch Series 6 - Smartwatch with Health Tracking",
+      "brand": "Apple",
+      "category": "Electronics",
+      "subcategory": "Smartwatches",
+      "description": {
+        "short": "Latest Apple Watch Series 6 with comprehensive health monitoring and fitness tracking features.",
+        "detailed": "Stay connected and healthy with the Apple Watch Series 6. Features blood oxygen monitoring, ECG app, sleep tracking, and fitness metrics. Always-on display shows time even when wrist is down.",
+        "highlights": [
+          "Blood oxygen monitoring",
+          "ECG app",
+          "Sleep tracking",
+          "Fitness metrics",
+          "Always-on display",
+          "Water resistant"
+        ]
+      },
+      "images": [
+        "/images/apple_watch_series6_01.jpg",
+        "/images/apple_watch_series6_lifestyle.jpg",
+        "/images/apple_watch_series6_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["40mm", "44mm"],
+        "colors": ["Black", "Gold", "Silver", "Space Grey"],
+        "other": {}
+      },
+      "tags": ["apple watch", "smartwatch", "health tracking", "fitness", "wearable", "electronics"],
+      "price": "25.00",
+      "stock": 8,
+      "rating": 5,
+      "numReviews": 2,
+      "image_file": "apple_watch.jpg"
+    },
+    {
+      "id": 23,
+      "original_name": "Men's shirt",
+      "name": "Rhino Leathers Premium White Dress Shirt for Men",
+      "brand": "Rhino Leathers",
+      "category": "Clothing - Tops",
+      "subcategory": "Dress Shirts",
+      "description": {
+        "short": "Professional white dress shirt from Rhino Leathers, perfect for business and formal occasions.",
+        "detailed": "Elevate your wardrobe with this premium white dress shirt. Made from high-quality cotton with expert tailoring. Features a crisp, clean look that's essential for any professional.",
+        "highlights": [
+          "Premium cotton fabric",
+          "Expert tailoring",
+          "Crisp collar",
+          "Comfortable fit",
+          "Machine washable",
+          "Wrinkle-resistant"
+        ]
+      },
+      "images": [
+        "/images/rhino_white_dress_shirt_01.jpg",
+        "/images/rhino_white_dress_shirt_lifestyle.jpg",
+        "/images/rhino_white_dress_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["White", "Light Blue", "Off-white"],
+        "other": {}
+      },
+      "tags": ["dress shirt", "white", "professional", "mens clothing", "formal", "rhino leathers"],
+      "price": "15.00",
+      "stock": 12,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_shirt_for_men.jpg"
+    },
+    {
+      "id": 24,
+      "original_name": "Wrist Watch",
+      "name": "Fossil Chrono Black Stainless Steel Watch",
+      "brand": "Fossil",
+      "category": "Watches",
+      "subcategory": "Analog Watches",
+      "description": {
+        "short": "Sophisticated Fossil chronograph watch with black stainless steel construction and classic design.",
+        "detailed": "Timeless elegance meets functional design in this Fossil chronograph watch. Features a precise quartz movement, durable stainless steel case, and leather strap.",
+        "highlights": [
+          "Chronograph function",
+          "Stainless steel case",
+          "Leather strap",
+          "Precise quartz movement",
+          "Water resistant",
+          "Date display window"
+        ]
+      },
+      "images": [
+        "/images/fossil_chrono_black_01.jpg",
+        "/images/fossil_chrono_black_lifestyle.jpg",
+        "/images/fossil_chrono_black_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Silver", "Brown"],
+        "other": {}
+      },
+      "tags": ["fossil watch", "chronograph", "stainless steel", "leather strap", "timepiece", "formal"],
+      "price": "18.00",
+      "stock": 10,
+      "rating": 4,
+      "numReviews": 1,
+      "image_file": "dark_watch.jpg"
+    },
+    {
+      "id": 25,
+      "original_name": "Men's Shoes",
+      "name": "Adidas Ultraboost Running Shoes for Men",
+      "brand": "Adidas",
+      "category": "Footwear",
+      "subcategory": "Running Shoes",
+      "description": {
+        "short": "High-performance Adidas Ultraboost running shoes with advanced speed and energy return.",
+        "detailed": "Experience ultimate performance with Adidas Ultraboost technology. Responsive boost cushioning provides energy return, while lightweight Primeknit upper offers breathable comfort.",
+        "highlights": [
+          "Boost cushioning technology",
+          "Primeknit upper",
+          "Energy return",
+          "Lightweight construction",
+          "Excellent traction",
+          "High-performance design"
+        ]
+      },
+      "images": [
+        "/images/adidas_ultraboost_01.jpg",
+        "/images/adidas_ultraboost_running.jpg",
+        "/images/adidas_ultraboost_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Black", "White", "Grey", "Blue"],
+        "other": {}
+      },
+      "tags": ["adidas", "ultraboost", "running shoes", "performance", "responsive", "lightweight"],
+      "price": "20.00",
+      "stock": 10,
+      "rating": 5,
+      "numReviews": 1,
+      "image_file": "adidas_ultra_boosts.jpg"
+    },
+    {
+      "id": 26,
+      "original_name": "Apple iPhone 12 Pro",
+      "name": "Apple iPhone 12 Pro Smartphone - 128GB Storage",
+      "brand": "Apple",
+      "category": "Electronics",
+      "subcategory": "Smartphones",
+      "description": {
+        "short": "Premium iPhone 12 Pro with advanced camera and A14 Bionic performance.",
+        "detailed": "The iPhone 12 Pro features a stunning 6.1-inch Super Retina XDR display and advanced camera system with pro-grade capabilities. Fast A14 Bionic chip handles anything you throw at it.",
+        "highlights": [
+          "6.1-inch Super Retina XDR display",
+          "Pro camera system",
+          "A14 Bionic chip",
+          "5G support",
+          "HDR video recording",
+          "Stainless steel design"
+        ]
+      },
+      "images": [
+        "/images/iphone_12_pro_01.jpg",
+        "/images/iphone_12_pro_lifestyle.jpg",
+        "/images/iphone_12_pro_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Gold", "Silver", "Graphite", "Pacific Blue"],
+        "other": {"storage": ["128GB", "256GB", "512GB"]}
+      },
+      "tags": ["iphone", "apple", "smartphone", "premium", "5g", "pro camera", "electronics"],
+      "price": "30.00",
+      "stock": 6,
+      "rating": 5,
+      "numReviews": 1,
+      "image_file": "iphone_12_pro.jpg"
+    },
+    {
+      "id": 27,
+      "original_name": "PlayStation 4",
+      "name": "Sony PlayStation 4 Pro Gaming Console",
+      "brand": "Sony",
+      "category": "Electronics",
+      "subcategory": "Gaming Consoles",
+      "description": {
+        "short": "Powerful Sony PlayStation 4 Pro for next-gen gaming experiences with stunning graphics.",
+        "detailed": "The PS4 Pro delivers true 4K gaming with enhanced power and performance. Play the latest blockbuster games with improved graphics, faster loading, and immersive experiences.",
+        "highlights": [
+          "4K gaming support",
+          "Enhanced power",
+          "Fast SSD storage",
+          "Backward compatible",
+          "Exclusive games library",
+          "Advanced controller"
+        ]
+      },
+      "images": [
+        "/images/ps4_pro_01.jpg",
+        "/images/ps4_pro_gaming.jpg",
+        "/images/ps4_pro_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black"],
+        "other": {}
+      },
+      "tags": ["playstation 4", "gaming console", "4k gaming", "sony", "entertainment", "electronics"],
+      "price": "35.00",
+      "stock": 5,
+      "rating": 5,
+      "numReviews": 1,
+      "image_file": "play_station_4.jpg"
+    },
+    {
+      "id": 28,
+      "original_name": "Handbag",
+      "name": "Premium Black Leather Handbag for Women",
+      "brand": "Generic",
+      "category": "Bags & Accessories",
+      "subcategory": "Handbags",
+      "description": {
+        "short": "Elegant black leather handbag offering sophistication and practical functionality for women.",
+        "detailed": "A timeless piece that complements any wardrobe. Crafted from genuine leather with multiple compartments and sturdy handles.",
+        "highlights": [
+          "Genuine leather construction",
+          "Multiple compartments",
+          "Sturdy handles",
+          "Premium finishing",
+          "Classic black color",
+          "Spacious interior"
+        ]
+      },
+      "images": [
+        "/images/black_leather_handbag_01.jpg",
+        "/images/black_leather_handbag_lifestyle.jpg",
+        "/images/black_leather_handbag_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Brown", "Tan"],
+        "other": {}
+      },
+      "tags": ["handbag", "leather bag", "womens accessories", "black", "elegant", "premium"],
+      "price": "16.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_handbag.jpg"
+    },
+    {
+      "id": 29,
+      "original_name": "Sunglasses",
+      "name": "Classic Black Polarized Sunglasses",
+      "brand": "Generic",
+      "category": "Accessories",
+      "subcategory": "Sunglasses",
+      "description": {
+        "short": "Stylish black polarized sunglasses providing UV protection and reduced glare.",
+        "detailed": "UV-blocking lenses reduce eye strain and protect from harmful rays. Polarized coating eliminates glare from reflective surfaces.",
+        "highlights": [
+          "Polarized lenses",
+          "UV protection",
+          "Reduces glare",
+          "Comfortable fit",
+          "Classic black frame",
+          "Durable construction"
+        ]
+      },
+      "images": [
+        "/images/black_sunglasses_01.jpg",
+        "/images/black_sunglasses_lifestyle.jpg",
+        "/images/black_sunglasses_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Brown", "Grey"],
+        "other": {}
+      },
+      "tags": ["sunglasses", "polarized", "uv protection", "black", "accessories", "outdoor"],
+      "price": "12.00",
+      "stock": 15,
+      "rating": 4,
+      "numReviews": 2,
+      "image_file": "black_sunglasses.jpg"
+    },
+    {
+      "id": 30,
+      "original_name": "Men's cap",
+      "name": "Street Style Canvas Baseball Cap for Men",
+      "brand": "Generic",
+      "category": "Accessories",
+      "subcategory": "Caps & Hats",
+      "description": {
+        "short": "Classic baseball cap in durable canvas, perfect for casual street style and sun protection.",
+        "detailed": "Comfortable and stylish baseball cap made from quality canvas material. Adjustable strap ensures perfect fit. Great for outdoor activities or casual everyday wear.",
+        "highlights": [
+          "Durable canvas material",
+          "Adjustable strap",
+          "Embroidered design",
+          "Curved bill",
+          "Breathable material",
+          "One size fits most"
+        ]
+      },
+      "images": [
+        "/images/canvas_baseball_cap_01.jpg",
+        "/images/canvas_baseball_cap_lifestyle.jpg",
+        "/images/canvas_baseball_cap_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["One Size"],
+        "colors": ["Black", "Navy", "Tan", "Khaki"],
+        "other": {}
+      },
+      "tags": ["baseball cap", "mens accessories", "canvas", "adjustable", "casual", "street style"],
+      "price": "8.00",
+      "stock": 20,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "cap_for_men.jpg"
+    },
+    {
+      "id": 31,
+      "original_name": "Men's Shoes",
+      "name": "Converse Chuck Taylor All Star Canvas Sneakers",
+      "brand": "Converse",
+      "category": "Footwear",
+      "subcategory": "Casual Sneakers",
+      "description": {
+        "short": "Iconic Converse Chuck Taylor All Stars, timeless canvas sneakers for casual style.",
+        "detailed": "The original Converse Chuck Taylor has been a cultural icon for decades. High-top or low-top designs provide ankle support options. Available in unlimited color combinations.",
+        "highlights": [
+          "Iconic canvas construction",
+          "Rubber toe cap",
+          "Ankle patch design",
+          "Available in high and low top",
+          "Multiple color options",
+          "Durable sole"
+        ]
+      },
+      "images": [
+        "/images/converse_chuck_taylor_01.jpg",
+        "/images/converse_chuck_taylor_lifestyle.jpg",
+        "/images/converse_chuck_taylor_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Black", "White", "Red", "Multi-color"],
+        "other": {"cut": ["High Top", "Low Top"]}
+      },
+      "tags": ["converse", "chuck taylor", "sneakers", "casual", "canvas", "iconic", "versatile"],
+      "price": "11.00",
+      "stock": 14,
+      "rating": 5,
+      "numReviews": 2,
+      "image_file": "converse_cloth_shoes.jpg"
+    },
+    {
+      "id": 32,
+      "original_name": "Diamond earrings",
+      "name": "Elegant Diamond Stud Earrings for Women",
+      "brand": "Generic",
+      "category": "Jewelry & Accessories",
+      "subcategory": "Earrings",
+      "description": {
+        "short": "Timeless diamond stud earrings adding elegance and sparkle to any occasion.",
+        "detailed": "Classic diamond earrings that never go out of style. Perfect for everyday wear or special occasions.",
+        "highlights": [
+          "Sparkling diamond stones",
+          "Secure post and back",
+          "Hypoallergenic materials",
+          "Elegant design",
+          "Suitable for all skin tones",
+          "Timeless style"
+        ]
+      },
+      "images": [
+        "/images/diamond_studs_01.jpg",
+        "/images/diamond_studs_lifestyle.jpg",
+        "/images/diamond_studs_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Clear", "Rose", "Yellow"],
+        "other": {}
+      },
+      "tags": ["diamond earrings", "jewelry", "womens accessories", "elegant", "studs", "timeless"],
+      "price": "22.00",
+      "stock": 8,
+      "rating": 5,
+      "numReviews": 1,
+      "image_file": "diamond_earrings.jpg"
+    },
+    {
+      "id": 33,
+      "original_name": "Men's Shoes",
+      "name": "Timberland 6-Inch Premium Waterproof Boots for Men",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "subcategory": "Boots",
+      "description": {
+        "short": "Iconic Timberland boots featuring waterproof construction and rugged durability for outdoor adventures.",
+        "detailed": "The legendary Timberland 6-inch boot is built tough for any terrain. Waterproof leather keeps feet dry, while the aggressive sole provides excellent traction.",
+        "highlights": [
+          "Waterproof leather",
+          "Insulated construction",
+          "Aggressive tread pattern",
+          "Reinforced toe",
+          "Comfortable padded collar",
+          "Rugged durability"
+        ]
+      },
+      "images": [
+        "/images/timberland_6inch_01.jpg",
+        "/images/timberland_6inch_outdoor.jpg",
+        "/images/timberland_6inch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Wheat", "Black", "Brown"],
+        "other": {}
+      },
+      "tags": ["timberland boots", "waterproof", "outdoor", "rugged", "mens footwear", "durable"],
+      "price": "18.00",
+      "stock": 12,
+      "rating": 5,
+      "numReviews": 2,
+      "image_file": "timberland_mens_boots.jpg"
+    },
+    {
+      "id": 34,
+      "original_name": "Ladies T-shirt",
+      "name": "Casual White Cotton T-Shirt for Women",
+      "brand": "Generic",
+      "category": "Clothing - Tops",
+      "subcategory": "T-Shirts",
+      "description": {
+        "short": "Comfortable white cotton t-shirt perfect for casual wear and easy styling.",
+        "detailed": "A wardrobe essential - soft cotton t-shirt that works with nearly everything. Available in multiple colors for versatile styling options.",
+        "highlights": [
+          "Soft cotton fabric",
+          "Breathable material",
+          "Classic crew neck",
+          "Comfortable fit",
+          "Easy care - machine washable",
+          "Available in multiple colors"
+        ]
+      },
+      "images": [
+        "/images/white_cotton_tshirt_01.jpg",
+        "/images/white_cotton_tshirt_lifestyle.jpg",
+        "/images/white_cotton_tshirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "colors": ["White", "Black", "Grey", "Pink"],
+        "other": {}
+      },
+      "tags": ["t-shirt", "womens clothing", "cotton", "casual", "white", "basic", "comfortable"],
+      "price": "7.00",
+      "stock": 18,
+      "rating": 4,
+      "numReviews": 3,
+      "image_file": "womens_white_tshirt.jpg"
+    },
+    {
+      "id": 35,
+      "original_name": "Winter hat",
+      "name": "Cozy Knit Winter Beanie with Fleece Lining",
+      "brand": "Generic",
+      "category": "Accessories",
+      "subcategory": "Winter Hats",
+      "description": {
+        "short": "Warm and comfortable knit beanie with soft fleece lining for cold weather protection.",
+        "detailed": "Stay warm during winter months with this comfortable beanie. Soft knit construction paired with fleece lining provides insulation and comfort.",
+        "highlights": [
+          "Soft knit construction",
+          "Fleece lining for warmth",
+          "Comfortable fit",
+          "One size fits most",
+          "Available in multiple colors",
+          "Durable material"
+        ]
+      },
+      "images": [
+        "/images/winter_beanie_01.jpg",
+        "/images/winter_beanie_lifestyle.jpg",
+        "/images/winter_beanie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["One Size"],
+        "colors": ["Black", "Grey", "Navy", "White"],
+        "other": {}
+      },
+      "tags": ["winter beanie", "knit hat", "winter accessories", "fleece lining", "warm", "cold weather"],
+      "price": "9.00",
+      "stock": 16,
+      "rating": 4,
+      "numReviews": 2,
+      "image_file": "winter_hat.jpg"
+    },
+    {
+      "id": 36,
+      "original_name": "Men's Shoes",
+      "name": "New Balance 990 Classic Running Shoes",
+      "brand": "New Balance",
+      "category": "Footwear",
+      "subcategory": "Running Shoes",
+      "description": {
+        "short": "Premium New Balance 990 running shoes with legendary comfort and stability.",
+        "detailed": "Handcrafted in the USA, the New Balance 990 is considered the best running shoe ever made. Offers superior cushioning and support for all-day comfort.",
+        "highlights": [
+          "Handcrafted in USA",
+          "ENCAP cushioning",
+          "Stability support",
+          "Premium materials",
+          "Exceptional comfort",
+          "Versatile width options"
+        ]
+      },
+      "images": [
+        "/images/new_balance_990_01.jpg",
+        "/images/new_balance_990_running.jpg",
+        "/images/new_balance_990_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Grey", "Black", "White", "Navy"],
+        "other": {}
+      },
+      "tags": ["new balance", "running shoes", "classic", "comfort", "stability", "premium"],
+      "price": "19.00",
+      "stock": 11,
+      "rating": 5,
+      "numReviews": 3,
+      "image_file": "new_balance_990.jpg"
+    },
+    {
+      "id": 37,
+      "original_name": "Motorcycle Helmet",
+      "name": "DOT Approved Safety Motorcycle Helmet",
+      "brand": "Generic",
+      "category": "Automotive",
+      "subcategory": "Safety Gear",
+      "description": {
+        "short": "DOT approved motorcycle helmet providing maximum safety and protection for riders.",
+        "detailed": "Engineered for safety with impact-absorbing interior and strong outer shell. DOT certified for on-road use.",
+        "highlights": [
+          "DOT approved",
+          "Impact-absorbing foam",
+          "Ventilation system",
+          "Face shield included",
+          "Comfortable fit",
+          "Secure chin strap"
+        ]
+      },
+      "images": [
+        "/images/motorcycle_helmet_01.jpg",
+        "/images/motorcycle_helmet_action.jpg",
+        "/images/motorcycle_helmet_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "White", "Red"],
+        "other": {}
+      },
+      "tags": ["motorcycle helmet", "safety", "dot approved", "protective gear", "riding"],
+      "price": "14.00",
+      "stock": 9,
+      "rating": 4,
+      "numReviews": 2,
+      "image_file": "motorcycle_helmet.jpg"
+    },
+    {
+      "id": 38,
+      "original_name": "Pet Shirt",
+      "name": "Comfortable Pet Dog T-Shirt",
+      "brand": "Generic",
+      "category": "Pet Accessories",
+      "subcategory": "Clothing",
+      "description": {
+        "short": "Adorable and comfortable t-shirt designed specifically for dogs and pets.",
+        "detailed": "Keep your furry friend comfortable and stylish with this pet t-shirt. Soft, breathable fabric with easy-to-use design.",
+        "highlights": [
+          "Soft pet-friendly fabric",
+          "Comfortable fit",
+          "Easy to put on and remove",
+          "Machine washable",
+          "Available in multiple sizes",
+          "Cute design"
+        ]
+      },
+      "images": [
+        "/images/pet_tshirt_01.jpg",
+        "/images/pet_tshirt_lifestyle.jpg",
+        "/images/pet_tshirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Blue", "Pink", "Green", "Red"],
+        "other": {}
+      },
+      "tags": ["pet clothing", "dog shirt", "pet accessories", "comfortable", "cute", "washable"],
+      "price": "6.00",
+      "stock": 15,
+      "rating": 4,
+      "numReviews": 2,
+      "image_file": "pet_dress.jpg"
+    },
+    {
+      "id": 39,
+      "original_name": "Wrist Watch",
+      "name": "Casio Vintage Digital Watch",
+      "brand": "Casio",
+      "category": "Watches",
+      "subcategory": "Digital Watches",
+      "description": {
+        "short": "Classic Casio digital watch featuring reliable timekeeping and vintage aesthetic.",
+        "detailed": "The iconic Casio digital watch is a timeless piece. Features digital display, multiple time zones, and durable construction.",
+        "highlights": [
+          "Digital display",
+          "Multiple time zones",
+          "Alarm function",
+          "Water resistant",
+          "Long battery life",
+          "Iconic design"
+        ]
+      },
+      "images": [
+        "/images/casio_digital_watch_01.jpg",
+        "/images/casio_digital_watch_lifestyle.jpg",
+        "/images/casio_digital_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Silver", "Gold"],
+        "other": {}
+      },
+      "tags": ["casio watch", "digital watch", "vintage", "reliable", "timepiece", "casual"],
+      "price": "9.00",
+      "stock": 13,
+      "rating": 4,
+      "numReviews": 2,
+      "image_file": "vintage_watch.jpg"
+    },
+    {
+      "id": 40,
+      "original_name": "Women's Shoes",
+      "name": "Elegant Black Formal High Heels for Women",
+      "brand": "Generic",
+      "category": "Footwear",
+      "subcategory": "Heels",
+      "description": {
+        "short": "Sophisticated black high heels perfect for formal events and professional occasions.",
+        "detailed": "Classic black heels designed to elevate any formal outfit. Features comfortable cushioned insole and stable heel design.",
+        "highlights": [
+          "Comfortable cushioned insole",
+          "Stable heel design",
+          "Professional appearance",
+          "Quality leather upper",
+          "Elegant silhouette",
+          "Versatile black color"
+        ]
+      },
+      "images": [
+        "/images/black_heels_formal_01.jpg",
+        "/images/black_heels_formal_lifestyle.jpg",
+        "/images/black_heels_formal_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [5, 6, 7, 8, 9, 10, 11],
+        "colors": ["Black", "Navy", "Burgundy"],
+        "other": {}
+      },
+      "tags": ["heels", "womens footwear", "formal", "black", "elegant", "professional"],
+      "price": "15.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "womens_black_formal_heals.jpg"
+    }
+  ],
+  "summary": {
+    "batch_number": 2,
+    "products_count": 20,
+    "id_range": "21-40",
+    "categories_covered": [
+      "Footwear - Multiple subcategories",
+      "Electronics - Smartwatches, Smartphones, Gaming",
+      "Clothing - Multiple styles",
+      "Watches - Digital and Analog",
+      "Jewelry & Accessories",
+      "Bags & Accessories",
+      "Pet Accessories",
+      "Automotive"
+    ]
+  }
+}

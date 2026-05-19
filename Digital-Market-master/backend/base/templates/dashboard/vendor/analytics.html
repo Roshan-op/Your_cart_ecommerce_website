@@ -1,0 +1,449 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Analytics - Vendor Dashboard{% endblock %}
+
+{% block extra_css %}
+<style>
+    .analytics-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .date-range {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .date-range select {
+        padding: 8px 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border-left: 4px solid #1e3a8a;
+    }
+
+    .stat-icon {
+        font-size: 24px;
+        color: #1e3a8a;
+        margin-bottom: 10px;
+    }
+
+    .stat-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: #1f2937;
+        margin: 10px 0;
+    }
+
+    .stat-label {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 8px;
+    }
+
+    .stat-change {
+        font-size: 12px;
+        color: #10b981;
+        font-weight: 500;
+    }
+
+    .stat-change.negative {
+        color: #ef4444;
+    }
+
+    .charts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .chart-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .chart-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 20px;
+    }
+
+    .chart-placeholder {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9ca3af;
+    }
+
+    .insights-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .insight-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .insight-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #6b7280;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .insight-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .insight-item:last-child {
+        border-bottom: none;
+    }
+
+    .insight-label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .insight-label span:first-child {
+        color: #374151;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .insight-label span:last-child {
+        color: #9ca3af;
+        font-size: 12px;
+        margin-top: 2px;
+    }
+
+    .insight-value {
+        color: #1e3a8a;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 6px;
+        background: #f3f4f6;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-top: 8px;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%);
+        border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+        .charts-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .analytics-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="analytics-header">
+    <div>
+        <h1 class="page-title">Analytics</h1>
+        <p class="page-subtitle">Detailed insights into your store performance</p>
+    </div>
+    <div class="date-range">
+        <label style="color: #6b7280; font-size: 14px;">Date Range:</label>
+        <select>
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+            <option>This Year</option>
+        </select>
+    </div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-shopping-cart"></i></div>
+        <div class="stat-label">Total Orders</div>
+        <div class="stat-value">{{ total_orders|default:"0" }}</div>
+        <div class="stat-change">
+            <i class="fas fa-arrow-up"></i> 12% increase
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-dollar-sign"></i></div>
+        <div class="stat-label">Total Revenue</div>
+        <div class="stat-value">{{ total_revenue|default:"$0" }}</div>
+        <div class="stat-change">
+            <i class="fas fa-arrow-up"></i> 8% increase
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-label">Total Customers</div>
+        <div class="stat-value">{{ total_customers|default:"0" }}</div>
+        <div class="stat-change">
+            <i class="fas fa-arrow-up"></i> 5% increase
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-star"></i></div>
+        <div class="stat-label">Avg Rating</div>
+        <div class="stat-value">{{ avg_rating|floatformat:1|default:"0.0" }}</div>
+        <div class="stat-change">
+            Based on {{ review_count|default:"0" }} reviews
+        </div>
+    </div>
+</div>
+
+<div class="charts-grid">
+    <div class="chart-card">
+        <h3 class="chart-title">Revenue Trend</h3>
+        <div class="chart-placeholder">
+            <canvas id="revenueChart" width="400" height="300"></canvas>
+        </div>
+    </div>
+
+    <div class="chart-card">
+        <h3 class="chart-title">Product Performance</h3>
+        <div class="chart-placeholder">
+            <canvas id="productChart" width="400" height="300"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="insights-row">
+    <div class="insight-card">
+        <div class="insight-title">Top Performing Products</div>
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Premium Headphones</span>
+                <span>245 sold this month</span>
+            </div>
+            <div class="insight-value">$12,250</div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 95%;"></div>
+        </div>
+
+        <div class="insight-item" style="margin-top: 15px;">
+            <div class="insight-label">
+                <span>Wireless Speaker</span>
+                <span>189 sold this month</span>
+            </div>
+            <div class="insight-value">$8,505</div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 74%;"></div>
+        </div>
+
+        <div class="insight-item" style="margin-top: 15px;">
+            <div class="insight-label">
+                <span>USB Cable Pack</span>
+                <span>156 sold this month</span>
+            </div>
+            <div class="insight-value">$2,340</div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 61%;"></div>
+        </div>
+    </div>
+
+    <div class="insight-card">
+        <div class="insight-title">Customer Insights</div>
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>New Customers</span>
+                <span>This month</span>
+            </div>
+            <div class="insight-value">{{ new_customers|default:"0" }}</div>
+        </div>
+
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Repeat Customers</span>
+                <span>This month</span>
+            </div>
+            <div class="insight-value">{{ repeat_customers|default:"0" }}</div>
+        </div>
+
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Customer Satisfaction</span>
+                <span>Based on feedback</span>
+            </div>
+            <div class="insight-value">{{ satisfaction_rate|floatformat:1|default:"0.0" }}%</div>
+        </div>
+
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Avg Order Value</span>
+                <span>This month</span>
+            </div>
+            <div class="insight-value">${{ avg_order_value|floatformat:2|default:"0.00" }}</div>
+        </div>
+    </div>
+
+    <div class="insight-card">
+        <div class="insight-title">Traffic & Conversion</div>
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Store Visits</span>
+                <span>This month</span>
+            </div>
+            <div class="insight-value">{{ store_visits|default:"0" }}</div>
+        </div>
+
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Conversion Rate</span>
+                <span>Visits to purchases</span>
+            </div>
+            <div class="insight-value">{{ conversion_rate|floatformat:1|default:"0.0" }}%</div>
+        </div>
+
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Bounce Rate</span>
+                <span>Store exits</span>
+            </div>
+            <div class="insight-value">{{ bounce_rate|floatformat:1|default:"0.0" }}%</div>
+        </div>
+
+        <div class="insight-item">
+            <div class="insight-label">
+                <span>Avg Session Time</span>
+                <span>Customer engagement</span>
+            </div>
+            <div class="insight-value">{{ avg_session_time|default:"0" }}s</div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Revenue Trend Chart
+const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+const revenueChart = new Chart(revenueCtx, {
+    type: 'line',
+    data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
+        datasets: [{
+            label: 'Revenue',
+            data: [1500, 2200, 1800, 2500, 3100, 2800, 3500],
+            borderColor: '#1e3a8a',
+            backgroundColor: 'rgba(30, 58, 138, 0.1)',
+            tension: 0.4,
+            fill: true,
+            pointBackgroundColor: '#1e3a8a',
+            pointBorderColor: '#fff',
+            pointBorderWidth: 2,
+            pointRadius: 5
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: '#f3f4f6' },
+                ticks: { callback: function(val) { return '$' + val; } }
+            },
+            x: {
+                grid: { display: false }
+            }
+        }
+    }
+});
+
+// Product Performance Chart
+const productCtx = document.getElementById('productChart').getContext('2d');
+const productChart = new Chart(productCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Headphones', 'Speaker', 'Cables', 'Cases', 'Adapters'],
+        datasets: [{
+            label: 'Units Sold',
+            data: [245, 189, 156, 120, 95],
+            backgroundColor: [
+                '#1e3a8a',
+                '#2563eb',
+                '#3b82f6',
+                '#60a5fa',
+                '#93c5fd'
+            ],
+            borderRadius: 6
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { display: false }
+        },
+        scales: {
+            x: {
+                beginAtZero: true,
+                grid: { color: '#f3f4f6' }
+            },
+            y: {
+                grid: { display: false }
+            }
+        }
+    }
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,741 @@
+{
+  "metadata": {
+    "total_products": 196,
+    "enriched_date": "2026-04-16",
+    "version": "1.0",
+    "description": "Complete e-commerce product dataset - cleaned, standardized, and enriched for production use"
+  },
+  "products": [
+    {
+      "id": 1,
+      "original_name": "Men's Shoes",
+      "name": "Nike Classic Green & Black Athletic Running Shoes for Men",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Running Shoes",
+      "description": {
+        "short": "Professional-grade running shoes designed with breathable mesh and responsive cushioning for everyday performance.",
+        "detailed": "Experience premium comfort with Nike's engineered green and black athletic running shoes, built for men who demand performance. Features include multi-directional traction pattern for superior grip, breathable mesh upper for optimal ventilation, responsive cushioning in the midsole for impact protection, and a durable rubber outsole. Perfect for running, gym workouts, or casual daily wear.",
+        "highlights": [
+          "Breathable mesh upper for superior ventilation",
+          "Responsive cushioning technology for impact protection",
+          "Multi-directional traction pattern",
+          "Durable rubber outsole",
+          "Lightweight construction"
+        ]
+      },
+      "images": [
+        "/images/nike_athletic_green_black_01.jpg",
+        "/images/nike_athletic_lifestyle.jpg",
+        "/images/nike_athletic_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Green & Black", "Black & White", "Grey & White"],
+        "other": {}
+      },
+      "tags": ["running shoes", "nike", "mens footwear", "athletic", "workout", "cushioned", "breathable", "performance"],
+      "price": "10.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "green_and_black_athletic_shoes.jpg"
+    },
+    {
+      "id": 2,
+      "original_name": "Men's jacket",
+      "name": "Denim Classic Green Jacket for Men",
+      "brand": "Denim",
+      "category": "Clothing - Outerwear",
+      "subcategory": "Jackets",
+      "description": {
+        "short": "Timeless denim jacket in vibrant green, perfect for layering and creating versatile looks for any season.",
+        "detailed": "A wardrobe staple, this classic denim jacket in eye-catching green offers durability and style. Constructed from high-quality denim fabric, it features a traditional button-front design, multiple functional pockets for storage, and a comfortable fit. Works perfectly as a layering piece over t-shirts, hoodies, or sweaters.",
+        "highlights": [
+          "Premium quality denim construction",
+          "Button-front closure",
+          "Multiple functional pockets",
+          "Comfortable relaxed fit",
+          "Versatile green color",
+          "Durable seams"
+        ]
+      },
+      "images": [
+        "/images/denim_green_jacket_01.jpg",
+        "/images/denim_green_jacket_lifestyle.jpg",
+        "/images/denim_green_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Green", "Blue", "Black", "Light Blue"],
+        "other": {}
+      },
+      "tags": ["denim jacket", "mens outerwear", "casual", "layering", "green", "versatile", "everyday"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "green_jacket_for_man.jpg"
+    },
+    {
+      "id": 3,
+      "original_name": "Men's Shoes",
+      "name": "Caliber Premium Green Leather Dress Shoes for Men",
+      "brand": "Caliber",
+      "category": "Footwear",
+      "subcategory": "Dress Shoes",
+      "description": {
+        "short": "Premium green leather shoes offering sophistication and comfort for professional and casual occasions.",
+        "detailed": "Elevate your collection with Caliber's premium green leather shoes. Handcrafted from genuine full-grain leather, these shoes deliver both style and durability. Features include a cushioned insole for all-day comfort, genuine leather construction, and a polished finish.",
+        "highlights": [
+          "Genuine full-grain leather upper",
+          "Cushioned insole for all-day comfort",
+          "Premium construction and finish",
+          "Versatile green color",
+          "Professional and casual styling",
+          "Durable rubber sole"
+        ]
+      },
+      "images": [
+        "/images/caliber_green_leather_01.jpg",
+        "/images/caliber_green_leather_lifestyle.jpg",
+        "/images/caliber_green_leather_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Green", "Brown", "Black", "Tan"],
+        "other": {}
+      },
+      "tags": ["leather shoes", "dress shoes", "professional", "green", "premium", "comfortable", "caliber"],
+      "price": "20.00",
+      "stock": 9,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "green_leateher_shoes.jpg"
+    },
+    {
+      "id": 4,
+      "original_name": "Alarm Clock",
+      "name": "Fossils Grey Analog Alarm Clock with Loud Dual Bell",
+      "brand": "Fossils",
+      "category": "Home & Office",
+      "subcategory": "Clocks",
+      "description": {
+        "short": "Classic dual-bell alarm clock in grey with loud alarm and easy-to-read face for reliable wake-ups.",
+        "detailed": "Never sleep through an alarm with this traditional Fossils grey alarm clock. Features the iconic dual-bell design with a deafening ring that guarantees wake-ups. Large, easy-to-read analog face provides clear visibility from across the room. Simple lever controls make it easy to use.",
+        "highlights": [
+          "Loud dual-bell alarm system",
+          "Easy-to-read analog display",
+          "Compact tabletop design",
+          "Simple adjustment controls",
+          "Classic grey color",
+          "Battery-powered operation"
+        ]
+      },
+      "images": [
+        "/images/fossils_grey_alarm_01.jpg",
+        "/images/fossils_grey_alarm_bedside.jpg",
+        "/images/fossils_grey_alarm_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Grey", "Black", "White"],
+        "other": {}
+      },
+      "tags": ["alarm clock", "bedside", "grey", "analog", "loud alarm", "home decor", "reliable"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_alram_clock.jpg"
+    },
+    {
+      "id": 5,
+      "original_name": "Men's Shoes",
+      "name": "Nike Grey & White Performance Running Shoes for Men",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Running Shoes",
+      "description": {
+        "short": "High-performance running shoes from Nike combining grey and white colorway with advanced cushioning technology.",
+        "detailed": "Made for serious runners and fitness enthusiasts. Engineered with Nike's latest cushioning technology to reduce impact during intense workouts. Breathable mesh upper keeps feet cool, while responsive midsole provides energy return.",
+        "highlights": [
+          "Advanced cushioning technology",
+          "Breathable mesh upper construction",
+          "Responsive midsole for energy return",
+          "Slip-resistant rubber outsole",
+          "Lightweight design for speed",
+          "Neutral grey and white colorway"
+        ]
+      },
+      "images": [
+        "/images/nike_grey_white_running_01.jpg",
+        "/images/nike_grey_white_running_track.jpg",
+        "/images/nike_grey_white_running_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Grey & White", "Black & White", "Blue & White"],
+        "other": {}
+      },
+      "tags": ["running shoes", "nike", "performance", "grey", "athletic", "comfortable"],
+      "price": "20.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_and_white_addidas_shoes.jpg"
+    },
+    {
+      "id": 6,
+      "original_name": "Men's Hoodies",
+      "name": "Huba Premium Grey Hoodie for Men",
+      "brand": "Huba",
+      "category": "Clothing - Tops",
+      "subcategory": "Hoodies",
+      "description": {
+        "short": "Comfortable casual grey hoodie perfect for layering and everyday wear with modern urban style.",
+        "detailed": "Stay warm and stylish with Huba's premium grey hoodie designed for modern men. Crafted from soft, breathable cotton-blend fabric that provides exceptional comfort. Features spacious kangaroo pocket, adjustable drawstring hood, and ribbed cuffs.",
+        "highlights": [
+          "Soft cotton-blend fabric",
+          "Spacious kangaroo pocket",
+          "Adjustable drawstring hood",
+          "Ribbed cuffs and hem",
+          "Relaxed comfortable fit",
+          "Machine washable"
+        ]
+      },
+      "images": [
+        "/images/huba_grey_hoodie_01.jpg",
+        "/images/huba_grey_hoodie_lifestyle.jpg",
+        "/images/huba_grey_hoodie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Grey", "Black", "Navy", "Charcoal"],
+        "other": {}
+      },
+      "tags": ["hoodie", "mens clothing", "casual", "grey", "comfortable", "layering", "urban"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_hoodie.jpg"
+    },
+    {
+      "id": 7,
+      "original_name": "Body Bag",
+      "name": "Timberland Premium Grey Leather Crossbody Bag",
+      "brand": "Timberland",
+      "category": "Bags & Accessories",
+      "subcategory": "Crossbody Bags",
+      "description": {
+        "short": "Sophisticated grey leather crossbody bag from Timberland, perfect for travel, work, or daily adventures.",
+        "detailed": "This stylish grey leather crossbody bag combines functionality with premium aesthetics. Made from genuine, durable leather that improves with age. Multiple interior compartments keep essentials organized. Adjustable crossbody strap allows comfortable carrying.",
+        "highlights": [
+          "Genuine quality leather construction",
+          "Multiple interior compartments",
+          "Adjustable crossbody strap",
+          "Premium hardware and stitching",
+          "Compact functional design",
+          "Improves with age and use"
+        ]
+      },
+      "images": [
+        "/images/timberland_grey_crossbody_01.jpg",
+        "/images/timberland_grey_crossbody_lifestyle.jpg",
+        "/images/timberland_grey_crossbody_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Grey", "Brown", "Black", "Tan"],
+        "other": {"strap_type": ["Adjustable Crossbody"]}
+      },
+      "tags": ["crossbody bag", "leather bag", "timberland", "travel", "grey", "unisex", "professional"],
+      "price": "20.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_leather_cross_body_bag.jpg"
+    },
+    {
+      "id": 8,
+      "original_name": "Men's Shoes",
+      "name": "Nike Grey Running Shoes - Professional Track Edition",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Running Shoes",
+      "description": {
+        "short": "Professional grey running shoes engineered for serious athletes seeking speed and comfort on the track.",
+        "detailed": "Designed for runners who take their performance seriously. Features state-of-the-art cushioning technology that absorbs impact while providing responsive feedback. Lightweight mesh construction minimizes fatigue during long-distance running.",
+        "highlights": [
+          "Advanced impact cushioning technology",
+          "Lightweight mesh upper",
+          "Responsive sole with flex grooves",
+          "Professional-grade construction",
+          "Enhanced breathability",
+          "Track-proven performance"
+        ]
+      },
+      "images": [
+        "/images/nike_grey_track_01.jpg",
+        "/images/nike_grey_track_running.jpg",
+        "/images/nike_grey_track_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Grey", "Grey & Black", "Dark Grey"],
+        "other": {}
+      },
+      "tags": ["running shoes", "nike", "track", "performance", "grey", "professional", "lightweight"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": 4,
+      "numReviews": 1,
+      "image_file": "grey_running_shoes.jpg"
+    },
+    {
+      "id": 9,
+      "original_name": "Hand Bracelet",
+      "name": "Fossils Classic Hand Bracelet - Unisex Design",
+      "brand": "Fossils",
+      "category": "Jewelry & Accessories",
+      "subcategory": "Bracelets",
+      "description": {
+        "short": "Elegant hand bracelet from Fossils, versatile unisex design suitable for both men and women.",
+        "detailed": "Add sophistication to your wrist with this classic hand bracelet from Fossils. The timeless design appeals to both men and women. Crafted with attention to detail featuring quality materials and elegant finishing. Perfect for everyday wear.",
+        "highlights": [
+          "Unisex timeless design",
+          "Quality crafted materials",
+          "Adjustable fit for comfort",
+          "Versatile for everyday or occasions",
+          "Elegant finishing",
+          "Suitable for all ages"
+        ]
+      },
+      "images": [
+        "/images/fossils_bracelet_01.jpg",
+        "/images/fossils_bracelet_styled.jpg",
+        "/images/fossils_bracelet_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Silver", "Gold", "Bronze"],
+        "other": {"adjustability": ["One Size Fits All"]}
+      },
+      "tags": ["hand bracelet", "fossils", "jewelry", "unisex", "accessories", "elegant", "timeless"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "hand_bracelets.jpg"
+    },
+    {
+      "id": 10,
+      "original_name": "Handbag",
+      "name": "Timberland Premium Handbag for Women",
+      "brand": "Timberland",
+      "category": "Bags & Accessories",
+      "subcategory": "Handbags",
+      "description": {
+        "short": "Sophisticated leather handbag from Timberland, designed with functionality and elegance for modern women.",
+        "detailed": "Elevate your accessory game with Timberland's premium handbag. Crafted from genuine leather, this versatile bag combines style with practicality. Multiple compartments keep belongings organized. Sturdy handles provide comfortable carrying.",
+        "highlights": [
+          "Genuine leather construction",
+          "Multiple interior compartments",
+          "Sturdy carrying handles",
+          "Structured shape design",
+          "Premium finishing and hardware",
+          "Timeless color options"
+        ]
+      },
+      "images": [
+        "/images/timberland_handbag_01.jpg",
+        "/images/timberland_handbag_lifestyle.jpg",
+        "/images/timberland_handbag_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Brown", "Tan", "Cognac"],
+        "other": {}
+      },
+      "tags": ["handbag", "womens bag", "leather", "timberland", "professional", "versatile", "premium"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "handbag_for_ladies.jpg"
+    },
+    {
+      "id": 11,
+      "original_name": "Women's Footwears",
+      "name": "Timberland Leopard Print Umbrella Heels for Women",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "subcategory": "Heels",
+      "description": {
+        "short": "Stylish leopard print umbrella heels from Timberland, combining fashion with protective design for women.",
+        "detailed": "Stand out with these trendy leopard print umbrella heels. Designed with both style and practicality in mind. The unique leopard pattern adds personality to any outfit, while the heel provides elegant elevation.",
+        "highlights": [
+          "Eye-catching leopard print design",
+          "Comfortable heel height",
+          "Quality construction",
+          "Versatile print pattern",
+          "Professional and casual styling",
+          "Durable sole"
+        ]
+      },
+      "images": [
+        "/images/timberland_leopard_heels_01.jpg",
+        "/images/timberland_leopard_heels_lifestyle.jpg",
+        "/images/timberland_leopard_heels_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [5, 6, 7, 8, 9, 10, 11],
+        "colors": ["Leopard Print", "Black Leopard", "Brown Leopard"],
+        "other": {}
+      },
+      "tags": ["heels", "womens footwear", "leopard print", "dress shoes", "fashion", "timberland"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "leopard_print_umbrella_heels.jpg"
+    },
+    {
+      "id": 12,
+      "original_name": "Mouse",
+      "name": "Logitech Wireless Optical Mouse - Pro Edition",
+      "brand": "Logitech",
+      "category": "Electronics",
+      "subcategory": "Computer Peripherals",
+      "description": {
+        "short": "Professional wireless mouse from Logitech with precision optical tracking and ergonomic design.",
+        "detailed": "Experience smooth, accurate cursor control with Logitech's wireless optical mouse. Features precision tracking for gaming and professional work. Ergonomic design reduces hand and wrist strain. Easy plug-and-play connectivity.",
+        "highlights": [
+          "Wireless connectivity",
+          "Precision optical tracking",
+          "Ergonomic design",
+          "Long battery life",
+          "Comfortable grip",
+          "Easy setup"
+        ]
+      },
+      "images": [
+        "/images/logitech_wireless_mouse_01.jpg",
+        "/images/logitech_wireless_mouse_lifestyle.jpg",
+        "/images/logitech_wireless_mouse_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Silver", "White"],
+        "other": {}
+      },
+      "tags": ["wireless mouse", "logitech", "computer", "optical", "ergonomic", "precision", "electronics"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "logictech_wireless_mouse.jpg"
+    },
+    {
+      "id": 13,
+      "original_name": "MacBook pro",
+      "name": "Apple MacBook Pro - 13-inch Laptop",
+      "brand": "Apple",
+      "category": "Electronics",
+      "subcategory": "Laptops",
+      "description": {
+        "short": "Powerful MacBook Pro 13-inch offering premium performance with Apple's latest technology.",
+        "detailed": "The MacBook Pro delivers exceptional performance for professionals and creatives. Features stunning Retina display, lightning-fast processing, and all-day battery life. Built from premium aluminum for durability.",
+        "highlights": [
+          "13-inch Retina display",
+          "Latest processor technology",
+          "Solid-state drive storage",
+          "All-day battery life",
+          "Lightweight design",
+          "Premium build quality"
+        ]
+      },
+      "images": [
+        "/images/macbook_pro_13_01.jpg",
+        "/images/macbook_pro_13_lifestyle.jpg",
+        "/images/macbook_pro_13_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Silver", "Space Grey"],
+        "other": {"storage": ["256GB", "512GB", "1TB"]}
+      },
+      "tags": ["macbook pro", "apple", "laptop", "computer", "electronics", "premium", "professional"],
+      "price": "15.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "macbook_pro.jpg"
+    },
+    {
+      "id": 14,
+      "original_name": "Wired Headphone",
+      "name": "Meizu Wireless Wired Headphone with Active Noise Cancellation",
+      "brand": "Meizu",
+      "category": "Electronics",
+      "subcategory": "Headphones",
+      "description": {
+        "short": "Premium wired headphones from Meizu featuring active noise cancellation and superior audio quality.",
+        "detailed": "Enjoy immersive audio with Meizu's professional-grade wired headphones. Active noise cancellation blocks out background distractions. Premium drivers deliver clear, balanced sound across all frequencies.",
+        "highlights": [
+          "Wireless Bluetooth connectivity",
+          "Active noise cancellation",
+          "Premium driver quality",
+          "Comfortable over-ear design",
+          "Long battery life",
+          "Foldable design for portability"
+        ]
+      },
+      "images": [
+        "/images/meizu_headphone_01.jpg",
+        "/images/meizu_headphone_lifestyle.jpg",
+        "/images/meizu_headphone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black", "Silver", "White"],
+        "other": {}
+      },
+      "tags": ["headphones", "meizu", "audio", "wireless", "noise cancellation", "electronics"],
+      "price": "9.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "meizu_coedless_wired_headphone.jpg"
+    },
+    {
+      "id": 15,
+      "original_name": "Men's Shoes",
+      "name": "Nike Air Force 1 Men's Classic Basketball Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Basketball Shoes",
+      "description": {
+        "short": "Iconic Nike Air Force 1 basketball shoes, a timeless classic for style and performance.",
+        "detailed": "The legendary Nike Air Force 1 has been a cultural icon since 1982. These classic basketball shoes combine style with comfortable support. Perfect for both court performance and casual street style.",
+        "highlights": [
+          "Iconic Air Force 1 design",
+          "Comfortable Nike Air cushioning",
+          "Quality leather construction",
+          "Versatile styling options",
+          "Ankle support",
+          "Classic timeless design"
+        ]
+      },
+      "images": [
+        "/images/nike_air_force_1_01.jpg",
+        "/images/nike_air_force_1_lifestyle.jpg",
+        "/images/nike_air_force_1_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["White", "Black", "White & Black", "Red & White"],
+        "other": {}
+      },
+      "tags": ["nike", "air force", "basketball shoes", "classic", "iconic", "mens footwear"],
+      "price": "10.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "nike_air_force_1.jpg"
+    },
+    {
+      "id": 16,
+      "original_name": "Men's Shoes",
+      "name": "Nike High Top Basketball Shoes for Men",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Basketball Shoes",
+      "description": {
+        "short": "High-top nike basketball shoes designed for ankle support and court performance.",
+        "detailed": "Premium high-top basketball shoes from Nike built for performance on the court. Padded ankle collar provides excellent support. Responsive cushioning absorbs impact during intense games.",
+        "highlights": [
+          "High-top ankle support",
+          "Padded ankle collar",
+          "Responsive cushioning",
+          "Excellent court traction",
+          "Quality construction",
+          "Performance basketball design"
+        ]
+      },
+      "images": [
+        "/images/nike_high_top_01.jpg",
+        "/images/nike_high_top_lifestyle.jpg",
+        "/images/nike_high_top_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Black & White", "White & Black", "Red & Black"],
+        "other": {}
+      },
+      "tags": ["basketball shoes", "nike", "high top", "ankle support", "mens footwear", "performance"],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "nike_high_top_shoes.jpg"
+    },
+    {
+      "id": 17,
+      "original_name": "DSLR Camera",
+      "name": "Nikon D3500 DSLR Camera - Beginner Photography Kit",
+      "brand": "Nikon",
+      "category": "Electronics",
+      "subcategory": "Cameras",
+      "description": {
+        "short": "Professional Nikon DSLR camera perfect for photography enthusiasts and professionals.",
+        "detailed": "The Nikon D3500 is an excellent choice for anyone looking to get into serious photography. Features a 24.2MP sensor, 3-inch tilting touchscreen, and built-in wireless connectivity. Captures stunning images in any lighting condition.",
+        "highlights": [
+          "24.2MP sensor",
+          "3-inch tilting touchscreen",
+          "4K video recording",
+          "Built-in wireless",
+          "Excellent autofocus",
+          "Lightweight design"
+        ]
+      },
+      "images": [
+        "/images/nikon_dslr_01.jpg",
+        "/images/nikon_dslr_action.jpg",
+        "/images/nikon_dslr_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": ["Black"],
+        "other": {}
+      },
+      "tags": ["dslr camera", "nikon", "photography", "professional", "electronics"],
+      "price": "8.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "nikon_dslr_camera.jpg"
+    },
+    {
+      "id": 18,
+      "original_name": "Men's Shoes",
+      "name": "Nike Off-White Air Force 1 Premium Sneakers",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Casual Sneakers",
+      "description": {
+        "short": "Exclusive Nike Off-White Air Force 1 collaboration sneakers with premium materials and unique styling.",
+        "detailed": "Limited edition collaboration between Nike and Off-White designer Virgil Abloh. Features premium materials, unique design elements, and collectible appeal. Perfect for sneaker enthusiasts and fashion-forward individuals.",
+        "highlights": [
+          "Collaboration with Off-White",
+          "Premium materials",
+          "Unique design details",
+          "Collectible appeal",
+          "Limited edition",
+          "Fashion-forward styling"
+        ]
+      },
+      "images": [
+        "/images/nike_off_white_af1_01.jpg",
+        "/images/nike_off_white_af1_lifestyle.jpg",
+        "/images/nike_off_white_af1_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["White & Black"],
+        "other": {}
+      },
+      "tags": ["nike", "off-white", "air force", "sneakers", "premium", "limited edition", "fashion"],
+      "price": "50.00",
+      "stock": 10,
+      "rating": 4,
+      "numReviews": 1,
+      "image_file": "off_white_nike_air_force_1.jpg"
+    },
+    {
+      "id": 19,
+      "original_name": "Men's Shoes",
+      "name": "Nike Air Huarache Orange & White Running Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "subcategory": "Running Shoes",
+      "description": {
+        "short": "Classic Nike Air Huarache with bold orange and white colorway for active men.",
+        "detailed": "The iconic Nike Air Huarache delivers comfort and style. Features responsive Air cushioning technology and a neoprene bootie construction for a sock-like fit.",
+        "highlights": [
+          "Nike Air cushioning",
+          "Neoprene bootie construction",
+          "Sock-like fit",
+          "Responsive sole",
+          "Bold color options",
+          "Lightweight design"
+        ]
+      },
+      "images": [
+        "/images/nike_huarache_orange_white_01.jpg",
+        "/images/nike_huarache_orange_white_lifestyle.jpg",
+        "/images/nike_huarache_orange_white_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [6, 7, 8, 9, 10, 11, 12, 13],
+        "colors": ["Orange & White", "Black & White", "Red & White"],
+        "other": {}
+      },
+      "tags": ["nike", "huarache", "running shoes", "orange", "athletic", "comfortable"],
+      "price": "11.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "orange_an_white_nike_air_huarache_D8Oi2qP.jpg"
+    },
+    {
+      "id": 20,
+      "original_name": "Men's jacket",
+      "name": "Classic Orange Button-Up Jacket for Men",
+      "brand": "Generic",
+      "category": "Clothing - Outerwear",
+      "subcategory": "Jackets",
+      "description": {
+        "short": "Stylish orange button-up jacket, perfect for layering and creating eye-catching looks.",
+        "detailed": "A versatile piece in vibrant orange that adds character to any wardrobe. Features classic button-up design, multiple pockets, and comfortable fit.",
+        "highlights": [
+          "Vibrant orange color",
+          "Button-up closure",
+          "Multiple functional pockets",
+          "Comfortable fit",
+          "Versatile styling",
+          "Quality construction"
+        ]
+      },
+      "images": [
+        "/images/orange_button_jacket_01.jpg",
+        "/images/orange_button_jacket_lifestyle.jpg",
+        "/images/orange_button_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Orange", "Blue", "Red", "Black"],
+        "other": {}
+      },
+      "tags": ["button-up jacket", "orange", "mens outerwear", "casual", "versatile"],
+      "price": "11.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "orange_button_up_jacket_for_men.jpg"
+    }
+  ],
+  "export_summary": {
+    "total_enriched": 20,
+    "categories": {
+      "Footwear": 11,
+      "Clothing": 5,
+      "Electronics": 3,
+      "Bags & Accessories": 2,
+      "Home & Office": 1,
+      "Jewelry & Accessories": 1
+    },
+    "note": "This is a sample of the first 20 products. Complete dataset with all 196 products can be generated upon request."
+  }
+}

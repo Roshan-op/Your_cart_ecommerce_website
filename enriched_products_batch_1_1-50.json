@@ -1,0 +1,2663 @@
+{
+  "metadata": {
+    "batch_number": 1,
+    "products_count": 50,
+    "id_range": "1-50"
+  },
+  "products": [
+    {
+      "id": 1,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "green and black athletic shoes for MENS , nike , shoes , mens shoes , mens footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "10.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "green_and_black_athletic_shoes.jpg"
+    },
+    {
+      "id": 2,
+      "original_name": "Men's jacket",
+      "name": "Denim Men's jacket",
+      "brand": "Demin",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable DEMIN garment perfect for casual and professional settings.",
+        "detailed": "Green jacket for men, mens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_jacket_01.jpg",
+        "/images/men's_jacket_lifestyle.jpg",
+        "/images/men's_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "demin",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "green_jacket_for_man.jpg"
+    },
+    {
+      "id": 3,
+      "original_name": "Men's Shoes",
+      "name": "Caliber Men's Shoes",
+      "brand": "Caliber",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from caliber combining style and comfort for everyday wear.",
+        "detailed": "Green Leather shoes for men, mens footswears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "caliber",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "20.00",
+      "stock": 9,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "green_leateher_shoes.jpg"
+    },
+    {
+      "id": 4,
+      "original_name": " Alarm Clock",
+      "name": "Fossils, Watch Alarm Clock",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Grey Alarm Clock  for sleepy peoples, Alram clock ,clock  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/_alarm_clock_01.jpg",
+        "/images/_alarm_clock_lifestyle.jpg",
+        "/images/_alarm_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_alram_clock.jpg"
+    },
+    {
+      "id": 5,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Grey and white adidas shoes for runners, mens shoes , men's footwear This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "20.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_and_white_addidas_shoes.jpg"
+    },
+    {
+      "id": 6,
+      "original_name": "Men's Hoodies",
+      "name": "Huba Men's Hoodies",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "grey hoodie for men , men's wears ,  This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_hoodies_01.jpg",
+        "/images/men's_hoodies_lifestyle.jpg",
+        "/images/men's_hoodies_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_hoodie.jpg"
+    },
+    {
+      "id": 7,
+      "original_name": "Body Bag  ",
+      "name": "Timberland Body Bag - Bag  for Professional Use",
+      "brand": "Timberland",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality timberland accessories item with excellent functionality.",
+        "detailed": "Grey Leather Cross Body Bag for ladies, women's Bag ,Bag This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/body_bag___01.jpg",
+        "/images/body_bag___lifestyle.jpg",
+        "/images/body_bag___detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "20.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "grey_leather_cross_body_bag.jpg"
+    },
+    {
+      "id": 8,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Grey Running Shoes for Runners, men's shoes, mens footwear This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": 4,
+      "numReviews": 1,
+      "image_file": "grey_running_shoes.jpg"
+    },
+    {
+      "id": 9,
+      "original_name": "Hand Bracelet",
+      "name": "Fossils Hand Bracelet",
+      "brand": "Fossils",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality fossils accessories item with excellent functionality.",
+        "detailed": "Hand Brasclet for both men's and Women's  This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hand_bracelet_01.jpg",
+        "/images/hand_bracelet_lifestyle.jpg",
+        "/images/hand_bracelet_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "hand_braclets.jpg"
+    },
+    {
+      "id": 10,
+      "original_name": "Handbag ",
+      "name": "Timberland Handbag - Bag for Professional Use",
+      "brand": "Timberland",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality timberland accessories item with excellent functionality.",
+        "detailed": "Handbag for Women, women's bag ,  This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/handbag__01.jpg",
+        "/images/handbag__lifestyle.jpg",
+        "/images/handbag__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "handbag_for_ladies.jpg"
+    },
+    {
+      "id": 11,
+      "original_name": " Women's Footwears",
+      "name": "Timberland Women's Footwears",
+      "brand": "Timberland",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from timberland combining style and comfort for everyday wear.",
+        "detailed": "leopard print umbrella Heels, shoes women's footwears , heels This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/_women's_footwears_01.jpg",
+        "/images/_women's_footwears_lifestyle.jpg",
+        "/images/_women's_footwears_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "leopard_print_umbrella_heels.jpg"
+    },
+    {
+      "id": 12,
+      "original_name": "Mouse",
+      "name": "Logitech Mouse - Mouse  for Professional Use",
+      "brand": "Logitech",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Logitech technology product featuring modern features and performance.",
+        "detailed": "Logitech wireless mouse, electronics, mouse  This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/mouse_01.jpg",
+        "/images/mouse_lifestyle.jpg",
+        "/images/mouse_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "logitech",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "logictech_wireless_mouse.jpg"
+    },
+    {
+      "id": 13,
+      "original_name": "MacBook pro ",
+      "name": "Apple MacBook pro",
+      "brand": "Apple",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Apple technology product featuring modern features and performance.",
+        "detailed": "MacBook pro, laptop , electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/macbook_pro__01.jpg",
+        "/images/macbook_pro__lifestyle.jpg",
+        "/images/macbook_pro__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "apple",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "premium"
+      ],
+      "price": "15.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "macbook_pro.jpg"
+    },
+    {
+      "id": 14,
+      "original_name": "Wired Headphone",
+      "name": "Meizu Wired Headphone",
+      "brand": "Meizu",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Meizu technology product featuring modern features and performance.",
+        "detailed": "Meizu codeless wired headphone, headphone ,electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/wired_headphone_01.jpg",
+        "/images/wired_headphone_lifestyle.jpg",
+        "/images/wired_headphone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "meizu",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "9.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "meizu_coedless_wired_headphone.jpg"
+    },
+    {
+      "id": 15,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Nike Air Force 1 ,men's footwears, shoes This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "10.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "nike_air_force_1.jpg"
+    },
+    {
+      "id": 16,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Nike High Top Shoes for men , men's footsware, shoes This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "nike_high_top_shoes.jpg"
+    },
+    {
+      "id": 17,
+      "original_name": "DSLR Camera",
+      "name": "Nikon DSLR Camera",
+      "brand": "Nikon",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Nikon technology product featuring modern features and performance.",
+        "detailed": "Nikon DSLR camera, camera  This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/dslr_camera_01.jpg",
+        "/images/dslr_camera_lifestyle.jpg",
+        "/images/dslr_camera_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "nikon",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "nikon_dslr_camera.jpg"
+    },
+    {
+      "id": 18,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "OFF White Nike Air Force 1, men's foots wears, shoes This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "50.00",
+      "stock": 10,
+      "rating": 4,
+      "numReviews": 1,
+      "image_file": "off_white_nike_air_force_1.jpg"
+    },
+    {
+      "id": 19,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Orange an White Nike Air Huarache for men , men's wears , men's footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "11.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "orange_an_white_nike_air_huarache_D8Oi2qP.jpg"
+    },
+    {
+      "id": 20,
+      "original_name": "Men's jacket",
+      "name": "Men's jacket",
+      "brand": "Jacket",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable jacket garment perfect for casual and professional settings.",
+        "detailed": "Orange Button up Jacket for men, men's wears, jackets This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_jacket_01.jpg",
+        "/images/men's_jacket_lifestyle.jpg",
+        "/images/men's_jacket_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "jacket",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "11.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "orange_button_up_jacket_for_men.jpg"
+    },
+    {
+      "id": 21,
+      "original_name": "Hoodie",
+      "name": "Huba Hoodie - Hoodie for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "Pink Hoodie for both men and women ,men's wear , women's wear hoodie This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie_01.jpg",
+        "/images/hoodie_lifestyle.jpg",
+        "/images/hoodie_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "9.00",
+      "stock": 11,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "pink_hoodie.jpg"
+    },
+    {
+      "id": 22,
+      "original_name": "Shoes",
+      "name": "Nike Shoes - Shoes for Professional Use",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Pink White Air max 90 for both men and women ,shoes, footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shoes_01.jpg",
+        "/images/shoes_lifestyle.jpg",
+        "/images/shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "11.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "pink_white_air_max_90.jpg"
+    },
+    {
+      "id": 23,
+      "original_name": "T-shirt ",
+      "name": "Huba T-shirt - T-Shirt for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "Plane White t-shirt for men ,mens wears , t-shirts This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/t-shirt__01.jpg",
+        "/images/t-shirt__lifestyle.jpg",
+        "/images/t-shirt__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "plane_white_tshirt.jpg"
+    },
+    {
+      "id": 24,
+      "original_name": "Pocket Watch",
+      "name": "Fossils, Watch Pocket Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Pocket Watch , watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/pocket_watch_01.jpg",
+        "/images/pocket_watch_lifestyle.jpg",
+        "/images/pocket_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "pocket_watch.jpg"
+    },
+    {
+      "id": 25,
+      "original_name": "Red I-phone 7",
+      "name": "Red I-phone 7",
+      "brand": "I-Phone",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced I-phone technology product featuring modern features and performance.",
+        "detailed": "Red I-phone 7 , apple , electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/red_i-phone_7_01.jpg",
+        "/images/red_i-phone_7_lifestyle.jpg",
+        "/images/red_i-phone_7_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "i-phone",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "45.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "red_iphone_7.jpg"
+    },
+    {
+      "id": 26,
+      "original_name": "Hand Bag",
+      "name": "Timberland Hand Bag - Bag for Professional Use",
+      "brand": "Timberland",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality timberland accessories item with excellent functionality.",
+        "detailed": "Red leather Hand Bag for Women, women's wears This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hand_bag_01.jpg",
+        "/images/hand_bag_lifestyle.jpg",
+        "/images/hand_bag_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "timberland",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 11,
+      "rating": 5,
+      "numReviews": 1,
+      "image_file": "red_leather_hand_bag.jpg"
+    },
+    {
+      "id": 27,
+      "original_name": "Headphone",
+      "name": "Boat Headphone - Headphones for Professional Use",
+      "brand": "Boat",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Boat technology product featuring modern features and performance.",
+        "detailed": "Red Wired Headphone for music lover , music , Electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/headphone_01.jpg",
+        "/images/headphone_lifestyle.jpg",
+        "/images/headphone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "boat",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 13,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "red_wired_headphone.jpg"
+    },
+    {
+      "id": 28,
+      "original_name": "Wall Clock",
+      "name": "Fossils Wall Clock",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round Black and White Wall Clock, clock  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/wall_clock_01.jpg",
+        "/images/wall_clock_lifestyle.jpg",
+        "/images/wall_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_black_and_white_wall_clock.jpg"
+    },
+    {
+      "id": 29,
+      "original_name": "Wall Clock",
+      "name": "Fossils, Watch Wall Clock",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round Grey Wall Clock ,watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/wall_clock_01.jpg",
+        "/images/wall_clock_lifestyle.jpg",
+        "/images/wall_clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "9.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_grey_wall_clock.jpg"
+    },
+    {
+      "id": 30,
+      "original_name": "Women's watch",
+      "name": "Fossils, Watch Women's watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round Silver Color Analog Watch for women ,womens watch ,watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_watch_01.jpg",
+        "/images/women's_watch_lifestyle.jpg",
+        "/images/women's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_silver_color_analog_watch.jpg"
+    },
+    {
+      "id": 31,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round Silver Watch with Brown Band, analog watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "11.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_silver_watch_with_brown_band.jpg"
+    },
+    {
+      "id": 32,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round Silver watch with pink band, watch ,analog watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_silver_watch_with_pink_band.jpg"
+    },
+    {
+      "id": 33,
+      "original_name": "Men's Watch",
+      "name": "Fossils Men's Watch",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round silver watch with black strap, watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "13.00",
+      "stock": 10,
+      "rating": 4,
+      "numReviews": 1,
+      "image_file": "round_silvr_watch_with_black_strap.jpg"
+    },
+    {
+      "id": 34,
+      "original_name": "Watch",
+      "name": "Fossils, Watch Watch - Watch for Professional Use",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Round white watch with white band, watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/watch_01.jpg",
+        "/images/watch_lifestyle.jpg",
+        "/images/watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "9.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_white_watch_with_white_band.jpg"
+    },
+    {
+      "id": 35,
+      "original_name": "Watch",
+      "name": "Apple Watch - Watch for Professional Use",
+      "brand": "Apple",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable Apple timepiece with classic design and accurate timekeeping.",
+        "detailed": "Silver Aluminum case apple watch, Apple, Watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/watch_01.jpg",
+        "/images/watch_lifestyle.jpg",
+        "/images/watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "apple",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_aluminium_case_apple_watch.jpg"
+    },
+    {
+      "id": 36,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Silver Colored Analog Watch for men, mens watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_colored_analog_watch.jpg"
+    },
+    {
+      "id": 37,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "silver gold watch for men, mens wears , analog watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 10,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_gold_watch.jpg"
+    },
+    {
+      "id": 38,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "silver watch for men , analog watch , mens watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_watch.jpg"
+    },
+    {
+      "id": 39,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Silver Watch Analog for men, analog watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_watch_analog.jpg"
+    },
+    {
+      "id": 40,
+      "original_name": "Headphone ",
+      "name": "Sony Headphone - Headphones for Professional Use",
+      "brand": " Sony",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced  Sony technology product featuring modern features and performance.",
+        "detailed": "Sony Black Headphone for music lover , electronics , headphone This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/headphone__01.jpg",
+        "/images/headphone__lifestyle.jpg",
+        "/images/headphone__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        " sony",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "sony_black_headphone.jpg"
+    },
+    {
+      "id": 41,
+      "original_name": " Headphone ",
+      "name": "Sony Headphone - Headphones for Professional Use",
+      "brand": "Sony",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Sony technology product featuring modern features and performance.",
+        "detailed": "Sony wireless Headphone for music lover , electronics ,headphone This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/_headphone__01.jpg",
+        "/images/_headphone__lifestyle.jpg",
+        "/images/_headphone__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "sony",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "11.00",
+      "stock": 2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "sony_wireless_headphone.jpg"
+    },
+    {
+      "id": 42,
+      "original_name": "Men's Shoes",
+      "name": "Addidas Men's Shoes",
+      "brand": "Addidas",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Addidas combining style and comfort for everyday wear.",
+        "detailed": "White Adidas Low Top Sneaker for men , shoes , mens shoes, mens footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "addidas",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "15.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_adidas_low_top_sneaker.jpg"
+    },
+    {
+      "id": 43,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "White and Black Nike Air max 90 for men, nike , mens shoes , mens footwears, shoes This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "22.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_and_black_nike_air_max_90.jpg"
+    },
+    {
+      "id": 44,
+      "original_name": "Ceramic Vase",
+      "name": "No Brand Ceramic Vase",
+      "brand": "No Brand ",
+      "category": "Clay",
+      "description": {
+        "short": "Quality No Brand  clay item with excellent functionality.",
+        "detailed": "White and Blue Ceramic Vase for Interior Design of Room, ceramic pot , pot This clay product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/ceramic_vase_01.jpg",
+        "/images/ceramic_vase_lifestyle.jpg",
+        "/images/ceramic_vase_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clay",
+        "no brand ",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_and_blue_ceramic_vase.jpg"
+    },
+    {
+      "id": 45,
+      "original_name": "Cup ",
+      "name": "Pot Cup - Clay for Professional Use",
+      "brand": "Pot",
+      "category": "Clay",
+      "description": {
+        "short": "Quality pot clay item with excellent functionality.",
+        "detailed": "White and Brown Cup for Interior Design of Room, ceramic pot  This clay product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/cup__01.jpg",
+        "/images/cup__lifestyle.jpg",
+        "/images/cup__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clay",
+        "pot",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_and_brown_cup.jpg"
+    },
+    {
+      "id": 46,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "White and Orange Athletic Shoes for MEN, mens shoes , mens footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "13.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_and_orange_athletic_shoes.jpg"
+    },
+    {
+      "id": 47,
+      "original_name": "Men's Shoes",
+      "name": "Nike Men's Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "White and Red Athletic Nike Shoes for MEN, mens shoes , mens footwears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "7.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_and_red_athletic_nike_shoes.jpg"
+    },
+    {
+      "id": 48,
+      "original_name": "Earphone",
+      "name": "Boat Earphone - Electronics for Professional Use",
+      "brand": "Boat",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Boat technology product featuring modern features and performance.",
+        "detailed": "White Earphone for Music Lovers, earphone , electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/earphone_01.jpg",
+        "/images/earphone_lifestyle.jpg",
+        "/images/earphone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "boat",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_earphone.jpg"
+    },
+    {
+      "id": 49,
+      "original_name": "Hoodie and Paint ",
+      "name": "Huba Hoodie and Paint",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "White Hoodie and Paint Set for MEN, paint , hoodies, mens wears ,  This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/hoodie_and_paint__01.jpg",
+        "/images/hoodie_and_paint__lifestyle.jpg",
+        "/images/hoodie_and_paint__detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "25.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_hoodie_and_paint_set.jpg"
+    },
+    {
+      "id": 50,
+      "original_name": "T-shirt",
+      "name": "Huba T-shirt - Clothes for Professional Use",
+      "brand": "Huba",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable Huba garment perfect for casual and professional settings.",
+        "detailed": "White Long Sleeves t-shirt for MEN, t-shirt , mens wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/t-shirt_01.jpg",
+        "/images/t-shirt_lifestyle.jpg",
+        "/images/t-shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "huba",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "10.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "white_long_sleeves_tshirt.jpg"
+    }
+  ]
+}

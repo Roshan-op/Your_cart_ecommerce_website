@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .email-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .email-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .email-body {
+            padding: 40px 20px;
+        }
+        .email-body h2 {
+            color: #333333;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .email-body p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .email-footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            color: #999999;
+            font-size: 12px;
+        }
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Welcome to {{ shop_name }}!</h1>
+        </div>
+        
+        <div class="email-body">
+            <h2>Hello {{ user_name }},</h2>
+            
+            <p>Thank you for joining <span class="highlight">{{ shop_name }}</span>! We're thrilled to have you as part of our community.</p>
+            
+            <p>At {{ shop_name }}, we believe in offering premium, sustainably stylish fashion that lets you express your unique personality. Whether you're looking for timeless classics or trendy new pieces, we've got something for everyone.</p>
+            
+            <p>Here's what you can do now:</p>
+            <ul style="margin-left: 20px; color: #666666; line-height: 1.8;">
+                <li>Browse our exclusive collection of products</li>
+                <li>Add items to your wishlist for later</li>
+                <li>Track your orders in real-time</li>
+                <li>Enjoy special discounts and offers</li>
+            </ul>
+            
+            <p style="margin-top: 20px;">If you have any questions or need assistance, our customer support team is always here to help.</p>
+            
+            <p>Happy Shopping!<br><strong>The {{ shop_name }} Team</strong></p>
+        </div>
+        
+        <div class="email-footer">
+            <p>&copy; 2026 {{ shop_name }}. All rights reserved. | Sustainably Stylish, Naturally You.</p>
+            <p>This is an automated email, please do not reply directly.</p>
+        </div>
+    </div>
+</body>
+</html>

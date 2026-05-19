@@ -1,0 +1,2591 @@
+{
+  "metadata": {
+    "batch_number": 3,
+    "products_count": 50,
+    "id_range": "101-150"
+  },
+  "products": [
+    {
+      "id": 101,
+      "original_name": "Men's Shoes",
+      "name": "Caliber Men's Shoes",
+      "brand": "Caliber",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from caliber combining style and comfort for everyday wear.",
+        "detailed": "Caliber brown leather boots , mens wears, shoes  This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shoes_01.jpg",
+        "/images/men's_shoes_lifestyle.jpg",
+        "/images/men's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "caliber",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_leathers_shoes.jpg"
+    },
+    {
+      "id": 102,
+      "original_name": "Nike Shoes",
+      "name": "Nike Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Brown Nike sneakers , men's footwears  This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/nike_shoes_01.jpg",
+        "/images/nike_shoes_lifestyle.jpg",
+        "/images/nike_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "6.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "brown_nike_sneakers.jpg"
+    },
+    {
+      "id": 103,
+      "original_name": "Ceramic Pot",
+      "name": "Ceramic Pot",
+      "brand": "Pot",
+      "category": "Ceramic pot",
+      "description": {
+        "short": "Quality pot ceramic pot item with excellent functionality.",
+        "detailed": "White Ceramic Pot , Home Decor This ceramic pot product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/ceramic_pot_01.jpg",
+        "/images/ceramic_pot_lifestyle.jpg",
+        "/images/ceramic_pot_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "ceramic pot",
+        "pot",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "ceramic_vase.jpg"
+    },
+    {
+      "id": 104,
+      "original_name": "Sunglasses",
+      "name": "Newmew Sunglasses",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "Gold Framed Sunglasses , sunglasses  This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/sunglasses_01.jpg",
+        "/images/sunglasses_lifestyle.jpg",
+        "/images/sunglasses_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "gold_framed_sunglasses.jpg"
+    },
+    {
+      "id": 105,
+      "original_name": "Men's Watch",
+      "name": "Fossils Men's Watch",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Fossils analog watch with brown band , mens wears This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "fossil_analog_watch.jpg"
+    },
+    {
+      "id": 106,
+      "original_name": "Nike Shoes",
+      "name": "Nike Shoes",
+      "brand": "Nike",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from Nike combining style and comfort for everyday wear.",
+        "detailed": "Blue and white Nike shoes, mens running shoes,mens wears This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/nike_shoes_01.jpg",
+        "/images/nike_shoes_lifestyle.jpg",
+        "/images/nike_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "nike",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile",
+        "sports",
+        "athletic"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "blue_black_white_nike_running_shoes.jpg"
+    },
+    {
+      "id": 107,
+      "original_name": "Men's Watch",
+      "name": "Fossils Men's Watch",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Fossils analog watch  , men's wears, watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "analog_black_watch_JMVd8fO.jpg"
+    },
+    {
+      "id": 108,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Golden Blue analog watch , men's watch, watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 9,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "gold_and_blue_analog_watch.jpg"
+    },
+    {
+      "id": 109,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Silver analog clock with brown band, mens watch ,mens wears This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_grey_analog_watch_with_brown_band_qnqUWVM.jpg"
+    },
+    {
+      "id": 110,
+      "original_name": "Men's Watch",
+      "name": "Fossils Men's Watch",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Silver and Gold analog watch, mens watch , mens wears This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_gold_watch_vhgsVoV.jpg"
+    },
+    {
+      "id": 111,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Silver analog watch, mens watch , mens wears This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "silver_watch_analog_AUUGKj3.jpg"
+    },
+    {
+      "id": 112,
+      "original_name": "Earpode",
+      "name": "Boat Earpode - Headphones for Professional Use",
+      "brand": "Boat",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced Boat technology product featuring modern features and performance.",
+        "detailed": "Black wireless Earpod , headphone , electronics This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/earpode_01.jpg",
+        "/images/earpode_lifestyle.jpg",
+        "/images/earpode_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "boat",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_earbode.jpg"
+    },
+    {
+      "id": 113,
+      "original_name": "Mobile Phone",
+      "name": "Samsung Mobile Phone",
+      "brand": "Samsung",
+      "category": "Electronics",
+      "description": {
+        "short": "Advanced samsung technology product featuring modern features and performance.",
+        "detailed": "Samsung Galaxy s8 phone , phone , mobile,electronics ,gagets  This electronics product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/mobile_phone_01.jpg",
+        "/images/mobile_phone_lifestyle.jpg",
+        "/images/mobile_phone_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "White"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "electronics",
+        "samsung",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_samsung_galaxy_s6_edge.jpg"
+    },
+    {
+      "id": 114,
+      "original_name": "Clock",
+      "name": "Fossils Clock - Clock  for Professional Use",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "wooden framed digital clock , clock , alram clock  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/clock_01.jpg",
+        "/images/clock_lifestyle.jpg",
+        "/images/clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "black_and_brown_digital_clock_chB99dd.jpg"
+    },
+    {
+      "id": 115,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "Analog watch with black band, watch , men's watch This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "golden_analog_watch_with_black_band.jpg"
+    },
+    {
+      "id": 116,
+      "original_name": "Women's shoes",
+      "name": "Caliber Women's shoes",
+      "brand": "Caliber",
+      "category": "Footwear",
+      "description": {
+        "short": "Premium footwear from caliber combining style and comfort for everyday wear.",
+        "detailed": "Women's heels , silver glitter color , women's wears , heels , shoes  This footwear product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_shoes_01.jpg",
+        "/images/women's_shoes_lifestyle.jpg",
+        "/images/women's_shoes_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Brown",
+          "Grey",
+          "Navy"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "footwear",
+        "caliber",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "glitter_white_pointed_toe_pumps.jpg"
+    },
+    {
+      "id": 117,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "analog watch , men's watch ,  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "7.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "round_grey_analog_watch_with_brown_band_P8jcNoR.jpg"
+    },
+    {
+      "id": 118,
+      "original_name": "Clock",
+      "name": "Fossils Clock - Watch for Professional Use",
+      "brand": "Fossils",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils timepiece with classic design and accurate timekeeping.",
+        "detailed": "Mini alram clock for sleepy head  , clock   This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/clock_01.jpg",
+        "/images/clock_lifestyle.jpg",
+        "/images/clock_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 7,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "yellow_mini_alram_clock_sf9Drd6.jpg"
+    },
+    {
+      "id": 119,
+      "original_name": "Women's Shirt",
+      "name": "New Season Women's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "Women's shirt , Women's wears, white shirts , new season This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/women's_shirt_01.jpg",
+        "/images/women's_shirt_lifestyle.jpg",
+        "/images/women's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "2.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s1.jpg"
+    },
+    {
+      "id": 120,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "Men's shirt , black shirt , new season shirt , men's wears, men's shirts This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s2.jpg"
+    },
+    {
+      "id": 121,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's shirt , blue shirt , new season shirt , men's wears  This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s3.jpg"
+    },
+    {
+      "id": 122,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's shirt , white shirts  , men's wears  ,new season shirts This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s4.jpg"
+    },
+    {
+      "id": 123,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's shirts,  new season shirt , men's wears, shirt This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s5.jpg"
+    },
+    {
+      "id": 124,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's shirt , shirt with tie , news season shirts , men's wears , shirts This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s6.jpg"
+    },
+    {
+      "id": 125,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's  wears , shirt , new season shirt , This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "8.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s7.jpg"
+    },
+    {
+      "id": 126,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's shirts, shirts , new season shirt , men's wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s8.jpg"
+    },
+    {
+      "id": 127,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "men's shirt, new season shirt, men's wears, shirts This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 8,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s9.jpg"
+    },
+    {
+      "id": 128,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "Men's shirt ,shirt , new season shirts , men's wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s10.jpg"
+    },
+    {
+      "id": 129,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "Men's shirt , men's wears , shirt , new season shirts This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s11.jpg"
+    },
+    {
+      "id": 130,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "shirt, men's shirt  , new season's shirts, men's wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s12.jpg"
+    },
+    {
+      "id": 131,
+      "original_name": "Men's Shirt",
+      "name": "New Season Men's Shirt",
+      "brand": "New Season",
+      "category": "Clothing",
+      "description": {
+        "short": "Comfortable New Season garment perfect for casual and professional settings.",
+        "detailed": "shirt, men's shirt  , new season's shirts,  men's wears This clothing product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_shirt_01.jpg",
+        "/images/men's_shirt_lifestyle.jpg",
+        "/images/men's_shirt_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "colors": [
+          "Black",
+          "White",
+          "Grey",
+          "Navy",
+          "Red"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "clothing",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "6.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "s13.jpg"
+    },
+    {
+      "id": 132,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "men's watch , fossils watch , watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_1.jpg"
+    },
+    {
+      "id": 133,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses ,  eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades1.jpg"
+    },
+    {
+      "id": 134,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades2.jpg"
+    },
+    {
+      "id": 135,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades3.jpg"
+    },
+    {
+      "id": 136,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades9.jpg"
+    },
+    {
+      "id": 137,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades5.jpg"
+    },
+    {
+      "id": 138,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades9_nrWEBYE.jpg"
+    },
+    {
+      "id": 139,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "5.00",
+      "stock": 4,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades14.jpg"
+    },
+    {
+      "id": 140,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades16.jpg"
+    },
+    {
+      "id": 141,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades21.jpg"
+    },
+    {
+      "id": 142,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "2.00",
+      "stock": 6,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades16_IaYTR6R.jpg"
+    },
+    {
+      "id": 143,
+      "original_name": "Shades",
+      "name": "New Season Shades - Sunglasses for Professional Use",
+      "brand": "New Season",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality New Season accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "new season",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades20.jpg"
+    },
+    {
+      "id": 144,
+      "original_name": "Shades",
+      "name": "Newmew Shades - Sunglasses for Professional Use",
+      "brand": "Newmew",
+      "category": "Accessories",
+      "description": {
+        "short": "Quality newmew accessories item with excellent functionality.",
+        "detailed": "shades, sunglasses, eyewear, UV-ray protection, fashion, luxury This accessories product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/shades_01.jpg",
+        "/images/shades_lifestyle.jpg",
+        "/images/shades_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "White",
+          "Grey"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "accessories",
+        "newmew",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 3,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "shades23.jpg"
+    },
+    {
+      "id": 145,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "wristwatch, Men's watch set, fossils watch, Luxury watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_7.jpg"
+    },
+    {
+      "id": 146,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "wristwatch, Men's watch set, fossils watch, Luxury watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "4.00",
+      "stock": 2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_18.jpg"
+    },
+    {
+      "id": 147,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "wristwatch, Men's watch set, fossils watch, Luxury watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_14.jpg"
+    },
+    {
+      "id": 148,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "wristwatch, Men's watch set, fossils watch, Luxury watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 2,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_14_XNp8KbT.jpg"
+    },
+    {
+      "id": 149,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "wristwatch, Men's watch set, fossils watch, Luxury watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "2.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_17.jpg"
+    },
+    {
+      "id": 150,
+      "original_name": "Men's Watch",
+      "name": "Fossils, Watch Men's Watch",
+      "brand": "Fossils, Watch",
+      "category": "Watches",
+      "description": {
+        "short": "Reliable fossils, watch timepiece with classic design and accurate timekeeping.",
+        "detailed": "wristwatch, Men's watch set, fossils watch, Luxury watch  This watches product offers premium quality and reliable performance for everyday use.",
+        "highlights": [
+          "Premium quality construction",
+          "Durable materials",
+          "Comfortable fit",
+          "Professional design",
+          "Versatile styling",
+          "Long-lasting durability"
+        ]
+      },
+      "images": [
+        "/images/men's_watch_01.jpg",
+        "/images/men's_watch_lifestyle.jpg",
+        "/images/men's_watch_detail.jpg"
+      ],
+      "variants": {
+        "sizes": [],
+        "colors": [
+          "Black",
+          "Silver",
+          "Gold",
+          "Brown"
+        ],
+        "other": {}
+      },
+      "tags": [
+        "watches",
+        "fossils, watch",
+        "quality",
+        "professional",
+        "comfortable",
+        "durable",
+        "everyday",
+        "versatile"
+      ],
+      "price": "3.00",
+      "stock": 5,
+      "rating": null,
+      "numReviews": 0,
+      "image_file": "w14_12.jpg"
+    }
+  ]
+}

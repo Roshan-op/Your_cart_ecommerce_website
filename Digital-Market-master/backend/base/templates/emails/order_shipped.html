@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .email-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .email-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .order-id {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .email-body {
+            padding: 40px 20px;
+        }
+        .email-body h2 {
+            color: #333333;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .email-body p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .tracking-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .tracking-label {
+            color: #999999;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .tracking-number {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333333;
+            font-family: monospace;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .email-footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+            color: #999999;
+            font-size: 12px;
+        }
+        .highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .shipped-badge {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>📦 Your Order Has Shipped!</h1>
+            <div class="order-id">Order #{{ order_id }}</div>
+        </div>
+        
+        <div class="email-body">
+            <h2>Hello {{ user_name }},</h2>
+            
+            <p>Great news! Your order has been shipped and is on its way to you.</p>
+            
+            <div class="shipped-badge">✓ Shipped</div>
+            
+            {% if tracking_number %}
+            <div class="tracking-box">
+                <div class="tracking-label">Tracking Number</div>
+                <div class="tracking-number">{{ tracking_number }}</div>
+                <p style="color: #999999; font-size: 12px; margin-top: 10px;">Track your package using the carrier's website</p>
+            </div>
+            {% endif %}
+            
+            <p>Your package should arrive within 5-7 business days. You can monitor the delivery progress at any time using your tracking number.</p>
+            
+            <p><strong>What to expect:</strong></p>
+            <ul style="margin-left: 20px; color: #666666; line-height: 1.8;">
+                <li>Your package will arrive in {{ shop_name }} branded packaging</li>
+                <li>A signature may be required upon delivery</li>
+                <li>If you have any issues, contact our support team immediately</li>
+            </ul>
+            
+            <p style="margin-top: 20px;">Thank you for your purchase and for choosing <span class="highlight">{{ shop_name }}</span>. We hope you love your new items!</p>
+            
+            <p>Questions? Our customer support team is here to help.</p>
+        </div>
+        
+        <div class="email-footer">
+            <p>&copy; 2026 {{ shop_name }}. All rights reserved. | Sustainably Stylish, Naturally You.</p>
+            <p>This is an automated email, please do not reply directly.</p>
+        </div>
+    </div>
+</body>
+</html>

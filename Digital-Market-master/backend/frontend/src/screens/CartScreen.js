@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 import {
   Row,
   Col,
@@ -10,28 +9,11 @@ import {
   Button,
   Card,
 } from "react-bootstrap";
-import { addToCart, removeFromCart } from "../actions/cartActions";
+import { useCart } from "../context/CartContext";
 import Message from "../components/Message";
 
 function CartScreen({ match, history }) {
-  const Location = useLocation();
-  const productId = match.params.id;
-  const qty = Location.search ? Number(Location.search.split("=")[1]) : 1;
-
-  const dispatch = useDispatch();
-
-  const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
-
-  useEffect(() => {
-    if (productId) {
-      dispatch(addToCart(productId, qty));
-    }
-  }, [dispatch, productId, qty]);
-
-  const removeFromCartHandler = (id) => {
-    dispatch(removeFromCart(id));
-  };
+  const { cartItems, addToCart, removeFromCart } = useCart();
 
   const checkoutHandler = () => {
     history.push("/login?redirect=shipping");
@@ -48,20 +30,22 @@ function CartScreen({ match, history }) {
         ) : (
           <ListGroup variant="flush">
             {cartItems.map((item) => (
-              <ListGroup.Item key={item.product} className="py-3">
+              <ListGroup.Item key={`${item._id}-${item.selectedSize}-${item.selectedGender}`} className="py-3">
                 <div className="cart-item-card d-flex align-items-center">
                   <div className="cart-thumb me-3">
                     <Image src={item.image} alt={item.name} rounded className="cart-img" />
                   </div>
                   <div className="flex-grow-1">
-                    <Link to={`/product/${item.product}`} className="cart-title d-block mb-1">{item.name}</Link>
+                    <Link to={`/product/${item._id}`} className="cart-title d-block mb-1">{item.name}</Link>
                     <div className="cart-price mb-2">Rs.{item.price}</div>
+                    {item.selectedSize && <div style={{ fontSize: '0.85em', color: '#666' }}>Size: <strong>{item.selectedSize}</strong></div>}
+                    {item.selectedGender && <div style={{ fontSize: '0.85em', color: '#666' }}>Gender: <strong>{item.selectedGender}</strong></div>}
                   </div>
 
                   <div className="qty-controls d-flex flex-column align-items-center">
                     <button
                       className="qty-btn"
-                      onClick={() => dispatch(addToCart(item.product, Math.min(item.qty + 1, item.countInStock)))}
+                      onClick={() => addToCart(item, item.qty + 1, item.selectedSize, item.selectedGender)}
                       aria-label={`Increase quantity for ${item.name}`}
                     >
                       +
@@ -70,7 +54,7 @@ function CartScreen({ match, history }) {
                     <button
                       className="qty-btn"
                       onClick={() => {
-                        if (item.qty > 1) dispatch(addToCart(item.product, item.qty - 1));
+                        if (item.qty > 1) addToCart(item, item.qty - 1, item.selectedSize, item.selectedGender);
                       }}
                       aria-label={`Decrease quantity for ${item.name}`}
                     >
@@ -79,7 +63,7 @@ function CartScreen({ match, history }) {
                   </div>
 
                   <div className="ms-3">
-                    <Button variant="light" onClick={() => removeFromCartHandler(item.product)} aria-label={`Remove ${item.name}`}>
+                    <Button variant="light" onClick={() => removeFromCart(item._id)} aria-label={`Remove ${item.name}`}>
                       <i className="fas fa-trash"></i>
                     </Button>
                   </div>

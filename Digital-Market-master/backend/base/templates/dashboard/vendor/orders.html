@@ -1,0 +1,353 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}My Orders - Vendor Dashboard{% endblock %}
+
+{% block extra_css %}
+<style>
+    .page-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .search-box {
+        flex: 1;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: white;
+        padding: 10px 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+
+    .search-box input {
+        border: none;
+        outline: none;
+        background: transparent;
+        flex: 1;
+        font-size: 14px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        border: 1px solid #e5e7eb;
+        background: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s;
+    }
+
+    .filter-btn.active {
+        background: #1e3a8a;
+        color: white;
+        border-color: #1e3a8a;
+    }
+
+    .table-responsive {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead th {
+        background: #f9fafb;
+        padding: 16px;
+        text-align: left;
+        font-size: 12px;
+        font-weight: 600;
+        color: #6b7280;
+        border-bottom: 1px solid #e5e7eb;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    tbody td {
+        padding: 16px;
+        border-bottom: 1px solid #f3f4f6;
+        font-size: 14px;
+        color: #1f2937;
+    }
+
+    tbody tr:hover {
+        background: #f9fafb;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .status-delivered {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    .status-pending {
+        background: #fef3c7;
+        color: #d97706;
+    }
+
+    .status-processing {
+        background: #dbeafe;
+        color: #1e40af;
+    }
+
+    .status-shipped {
+        background: #e0e7ff;
+        color: #4f46e5;
+    }
+
+    .payment-status {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .payment-paid {
+        background: #d1fae5;
+        color: #047857;
+    }
+
+    .payment-unpaid {
+        background: #fee2e2;
+        color: #dc2626;
+    }
+
+    .customer-info {
+        font-size: 13px;
+    }
+
+    .customer-name {
+        font-weight: 500;
+        color: #1f2937;
+    }
+
+    .customer-email {
+        color: #6b7280;
+        font-size: 12px;
+    }
+
+    .action-menu {
+        position: relative;
+    }
+
+    .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        color: #9ca3af;
+        transition: color 0.2s;
+    }
+
+    .action-btn:hover {
+        color: #1f2937;
+    }
+
+    .action-dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        min-width: 180px;
+        z-index: 100;
+    }
+
+    .action-menu:hover .action-dropdown {
+        display: block;
+    }
+
+    .action-dropdown a {
+        display: block;
+        padding: 10px 15px;
+        color: #1f2937;
+        text-decoration: none;
+        font-size: 14px;
+        border-bottom: 1px solid #f3f4f6;
+        transition: background 0.2s;
+    }
+
+    .action-dropdown a:last-child {
+        border-bottom: none;
+    }
+
+    .action-dropdown a:hover {
+        background: #f9fafb;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        padding: 8px 12px;
+        border: 1px solid #e5e7eb;
+        background: white;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .pagination button.active {
+        background: #1e3a8a;
+        color: white;
+        border-color: #1e3a8a;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        background: white;
+        border-radius: 12px;
+    }
+
+    .empty-state i {
+        font-size: 48px;
+        color: #d1d5db;
+        margin-bottom: 15px;
+    }
+
+    .empty-state h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 10px;
+    }
+
+    .empty-state p {
+        color: #6b7280;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">My Orders</h1>
+    <p class="page-subtitle">Track and manage your customer orders</p>
+</div>
+
+<div class="page-controls">
+    <div class="search-box">
+        <i class="fas fa-search" style="color: #9ca3af;"></i>
+        <input type="text" placeholder="Search order ID...">
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active">All Orders</button>
+        <button class="filter-btn">Processing</button>
+        <button class="filter-btn">Shipped</button>
+        <button class="filter-btn">Delivered</button>
+    </div>
+</div>
+
+{% if orders %}
+<div class="table-responsive">
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Customer</th>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Order Status</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>
+                    {% for item in order.orderitem_set.all %}
+                        {% if forloop.first %}{{ item.name|truncatewords:2 }}{% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    <div class="customer-info">
+                        <div class="customer-name">{{ order.user.get_full_name|default:order.user.username }}</div>
+                        <div class="customer-email">{{ order.user.email }}</div>
+                    </div>
+                </td>
+                <td><strong>#{{ order.display_id }}</strong></td>
+                <td>{{ order.createdAt|date:"M d, Y" }}</td>
+                <td><strong>${{ order.totalPrice|floatformat:2 }}</strong></td>
+                <td>
+                    {% if order.isDelivered %}
+                        <span class="status-badge status-delivered">Delivered</span>
+                    {% elif order.isShipped %}
+                        <span class="status-badge status-shipped">Shipped</span>
+                    {% else %}
+                        <span class="status-badge status-processing">Processing</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if order.ispaid %}
+                        <span class="payment-status payment-paid">✓ Paid</span>
+                    {% else %}
+                        <span class="payment-status payment-unpaid">✕ Unpaid</span>
+                    {% endif %}
+                </td>
+                <td>
+                    <div class="action-menu">
+                        <button class="action-btn"><i class="fas fa-ellipsis-v"></i></button>
+                        <div class="action-dropdown">
+                            <a href="#">View Order Details</a>
+                            <a href="#">Print Invoice</a>
+                            <a href="#">Mark as Shipped</a>
+                            <a href="#">Mark as Delivered</a>
+                            <a href="#">Send Message</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <button>←</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>→</button>
+</div>
+
+{% else %}
+<div class="empty-state">
+    <i class="fas fa-inbox"></i>
+    <h3>No Orders Yet</h3>
+    <p>You don't have any orders yet. Once customers start ordering, they'll appear here.</p>
+</div>
+{% endif %}
+
+{% endblock %}
