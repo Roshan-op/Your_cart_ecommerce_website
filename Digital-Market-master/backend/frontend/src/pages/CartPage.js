@@ -71,6 +71,7 @@ const CartPage = () => {
                       <p className="text-2xl font-bold text-accent mt-2">Rs. {item.price}</p>
                       {item.selectedSize && <p className="text-sm text-gray-600 mt-2">Size: <strong>{item.selectedSize}</strong></p>}
                       {item.selectedGender && <p className="text-sm text-gray-600">Gender: <strong>{item.selectedGender}</strong></p>}
+                      {item.selectedColor && <p className="text-sm text-gray-600">Color: <strong>{item.selectedColor}</strong></p>}
                     </div>
 
                     {/* Quantity & Actions */}

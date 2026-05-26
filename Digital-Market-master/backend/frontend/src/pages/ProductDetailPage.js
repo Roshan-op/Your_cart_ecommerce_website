@@ -20,10 +20,11 @@ const ProductDetailPage = () => {
   const { isInWishlist, toggleWishlist } = useWishlist();
   const [isWishlisted, setIsWishlisted] = useState(false);
   
-  // New state for sizes, gender, and images
+  // New state for sizes, gender, images, and colors
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
   const [mainImage, setMainImage] = useState("");
+  const [selectedColor, setSelectedColor] = useState("");
 
   // Fetch product details on component mount
   useEffect(() => {
@@ -49,6 +50,19 @@ const ProductDetailPage = () => {
         // Set gender
         if (data.gender) {
           setSelectedGender(data.gender);
+        }
+
+        // Set default color if variants exist
+        const colorVariants = data.name && data.name.toLowerCase().includes('shoes') 
+          ? [
+              { name: 'Red', color: '#EF4444', image: data.image },
+              { name: 'Gray', color: '#6B7280', image: data.image },
+              { name: 'White', color: '#FFFFFF', image: data.image }
+            ]
+          : [];
+        
+        if (colorVariants.length > 0) {
+          setSelectedColor('Red');
         }
 
         // Fetch recommendations
@@ -98,6 +112,31 @@ const ProductDetailPage = () => {
     return [];
   };
 
+  // Get color variants for specific products (mainly for shoes and apparel)
+  const getColorVariants = () => {
+    if (!product) return [];
+    
+    // Check if product name contains "Shoes" or "shoes"
+    if (product.name && product.name.toLowerCase().includes('shoes')) {
+      return [
+        { name: 'Red', color: '#EF4444', image: product.image }, // Uses main image as red
+        { name: 'Gray', color: '#6B7280', image: product.image }, // Can be replaced with actual gray shoe image
+        { name: 'White', color: '#FFFFFF', image: product.image } // Can be replaced with actual white shoe image
+      ];
+    }
+    
+    // Expand for other clothing items
+    if (product.name && (product.name.toLowerCase().includes('shirt') || product.name.toLowerCase().includes('jacket'))) {
+      return [
+        { name: 'Red', color: '#EF4444', image: product.image },
+        { name: 'Gray', color: '#6B7280', image: product.image },
+        { name: 'White', color: '#FFFFFF', image: product.image }
+      ];
+    }
+    
+    return [];
+  };
+
   const genderDisplay = {
     'male': '👨 Male',
     'female': '👩 Female',
@@ -111,9 +150,14 @@ const ProductDetailPage = () => {
         alert('⚠️ Please select a size');
         return;
       }
-      addToCart(product, quantity, selectedSize, selectedGender);
+      // Check if color is required
+      if (getColorVariants().length > 0 && !selectedColor) {
+        alert('⚠️ Please select a color');
+        return;
+      }
+      addToCart(product, quantity, selectedSize, selectedGender, selectedColor);
       // Show confirmation
-      alert(`✓ Added ${quantity} ${quantity > 1 ? 'items' : 'item'} to cart!`);
+      alert(`✓ Added ${quantity} ${quantity > 1 ? 'items' : 'item'} (${selectedColor || 'default'}) to cart!`);
       // Reset quantity
       setQuantity(1);
     }
@@ -294,6 +338,39 @@ const ProductDetailPage = () => {
                         }`}
                       >
                         {size}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Color Selection */}
+              {getColorVariants().length > 0 && (
+                <div className="mb-6">
+                  <span className="text-primary font-semibold block mb-3">Select Color:</span>
+                  <div className="flex flex-wrap gap-3">
+                    {getColorVariants().map((colorOption) => (
+                      <button
+                        key={colorOption.name}
+                        onClick={() => {
+                          setSelectedColor(colorOption.name);
+                          setMainImage(colorOption.image);
+                        }}
+                        className={`flex items-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all ${
+                          selectedColor === colorOption.name
+                            ? 'bg-accent text-white ring-2 ring-offset-2 ring-accent'
+                            : 'border-2 border-primary text-primary hover:bg-beige'
+                        }`}
+                      >
+                        {/* Color Circle Indicator */}
+                        <div
+                          className="w-6 h-6 rounded-full border-2"
+                          style={{
+                            backgroundColor: colorOption.color,
+                            borderColor: colorOption.color === '#FFFFFF' ? '#000' : colorOption.color,
+                          }}
+                        />
+                        {colorOption.name}
                       </button>
                     ))}
                   </div>

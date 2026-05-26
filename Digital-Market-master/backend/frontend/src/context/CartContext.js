@@ -40,19 +40,19 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   // Add item to cart
-  const addToCart = useCallback((product, quantity = 1, size = '', gender = '') => {
-    const existingItem = cartItems.find(item => item._id === product._id && item.selectedSize === size && item.selectedGender === gender);
+  const addToCart = useCallback((product, quantity = 1, size = '', gender = '', color = '') => {
+    const existingItem = cartItems.find(item => item._id === product._id && item.selectedSize === size && item.selectedGender === gender && item.selectedColor === color);
 
     if (existingItem) {
-      // Increase quantity if same product with same size/gender in cart
+      // Increase quantity if same product with same size/gender/color in cart
       setCartItems(cartItems.map(item =>
-        item._id === product._id && item.selectedSize === size && item.selectedGender === gender
+        item._id === product._id && item.selectedSize === size && item.selectedGender === gender && item.selectedColor === color
           ? { ...item, qty: (item.qty || 1) + quantity }
           : item
       ));
     } else {
-      // Add new item to cart with size and gender
-      setCartItems([...cartItems, { ...product, qty: quantity, selectedSize: size, selectedGender: gender }]);
+      // Add new item to cart with size, gender, and color
+      setCartItems([...cartItems, { ...product, qty: quantity, selectedSize: size, selectedGender: gender, selectedColor: color }]);
     }
   }, [cartItems]);
 

@@ -40,6 +40,7 @@ function CartScreen({ match, history }) {
                     <div className="cart-price mb-2">Rs.{item.price}</div>
                     {item.selectedSize && <div style={{ fontSize: '0.85em', color: '#666' }}>Size: <strong>{item.selectedSize}</strong></div>}
                     {item.selectedGender && <div style={{ fontSize: '0.85em', color: '#666' }}>Gender: <strong>{item.selectedGender}</strong></div>}
+                    {item.selectedColor && <div style={{ fontSize: '0.85em', color: '#666' }}>Color: <strong>{item.selectedColor}</strong></div>}
                   </div>
 
                   <div className="qty-controls d-flex flex-column align-items-center">
