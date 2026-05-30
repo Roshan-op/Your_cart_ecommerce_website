@@ -11,6 +11,7 @@ import ShopPage from "./pages/ShopPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 import LoginPage from "./pages/LoginPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -38,6 +39,7 @@ function App() {
             <Route path="/product/:id" component={ProductDetailPage} />
             <Route path="/cart" component={CartPage} />
             <Route path="/checkout" component={CheckoutPage} />
+            <Route path="/payment-success/:id" component={PaymentSuccessPage} />
             <Route path="/login" component={LoginPage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />

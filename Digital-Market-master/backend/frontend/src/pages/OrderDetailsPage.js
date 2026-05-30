@@ -3,7 +3,6 @@ import { Navbar, Loading } from '../components';
 import Footer from '../components/Footer';
 import { useAuth } from '../context/AuthContext';
 import { orderAPI, apiUtils } from '../api/api';
-import KhaltiCheckout from 'khalti-checkout-web';
 
 const OrderDetailsPage = ({ match, history }) => {
   const { user, isAuthenticated } = useAuth();
@@ -11,8 +10,6 @@ const OrderDetailsPage = ({ match, history }) => {
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [loadingPay, setLoadingPay] = useState(false);
-  const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   // Fetch order details
   useEffect(() => {
@@ -35,63 +32,6 @@ const OrderDetailsPage = ({ match, history }) => {
 
     fetchOrder();
   }, [orderId, isAuthenticated, history]);
-
-  // Initialize Khalti Checkout
-  const initializeKhaltiPayment = () => {
-    if (!order) return;
-
-    const config = {
-      publicKey: 'test_public_key_37cb6b253b0f4ae5824d4d48bca676e3',
-      productIdentity: String(order._id),
-      productName: order.orderItems[0]?.name || 'Order Payment',
-      productUrl: `http://localhost:3000/order/${order._id}`,
-      amount: Math.ceil(order.totalPrice * 100), // Khalti expects amount in paisa (1 Rs = 100 paisa)
-      eventHandler: {
-        onSuccess(payload) {
-          handlePaymentSuccess(payload);
-        },
-        onError(error) {
-          console.error('Payment error:', error);
-          setError('Payment failed: ' + error.message);
-        },
-        onClose() {
-          console.log('Payment widget closed');
-        },
-      },
-      paymentPreference: [
-        'KHALTI',
-        'EBANKING',
-        'MOBILE_BANKING',
-        'CONNECT_IPS',
-        'SCT',
-      ],
-    };
-
-    const checkout = new KhaltiCheckout(config);
-    checkout.show({ amount: Math.ceil(order.totalPrice * 100) });
-  };
-
-  // Handle successful payment
-  const handlePaymentSuccess = async (payload) => {
-    try {
-      setLoadingPay(true);
-      setError(null);
-
-      // Verify payment on backend
-      await orderAPI.markAsPaid(orderId);
-
-      // Show success state
-      setPaymentSuccess(true);
-      
-      // Refresh order details
-      const updatedOrder = await orderAPI.getOrder(orderId);
-      setOrder(updatedOrder);
-    } catch (err) {
-      setError('Payment verification failed: ' + err.message);
-    } finally {
-      setLoadingPay(false);
-    }
-  };
 
   if (!isAuthenticated) {
     return (
@@ -143,58 +83,6 @@ const OrderDetailsPage = ({ match, history }) => {
 
   return (
     <div className="min-h-screen bg-light flex flex-col">
-      {/* Payment Success Overlay */}
-      {paymentSuccess && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 p-8 text-center animate-fadeIn">
-            {/* Success Checkmark */}
-            <div className="mb-6 flex justify-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-10 h-10 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold text-primary mb-3">Payment Successful!</h2>
-            <p className="text-gray-600 mb-2">Your order has been confirmed</p>
-            <p className="text-sm text-gray-500 mb-6">Order ID: #{order._id}</p>
-
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
-              <p className="text-green-700 font-semibold mb-2">✓ Payment Received</p>
-              <p className="text-green-600 text-sm">
-                Thank you for your purchase. A confirmation email has been sent to {order.user?.email}
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <button
-                onClick={() => history.push('/')}
-                className="w-full bg-primary text-light px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
-              >
-                Continue Shopping
-              </button>
-              <button
-                onClick={() => setPaymentSuccess(false)}
-                className="w-full bg-gray-100 text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all"
-              >
-                View Order Details
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       <Navbar />
 
       <main className="flex-grow py-12">
@@ -300,13 +188,9 @@ const OrderDetailsPage = ({ match, history }) => {
                 </div>
 
                 {!order.ispaid && (
-                  <button
-                    onClick={initializeKhaltiPayment}
-                    disabled={loadingPay}
-                    className="w-full bg-primary text-light px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all disabled:opacity-50"
-                  >
-                    {loadingPay ? 'Processing...' : 'Pay with Khalti'}
-                  </button>
+                  <div className="w-full bg-yellow-100 text-yellow-700 px-6 py-3 rounded-lg font-semibold text-center">
+                    ⏳ Awaiting Payment
+                  </div>
                 )}
 
                 {order.ispaid && (
@@ -314,18 +198,6 @@ const OrderDetailsPage = ({ match, history }) => {
                     ✓ Payment Completed
                   </div>
                 )}
-
-                {/* Payment Methods Info */}
-                <div className="mt-6 pt-6 border-t text-sm text-gray-600 space-y-2">
-                  <p className="font-semibold text-primary">Payment Methods:</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Khalti</li>
-                    <li>E-Banking</li>
-                    <li>Mobile Banking</li>
-                    <li>Connect IPS</li>
-                    <li>SCT</li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import KhaltiCheckout from "khalti-checkout-web";
 import { Navbar } from '../components';
 import Footer from '../components/Footer';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
+import { initiateKhaltiPayment } from '../services/khaltiService';
 
 const CheckoutPage = ({ history }) => {
   const { cartItems, getTotalPrice, createOrder, loading: cartLoading } = useCart();
   const { user, isAuthenticated } = useAuth();
   const [step, setStep] = useState(1);
-  const [paymentMethod, setPaymentMethod] = useState('khalti');
+  const [paymentMethod, setPaymentMethod] = useState('card');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
@@ -79,81 +79,21 @@ const CheckoutPage = ({ history }) => {
         // Create order
         const order = await createOrder(shippingAddress, paymentMethod);
 
-        // Handle payment based on method
+        // Handle payment based on selected method
         if (paymentMethod === 'khalti') {
-          // Initialize Khalti payment
-          const khaltiConfig = {
-            publicKey: "test_public_key_37cb6b253b0f4ae5824d4d48bca676e3",
-            productIdentity: order._id,
-            productName: "Digital Market Order #" + order._id,
-            productUrl: `http://localhost:3000/order/${order._id}`,
-            amount: Math.round((subtotal + shippingPrice + tax) * 100), // Amount in paisa
-            eventHandler: {
-              onSuccess: async (payload) => {
-                try {
-                  // Verify payment with backend
-                  const token = localStorage.getItem('authToken');
-                  const verifyResponse = await fetch('http://127.0.0.1:8000/api/orders/verify-khalti/', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json',
-                      'Authorization': `Bearer ${token}`,
-                    },
-                    body: JSON.stringify({
-                      orderId: order._id,
-                      khaltiToken: payload.token,
-                      khaltiAmount: payload.amount,
-                    }),
-                  });
-
-                  const responseData = await verifyResponse.json();
-                  
-                  if (verifyResponse.ok) {
-                    // Payment verified successfully
-                    setLoading(false);
-                    if (history) history.push(`/order/${order._id}?payment=success`);
-                    else window.location.href = `/order/${order._id}?payment=success`;
-                  } else {
-                    throw new Error(responseData.error || 'Payment verification failed');
-                  }
-                } catch (verifyError) {
-                  console.error('Khalti verification error:', verifyError);
-                  setError('Payment verification failed: ' + verifyError.message);
-                  setLoading(false);
-                }
-              },
-              onError: (error) => {
-                console.error('Khalti payment error:', error);
-                setError('Payment failed: ' + (error.message || 'Unknown error'));
-                setLoading(false);
-              },
-              onClose: () => {
-                console.log("Khalti widget closed");
-                setLoading(false);
-              },
-            },
-            paymentPreference: [
-              "KHALTI",
-              "EBANKING",
-              "MOBILE_BANKING",
-              "CONNECT_IPS",
-              "SCT",
-            ],
-          };
-
-          // Initialize and show Khalti checkout
-          const checkout = new KhaltiCheckout(khaltiConfig);
-          checkout.show();
-        } else if (paymentMethod === 'cod') {
-          // Cash on Delivery - go directly to order confirmation
+          // Initiate Khalti payment
           setLoading(false);
-          if (history) history.push(`/order/${order._id}`);
-          else window.location.href = `/order/${order._id}`;
+          initiateKhaltiPayment({
+            orderId: order._id,
+            totalPrice: total,
+            phone: formData.phone,
+            email: formData.email,
+          });
         } else {
-          // Other payment methods
+          // Card payment - redirect to success page
           setLoading(false);
-          if (history) history.push(`/order/${order._id}`);
-          else window.location.href = `/order/${order._id}`;
+          if (history) history.push(`/payment-success/${order._id}`);
+          else window.location.href = `/payment-success/${order._id}`;
         }
       } catch (err) {
         setError(err.message || 'Failed to place order');
@@ -325,25 +265,45 @@ const CheckoutPage = ({ history }) => {
                       <h2 className="font-bold text-2xl mb-6">Payment Method</h2>
 
                       <div className="space-y-4">
-                        {[
-                          { id: 'khalti', name: 'Khalti', icon: '🏦' },
-                          { id: 'esewa', name: 'eSewa', icon: '💳' },
-                          { id: 'cod', name: 'Cash on Delivery', icon: '🚚' },
-                        ].map((method) => (
-                          <label key={method.id} className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-accent transition-colors">
-                            <input
-                              type="radio"
-                              name="payment"
-                              value={method.id}
-                              checked={paymentMethod === method.id}
-                              onChange={(e) => setPaymentMethod(e.target.value)}
-                              disabled={loading}
-                              className="w-4 h-4 text-accent"
-                            />
-                            <span className="ml-4 text-2xl">{method.icon}</span>
-                            <span className="ml-4 font-semibold text-primary">{method.name}</span>
-                          </label>
-                        ))}
+                        <label className="flex items-center p-4 border-2 border-accent bg-blue-50 rounded-lg cursor-pointer">
+                          <input
+                            type="radio"
+                            name="payment"
+                            value="card"
+                            checked={paymentMethod === 'card'}
+                            onChange={(e) => setPaymentMethod(e.target.value)}
+                            disabled={loading}
+                            className="w-4 h-4 text-accent"
+                          />
+                          <span className="ml-4 text-2xl">💳</span>
+                          <div className="ml-4">
+                            <span className="font-semibold text-primary block">Credit/Debit Card</span>
+                            <span className="text-sm text-gray-600">Visa, Mastercard, or other payment cards</span>
+                          </div>
+                        </label>
+
+                        <label className="flex items-center p-4 border-2 border-purple-300 bg-purple-50 rounded-lg cursor-pointer">
+                          <input
+                            type="radio"
+                            name="payment"
+                            value="khalti"
+                            checked={paymentMethod === 'khalti'}
+                            onChange={(e) => setPaymentMethod(e.target.value)}
+                            disabled={loading}
+                            className="w-4 h-4 text-accent"
+                          />
+                          <span className="ml-4 text-2xl">📱</span>
+                          <div className="ml-4">
+                            <span className="font-semibold text-primary block">Khalti Digital Wallet</span>
+                            <span className="text-sm text-gray-600">Fast and secure payment with Khalti</span>
+                          </div>
+                        </label>
+                      </div>
+
+                      <div className="mt-6 p-4 bg-blue-100 border border-blue-300 rounded-lg">
+                        <p className="text-sm text-blue-800">
+                          <strong>ℹ️ Note:</strong> Your payment information is securely processed. You will be redirected to a secure payment gateway after clicking "Place Order".
+                        </p>
                       </div>
                     </div>
                   )}
@@ -382,7 +342,7 @@ const CheckoutPage = ({ history }) => {
                       <span className="text-gray-600">
                         {item.name} x {item.qty || 1}
                       </span>
-                      <span className="font-semibold">Rs. {(item.price * (item.qty || 1)).toFixed(2)}</span>
+                      <span className="font-semibold">Rs. {(Number(item.price) * (item.qty || 1)).toFixed(2)}</span>
                     </div>
                   ))}
                 </div>

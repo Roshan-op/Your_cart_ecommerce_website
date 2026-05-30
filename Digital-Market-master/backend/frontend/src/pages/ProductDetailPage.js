@@ -25,6 +25,7 @@ const ProductDetailPage = () => {
   const [selectedGender, setSelectedGender] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
+  const [colorUnavailableMessage, setColorUnavailableMessage] = useState("");
 
   // Fetch product details on component mount
   useEffect(() => {
@@ -55,14 +56,16 @@ const ProductDetailPage = () => {
         // Set default color if variants exist
         const colorVariants = data.name && data.name.toLowerCase().includes('shoes') 
           ? [
-              { name: 'Red', color: '#EF4444', image: data.image },
-              { name: 'Gray', color: '#6B7280', image: data.image },
-              { name: 'White', color: '#FFFFFF', image: data.image }
+              { name: 'Default', color: '#94A3B8', image: data.image, available: true },
+              { name: 'Red', color: '#EF4444', image: data.image, available: false },
+              { name: 'Gray', color: '#6B7280', image: data.image, available: false },
+              { name: 'White', color: '#FFFFFF', image: data.image, available: false }
             ]
           : [];
         
         if (colorVariants.length > 0) {
-          setSelectedColor('Red');
+          setSelectedColor('Default');
+          setColorUnavailableMessage('');
         }
 
         // Fetch recommendations
@@ -119,18 +122,20 @@ const ProductDetailPage = () => {
     // Check if product name contains "Shoes" or "shoes"
     if (product.name && product.name.toLowerCase().includes('shoes')) {
       return [
-        { name: 'Red', color: '#EF4444', image: product.image }, // Uses main image as red
-        { name: 'Gray', color: '#6B7280', image: product.image }, // Can be replaced with actual gray shoe image
-        { name: 'White', color: '#FFFFFF', image: product.image } // Can be replaced with actual white shoe image
+        { name: 'Default', color: '#94A3B8', image: product.image, available: true },
+        { name: 'Red', color: '#EF4444', image: product.image, available: false },
+        { name: 'Gray', color: '#6B7280', image: product.image, available: false },
+        { name: 'White', color: '#FFFFFF', image: product.image, available: false }
       ];
     }
     
     // Expand for other clothing items
     if (product.name && (product.name.toLowerCase().includes('shirt') || product.name.toLowerCase().includes('jacket'))) {
       return [
-        { name: 'Red', color: '#EF4444', image: product.image },
-        { name: 'Gray', color: '#6B7280', image: product.image },
-        { name: 'White', color: '#FFFFFF', image: product.image }
+        { name: 'Default', color: '#94A3B8', image: product.image, available: true },
+        { name: 'Red', color: '#EF4444', image: product.image, available: false },
+        { name: 'Gray', color: '#6B7280', image: product.image, available: false },
+        { name: 'White', color: '#FFFFFF', image: product.image, available: false }
       ];
     }
     
@@ -155,6 +160,14 @@ const ProductDetailPage = () => {
         alert('⚠️ Please select a color');
         return;
       }
+      
+      // Verify selected color is available
+      const selectedColorOption = getColorVariants().find(c => c.name === selectedColor);
+      if (selectedColorOption && !selectedColorOption.available) {
+        alert(`⚠️ ${selectedColor} color is not available at the moment`);
+        return;
+      }
+      
       addToCart(product, quantity, selectedSize, selectedGender, selectedColor);
       // Show confirmation
       alert(`✓ Added ${quantity} ${quantity > 1 ? 'items' : 'item'} (${selectedColor || 'default'}) to cart!`);
@@ -353,27 +366,46 @@ const ProductDetailPage = () => {
                       <button
                         key={colorOption.name}
                         onClick={() => {
-                          setSelectedColor(colorOption.name);
-                          setMainImage(colorOption.image);
+                          if (colorOption.available) {
+                            setSelectedColor(colorOption.name);
+                            setMainImage(colorOption.image);
+                            setColorUnavailableMessage('');
+                          } else {
+                            setColorUnavailableMessage(`${colorOption.name} is not available at the moment`);
+                            setTimeout(() => setColorUnavailableMessage(''), 3000);
+                          }
                         }}
+                        disabled={!colorOption.available}
                         className={`flex items-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all ${
                           selectedColor === colorOption.name
                             ? 'bg-accent text-white ring-2 ring-offset-2 ring-accent'
-                            : 'border-2 border-primary text-primary hover:bg-beige'
+                            : colorOption.available
+                            ? 'border-2 border-primary text-primary hover:bg-beige'
+                            : 'border-2 border-gray-300 text-gray-400 cursor-not-allowed opacity-60'
                         }`}
                       >
                         {/* Color Circle Indicator */}
                         <div
-                          className="w-6 h-6 rounded-full border-2"
+                          className={`w-6 h-6 rounded-full border-2 ${
+                            !colorOption.available ? 'opacity-50' : ''
+                          }`}
                           style={{
                             backgroundColor: colorOption.color,
                             borderColor: colorOption.color === '#FFFFFF' ? '#000' : colorOption.color,
                           }}
                         />
                         {colorOption.name}
+                        {!colorOption.available && (
+                          <span className="text-xs ml-1 opacity-75">N/A</span>
+                        )}
                       </button>
                     ))}
                   </div>
+                  {colorUnavailableMessage && (
+                    <div className="mt-3 p-3 bg-orange-100 border border-orange-300 rounded-lg text-orange-700 text-sm font-semibold">
+                      ⚠️ {colorUnavailableMessage}
+                    </div>
+                  )}
                 </div>
               )}
 

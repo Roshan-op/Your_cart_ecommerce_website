@@ -93,14 +93,15 @@ def getMyOrders(request):
         
         for item in items:
             vendor = item.product.user
-            vendors_set.add(vendor.email)
+            if vendor:  # Check if vendor exists
+                vendors_set.add(vendor.email)
             
             order_dict['items'].append({
                 'name': item.name,
                 'qty': item.qty,
                 'price': float(item.price),
-                'vendor': vendor.email,
-                'vendorName': vendor.get_full_name() or vendor.username,
+                'vendor': vendor.email if vendor else 'Unknown',
+                'vendorName': (vendor.get_full_name() or vendor.username) if vendor else 'Unknown',
                 'image': item.image
             })
         

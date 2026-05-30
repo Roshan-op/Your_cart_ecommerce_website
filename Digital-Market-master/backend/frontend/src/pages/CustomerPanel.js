@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { useWishlist } from '../context/WishlistContext';
 import { Navbar } from '../components';
 import Footer from '../components/Footer';
-import { ShoppingBag, MapPin, LogOut, Edit2, Heart, Eye, Trash2 } from 'lucide-react';
+import { ShoppingBag, MapPin, LogOut, Edit2, Heart, Trash2 } from 'lucide-react';
 
 const CustomerPanel = ({ history }) => {
   const { user, isAuthenticated, logout, updateProfile } = useAuth();
@@ -20,7 +20,7 @@ const CustomerPanel = ({ history }) => {
     phone: '',
   });
 
-  // Check customer access
+  // Check customer access and fetch orders on mount
   useEffect(() => {
     if (!isAuthenticated) {
       history.push('/login');
@@ -39,27 +39,47 @@ const CustomerPanel = ({ history }) => {
         phone: user.phone || '',
       });
       
-      fetchOrders();
+      // Fetch orders immediately
+      fetchOrdersData();
     }
     
     setLoading(false);
   }, [isAuthenticated, user, history]);
 
-  const fetchOrders = async () => {
+  const fetchOrdersData = async () => {
     try {
       const token = localStorage.getItem('authToken');
+      if (!token) {
+        console.error('No auth token found');
+        return;
+      }
+      
       const res = await fetch('http://localhost:8000/api/orders/myorders/', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       
       if (res.ok) {
         const ordersData = await res.json();
+        console.log('Orders fetched:', ordersData);
         setOrders(Array.isArray(ordersData) ? ordersData : []);
+      } else {
+        console.error('Failed to fetch orders:', res.status, res.statusText);
       }
     } catch (error) {
       console.error('Error fetching orders:', error);
     }
   };
+
+  const fetchOrders = () => {
+    fetchOrdersData();
+  };
+
+  // Refresh orders when tab changes to orders or component mounts
+  useEffect(() => {
+    if (activeTab === 'orders' && isAuthenticated) {
+      fetchOrders();
+    }
+  }, [activeTab, isAuthenticated]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -271,7 +291,7 @@ const CustomerPanel = ({ history }) => {
                         <div className="flex justify-between items-start mb-4">
                           <div className="flex-1">
                             <p className="text-sm text-gray-600 font-mono">Order ID: {order._id}</p>
-                            <h3 className="text-lg font-bold text-primary mt-1">Total: Rs. {order.totalPrice.toFixed(2)}</h3>
+                            <h3 className="text-lg font-bold text-primary mt-1">Total: Rs. {Number(order.totalPrice).toFixed(2)}</h3>
                             <p className="text-sm text-gray-600 mt-2">
                               Status: <span className={order.ispaid ? 'text-green-500 font-semibold' : 'text-orange-500 font-semibold'}>
                                 {order.ispaid ? '✓ Paid' : '⏳ Pending'}
@@ -300,21 +320,73 @@ const CustomerPanel = ({ history }) => {
 
                         {/* Items Section */}
                         {order.items && order.items.length > 0 && (
-                          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                            <p className="text-sm font-semibold text-gray-700 mb-3">Items:</p>
-                            <div className="space-y-2">
+                          <div className="mt-4">
+                            <p className="text-sm font-semibold text-gray-700 mb-4">📦 Ordered Products:</p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                               {order.items.map((item, idx) => (
-                                <div key={idx} className="flex justify-between items-start p-2 bg-white rounded">
-                                  <div className="flex-1">
-                                    <p className="font-semibold text-gray-900">{item.name}</p>
-                                    <p className="text-xs text-gray-600">Qty: {item.qty} × Rs.{item.price.toFixed(2)}</p>
-                                    {item.vendorName && (
-                                      <p className="text-xs text-blue-600 font-semibold">Vendor: {item.vendorName}</p>
+                                <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition-all transform hover:scale-105">
+                                  {/* Product Image */}
+                                  <div className="h-40 bg-gray-100 flex items-center justify-center overflow-hidden">
+                                    {item.image ? (
+                                      <img
+                                        src={item.image.includes('http') ? item.image : `http://localhost:8000${item.image}`}
+                                        alt={item.name}
+                                        className="w-full h-full object-cover hover:scale-110 transition-transform"
+                                      />
+                                    ) : (
+                                      <div className="text-gray-400 text-center">
+                                        <ShoppingBag size={32} className="mx-auto mb-2" />
+                                        <p className="text-xs">No Image</p>
+                                      </div>
                                     )}
                                   </div>
-                                  <p className="font-semibold text-gray-900">Rs.{(item.qty * item.price).toFixed(2)}</p>
+
+                                  {/* Product Info */}
+                                  <div className="p-4">
+                                    <p className="font-bold text-primary line-clamp-2 mb-2">{item.name}</p>
+                                    <div className="space-y-2 mb-3">
+                                      <p className="text-sm text-gray-600">
+                                        <span className="font-semibold">Quantity:</span> {item.qty}
+                                      </p>
+                                      <p className="text-sm text-gray-600">
+                                        <span className="font-semibold">Price:</span> Rs. {Number(item.price).toFixed(2)}
+                                      </p>
+                                      <p className="text-lg font-bold text-accent">
+                                        Subtotal: Rs. {(item.qty * Number(item.price)).toFixed(2)}
+                                      </p>
+                                    </div>
+                                    {item.vendorName && (
+                                      <p className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded inline-block font-semibold">
+                                        📦 {item.vendorName}
+                                      </p>
+                                    )}
+                                  </div>
                                 </div>
                               ))}
+                            </div>
+
+                            {/* Order Summary */}
+                            <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border border-green-200">
+                              <div className="grid grid-cols-3 gap-4">
+                                <div className="text-center">
+                                  <p className="text-sm text-gray-600">Total Items</p>
+                                  <p className="text-2xl font-bold text-primary mt-1">
+                                    {order.items.reduce((sum, item) => sum + item.qty, 0)}
+                                  </p>
+                                </div>
+                                <div className="text-center border-l border-r border-gray-300">
+                                  <p className="text-sm text-gray-600">Shipping</p>
+                                  <p className="text-2xl font-bold text-accent mt-1">
+                                    Rs. {Number(order.shippingPrice || 0).toFixed(2)}
+                                  </p>
+                                </div>
+                                <div className="text-center">
+                                  <p className="text-sm text-gray-600">Total Order</p>
+                                  <p className="text-2xl font-bold text-green-600 mt-1">
+                                    Rs. {Number(order.totalPrice).toFixed(2)}
+                                  </p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         )}
@@ -376,7 +448,7 @@ const CustomerPanel = ({ history }) => {
                         {/* Product Image */}
                         <Link to={`/product/${item._id}`} className="block overflow-hidden h-48 bg-gray-100">
                           <img
-                            src={item.image}
+                            src={item.image && item.image.includes('http') ? item.image : `http://localhost:8000${item.image || '/media/placeholder.jpg'}`}
                             alt={item.name}
                             className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                           />
