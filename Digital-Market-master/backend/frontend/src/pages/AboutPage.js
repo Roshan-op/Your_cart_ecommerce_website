@@ -12,7 +12,7 @@ const AboutPage = () => {
         {/* Hero */}
         <section className="bg-gradient-to-r from-beige to-mint py-20">
           <div className="container-custom text-center">
-            <h1 className="font-serif text-5xl font-bold text-primary mb-4">About MUSE</h1>
+            <h1 className="font-serif text-5xl font-bold text-primary mb-4">About Your-cart</h1>
             <p className="text-xl text-gray-600">Sustainably Stylish, Naturally You</p>
           </div>
         </section>
@@ -23,17 +23,17 @@ const AboutPage = () => {
             <div>
               <h2 className="font-serif text-4xl font-bold text-primary mb-6">Our Story</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Founded in 2020, MUSE was born from a simple belief: that fashion should never compromise on ethics or sustainability.
+                Founded in 2020, Your-cart was born from a simple belief: that fashion should never compromise on ethics or sustainability.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 We started as a small team passionate about creating premium, eco-friendly fashion pieces that don't sacrifice style. Every product is carefully sourced and crafted with both the planet and our customers in mind.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Today, MUSE serves thousands of customers globally, proving that sustainable fashion isn't just possible—it's the future.
+                Today, Your-cart serves thousands of customers globally, proving that sustainable fashion isn't just possible—it's the future.
               </p>
             </div>
             <img
-              src="/images/watch.avif"
+              src="/images/about.jpg"
               alt="Our Story"
               className="rounded-2xl shadow-lg h-96 object-cover"
             />
@@ -66,9 +66,9 @@ const AboutPage = () => {
             <h2 className="font-serif text-4xl font-bold text-center text-primary mb-16">Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: 'Sarah Johnson', role: 'Founder & CEO', image: '/images/watch.avif' },
-                { name: 'Michael Chen', role: 'Creative Director', image: '/images/watch.avif' },
-                { name: 'Emma Williams', role: 'Sustainability Lead', image: '/images/watch.avif' },
+                { name: 'Roshan Khanal', role: 'Founder & CEO', image: '/images/roshan.jpg' },
+                { name: 'Raghav Bharati', role: 'Creative Director', image: '/images/raghav.png' },
+                { name: 'Anish Rajak', role: 'Sustainability Lead', image: '/images/anish.png' },
               ].map((member, idx) => (
                 <div key={idx} className="card-base text-center overflow-hidden">
                   <img

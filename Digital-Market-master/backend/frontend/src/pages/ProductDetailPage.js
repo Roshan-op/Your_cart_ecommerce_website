@@ -5,6 +5,7 @@ import { Navbar, Button, Loading } from '../components';
 import Footer from '../components/Footer';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
+import { useAuth } from '../context/AuthContext';
 import { productAPI } from '../api/api';
 
 const ProductDetailPage = () => {
@@ -17,8 +18,20 @@ const ProductDetailPage = () => {
   const [recommendations, setRecommendations] = useState([]);
   const [loadingRecommendations, setLoadingRecommendations] = useState(false);
   const { addToCart } = useCart();
-  const { isInWishlist, toggleWishlist } = useWishlist();
+  const { isInWishlist, toggleWishlist, wishlistItems } = useWishlist();
+  const { isAuthenticated } = useAuth();
   const [isWishlisted, setIsWishlisted] = useState(false);
+  
+  // Review management states
+  const [reviews, setReviews] = useState([]);
+  const [loadingReviews, setLoadingReviews] = useState(false);
+  const [reviewForm, setReviewForm] = useState({
+    rating: 5,
+    comment: '',
+  });
+  const [submittingReview, setSubmittingReview] = useState(false);
+  const [reviewError, setReviewError] = useState(null);
+  const [reviewSuccess, setReviewSuccess] = useState(false);
   
   // New state for sizes, gender, images, and colors
   const [selectedSize, setSelectedSize] = useState("");
@@ -97,20 +110,74 @@ const ProductDetailPage = () => {
     fetchProduct();
   }, [id, isInWishlist]);
 
+  // Update wishlist state whenever wishlist context changes
+  useEffect(() => {
+    if (product) {
+      setIsWishlisted(isInWishlist(product._id));
+    }
+  }, [wishlistItems, product, isInWishlist]);
+
+  // Fetch product reviews
+  const fetchReviews = async () => {
+    try {
+      setLoadingReviews(true);
+      const response = await productAPI.getReviews(id);
+      setReviews(response || []);
+    } catch (err) {
+      console.error('Error fetching reviews:', err);
+      setReviews([]);
+    } finally {
+      setLoadingReviews(false);
+    }
+  };
+
+  // Fetch reviews when product changes or tab becomes active
+  useEffect(() => {
+    if (product && activeTab === 'reviews') {
+      fetchReviews();
+    }
+  }, [id, activeTab, product]);
+
+  // Submit review handler
+  const handleSubmitReview = async (e) => {
+    e.preventDefault();
+    
+    if (!isAuthenticated) {
+      alert('Please login to submit a review');
+      return;
+    }
+
+    if (!reviewForm.comment.trim()) {
+      setReviewError('Please write a comment');
+      return;
+    }
+
+    try {
+      setSubmittingReview(true);
+      setReviewError(null);
+      setReviewSuccess(false);
+
+      await productAPI.createReview(id, reviewForm.rating, reviewForm.comment);
+
+      // Reset form
+      setReviewForm({ rating: 5, comment: '' });
+      setReviewSuccess(true);
+
+      // Refetch reviews
+      await fetchReviews();
+
+      // Clear success message after 3 seconds
+      setTimeout(() => setReviewSuccess(false), 3000);
+    } catch (err) {
+      setReviewError(err.message || 'Failed to submit review');
+    } finally {
+      setSubmittingReview(false);
+    }
+  };
+
   const getAvailableSizes = () => {
     if (product && product.available_sizes) {
       return product.available_sizes.split(',').map(s => s.trim());
-    }
-    return [];
-  };
-
-  const getAdditionalImages = () => {
-    if (product && product.additional_images) {
-      try {
-        return JSON.parse(product.additional_images);
-      } catch {
-        return [];
-      }
     }
     return [];
   };
@@ -122,15 +189,15 @@ const ProductDetailPage = () => {
     // Check if product name contains "Shoes" or "shoes"
     if (product.name && product.name.toLowerCase().includes('shoes')) {
       return [
-        { name: 'Default', color: '#94A3B8', image: product.image, available: true },
+        { name: 'Default', color: '#94A3B8', image: '/images/Nike_green.avif', available: true },
         { name: 'Red', color: '#EF4444', image: product.image, available: false },
         { name: 'Gray', color: '#6B7280', image: product.image, available: false },
-        { name: 'White', color: '#FFFFFF', image: product.image, available: false }
+        { name: 'White', color: '#FFFFFF', image: '/images/Nike_white.avif', available: true }
       ];
     }
     
-    // Expand for other clothing items
-    if (product.name && (product.name.toLowerCase().includes('shirt') || product.name.toLowerCase().includes('jacket'))) {
+    // Expand for other clothing items (shirts only)
+    if (product.name && product.name.toLowerCase().includes('shirt')) {
       return [
         { name: 'Default', color: '#94A3B8', image: product.image, available: true },
         { name: 'Red', color: '#EF4444', image: product.image, available: false },
@@ -140,6 +207,29 @@ const ProductDetailPage = () => {
     }
     
     return [];
+  };
+
+  const getAdditionalImages = () => {
+    let images = [];
+    
+    // Get additional images from product
+    if (product && product.additional_images) {
+      try {
+        images = JSON.parse(product.additional_images);
+      } catch {
+        images = [];
+      }
+    }
+    
+    // Add color variant images for shoes
+    if (product && product.name && product.name.toLowerCase().includes('shoes')) {
+      const colorImages = getColorVariants()
+        .filter(color => color.image && color.image !== product.image)
+        .map(color => color.image);
+      images = [...new Set([...images, ...colorImages])]; // Remove duplicates
+    }
+    
+    return images;
   };
 
   const genderDisplay = {
@@ -454,7 +544,7 @@ const ProductDetailPage = () => {
                   onClick={() => setActiveTab(tab)}
                   className={`px-6 py-4 font-semibold capitalize transition-colors ${
                     activeTab === tab
-                      ? 'text-primary border-b-2 border-primary'
+                      ? 'text-primary'
                       : 'text-gray-600 hover:text-primary'
                   }`}
                 >
@@ -484,28 +574,141 @@ const ProductDetailPage = () => {
 
               {activeTab === 'reviews' && (
                 <div>
-                  <h3 className="font-bold text-xl mb-6">Customer Reviews</h3>
-                  {product.numReviews > 0 ? (
-                    <div className="bg-beige p-6 rounded-lg">
-                      <div className="flex items-center gap-4">
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              size={24}
-                              className={i < Math.floor(product.rating || 0) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}
-                            />
-                          ))}
-                        </div>
-                        <div>
-                          <p className="font-bold text-lg">{product.rating || 0} out of 5</p>
-                          <p className="text-gray-600">Based on {product.numReviews} reviews</p>
-                        </div>
-                      </div>
+                  <h3 className="font-bold text-2xl mb-8">Customer Reviews</h3>
+
+                  {/* Success Message */}
+                  {reviewSuccess && (
+                    <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                      ✓ Review submitted successfully!
                     </div>
-                  ) : (
-                    <p className="text-gray-600">No reviews yet. Be the first to review this product!</p>
                   )}
+
+                  {/* Error Message */}
+                  {reviewError && (
+                    <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                      ✗ {reviewError}
+                    </div>
+                  )}
+
+                  {/* Add Review Form */}
+                  <div className="mb-12 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 className="font-semibold text-lg mb-4">Write a Review</h4>
+                    {!isAuthenticated ? (
+                      <p className="text-gray-600">
+                        <Link to="/login" className="text-primary hover:underline">
+                          Login
+                        </Link>
+                        {' '}to write a review
+                      </p>
+                    ) : (
+                      <form onSubmit={handleSubmitReview} className="space-y-4">
+                        {/* Rating */}
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">
+                            Rating
+                          </label>
+                          <div className="flex gap-2">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <button
+                                key={star}
+                                type="button"
+                                onClick={() => setReviewForm({ ...reviewForm, rating: star })}
+                                className="focus:outline-none transition-transform hover:scale-110"
+                              >
+                                <Star
+                                  size={32}
+                                  className={
+                                    star <= reviewForm.rating
+                                      ? 'fill-yellow-400 text-yellow-400'
+                                      : 'text-gray-300'
+                                  }
+                                />
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Comment */}
+                        <div>
+                          <label htmlFor="comment" className="block text-sm font-medium text-gray-700 mb-2">
+                            Your Comment
+                          </label>
+                          <textarea
+                            id="comment"
+                            value={reviewForm.comment}
+                            onChange={(e) =>
+                              setReviewForm({ ...reviewForm, comment: e.target.value })
+                            }
+                            placeholder="Share your experience with this product..."
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                            rows="4"
+                          />
+                        </div>
+
+                        {/* Submit Button */}
+                        <button
+                          type="submit"
+                          disabled={submittingReview}
+                          className="w-full bg-primary text-white py-2 px-4 rounded-lg font-semibold hover:bg-primary-dark disabled:opacity-50 transition-colors"
+                        >
+                          {submittingReview ? 'Submitting...' : 'Submit Review'}
+                        </button>
+                      </form>
+                    )}
+                  </div>
+
+                  {/* Reviews List */}
+                  <div className="space-y-6">
+                    <h4 className="font-semibold text-lg">
+                      {reviews.length > 0
+                        ? `${reviews.length} ${reviews.length === 1 ? 'Review' : 'Reviews'}`
+                        : 'No reviews yet'}
+                    </h4>
+
+                    {loadingReviews ? (
+                      <div className="flex justify-center py-8">
+                        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                      </div>
+                    ) : reviews.length > 0 ? (
+                      reviews.map((review) => (
+                        <div
+                          key={review._id}
+                          className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                        >
+                          <div className="flex justify-between items-start mb-3">
+                            <div>
+                              <h5 className="font-semibold text-gray-900">
+                                {review.name || 'Anonymous'}
+                              </h5>
+                              <p className="text-sm text-gray-500">
+                                {review.createdAt
+                                  ? new Date(review.createdAt).toLocaleDateString()
+                                  : 'Recently'}
+                              </p>
+                            </div>
+                            <div className="flex">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  size={16}
+                                  className={
+                                    i < (review.rating || 0)
+                                      ? 'fill-yellow-400 text-yellow-400'
+                                      : 'text-gray-300'
+                                  }
+                                />
+                              ))}
+                            </div>
+                          </div>
+                          <p className="text-gray-700">{review.comment}</p>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-gray-600">
+                        No reviews yet. Be the first to review this product!
+                      </p>
+                    )}
+                  </div>
                 </div>
               )}
             </div>

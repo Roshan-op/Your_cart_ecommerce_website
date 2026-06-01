@@ -30,7 +30,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <h1 className="font-serif text-2xl md:text-3xl font-bold text-primary hover:text-accent transition-colors">
-              MUSE
+              Your-cart
             </h1>
           </Link>
 

@@ -44,7 +44,7 @@ const ContactPage = () => {
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               {[
-                { icon: Mail, label: 'Email', value: 'hello@muse.com', href: 'mailto:hello@muse.com' },
+                { icon: Mail, label: 'Email', value: 'hello@your-cart.com', href: 'mailto:hello@your-cart.com' },
                 { icon: Phone, label: 'Phone', value: '+1 (800) 555-1234', href: 'tel:+18005551234' },
                 { icon: MapPin, label: 'Address', value: '123 Fashion St, Style City, SC 12345' },
               ].map(({ icon: Icon, label, value, href }, idx) => (

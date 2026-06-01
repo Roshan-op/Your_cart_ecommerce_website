@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, Truck, RotateCcw, Headphones } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { ChevronRight, Truck, RotateCcw, Headphones, Search } from 'lucide-react';
 import { Navbar, ProductCard, CategoryCard, TestimonialCard, Button, Loading } from '../components';
 import Footer from '../components/Footer';
 import { productAPI } from '../api/api';
 
 const CATEGORIES = [
-  { title: 'Women', slug: 'women', icon: null },
-  { title: 'Men', slug: 'men', icon: null },
-  { title: 'Shoes', slug: 'shoes', icon: null },
-  { title: 'Occasion', slug: 'occasion', icon: null },
+  { title: 'Footwear', slug: 'Footwear', icon: null },
+  { title: 'Clothing', slug: 'Clothing', icon: null },
+  { title: 'Watches', slug: 'Watches', icon: null },
+  { title: 'Accessories', slug: 'Accessories', icon: null },
 ];
 
 const HomePage = () => {
@@ -18,6 +18,8 @@ const HomePage = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const history = useHistory();
 
   // Fetch products from backend
   useEffect(() => {
@@ -47,6 +49,54 @@ const HomePage = () => {
     fetchProducts();
   }, []);
 
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let posX = 0;
+    let posY = 0;
+    let rAF = null;
+
+    const handleMove = (e) => {
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      const rect = el.getBoundingClientRect();
+      const relX = (clientX - rect.left) / rect.width;
+      const relY = (clientY - rect.top) / rect.height;
+      mouseX = (relX - 0.5) * 18; // horizontal sensitivity (percent)
+      mouseY = (relY - 0.5) * 10; // vertical sensitivity (percent)
+    };
+
+    const handleLeave = () => {
+      mouseX = 0;
+      mouseY = 0;
+    };
+
+    const update = () => {
+      posX += (mouseX - posX) * 0.12;
+      posY += (mouseY - posY) * 0.12;
+      el.style.backgroundPosition = `${50 + posX}% ${50 + posY}%`;
+      rAF = requestAnimationFrame(update);
+    };
+
+    update();
+
+    el.addEventListener('mousemove', handleMove);
+    el.addEventListener('touchmove', handleMove, { passive: true });
+    el.addEventListener('mouseleave', handleLeave);
+
+    return () => {
+      el.removeEventListener('mousemove', handleMove);
+      el.removeEventListener('touchmove', handleMove);
+      el.removeEventListener('mouseleave', handleLeave);
+      if (rAF) cancelAnimationFrame(rAF);
+    };
+  }, []);
+
   const handleFilter = (filter) => {
     setActiveFilter(filter);
     if (filter === 'All') {
@@ -58,45 +108,79 @@ const HomePage = () => {
     }
   };
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      if (history) {
+        history.push(`/shop?keyword=${encodeURIComponent(searchQuery)}`);
+      } else {
+        window.location.href = `/shop?keyword=${encodeURIComponent(searchQuery)}`;
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-light flex flex-col">
       <Navbar />
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-beige to-mint py-20 md:py-32">
-          <div className="container-custom">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section
+          ref={heroRef}
+          className="relative py-20 md:py-48 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/watch.webp)',
+            backgroundPosition: '50% 50%',
+            backgroundSize: 'cover'
+          }}
+        >
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50 pointer-events-none"></div>
+          
+          <div className="container-custom relative z-10">
+            <div className="max-w-2xl">
               {/* Left Content */}
               <div className="animate-slideUp">
                 <p className="text-accent uppercase tracking-widest font-bold text-sm mb-4">
                   New Arrival
                 </p>
-                <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-4 leading-tight">
+                <h1 className="font-serif text-4xl md:text-6xl font-bold text-light mb-4 leading-tight">
                   Sustainably Stylish.
                   <br />
                   Naturally You
                 </h1>
-                <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                <p className="text-light text-lg mb-8 leading-relaxed opacity-90">
                   Discover premium, eco-friendly fashion that doesn't compromise on style. Every piece
                   is carefully curated for the conscious consumer.
                 </p>
+
+                {/* Search Bar */}
+                <form onSubmit={handleSearch} className="mb-8 flex gap-2">
+                  <div className="flex-grow relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                    <input
+                      type="text"
+                      placeholder="Search for products..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="btn-primary px-6 flex items-center gap-2"
+                  >
+                    <Search size={20} />
+                    <span>Search</span>
+                  </button>
+                </form>
+
                 <Link to="/shop">
                   <button className="btn-primary flex items-center gap-2 group">
                     Explore Products
                     <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
                   </button>
                 </Link>
-              </div>
-
-              {/* Right Image */}
-              <div className="relative animate-fadeIn">
-                <div className="absolute inset-0 bg-gradient-to-br from-lavender to-mint rounded-3xl blur-2xl opacity-40"></div>
-                <img
-                  src="/images/watch.avif"
-                  alt="Hero"
-                  className="relative w-full h-auto rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300"
-                />
               </div>
             </div>
           </div>
@@ -240,7 +324,7 @@ const HomePage = () => {
                   role: 'Student',
                   image: '/images/watch.avif',
                   quotes:
-                    "Affordable luxury that doesn't feel guilty. I recommend MUSE to all my friends!",
+                    "Affordable luxury that doesn't feel guilty. I recommend Your-cart to all my friends!",
                   rating: 4,
                 },
               ].map((testimonial, idx) => (

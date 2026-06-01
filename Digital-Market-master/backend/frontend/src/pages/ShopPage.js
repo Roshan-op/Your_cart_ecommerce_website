@@ -7,11 +7,13 @@ import { productAPI } from '../api/api';
 const ShopPage = ({ location }) => {
   const searchParams = new URLSearchParams(location?.search);
   const initialCategory = searchParams.get('category') || '';
+  const initialKeyword = searchParams.get('keyword') || '';
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+  const [searchKeyword, setSearchKeyword] = useState(initialKeyword);
   const [sortBy, setSortBy] = useState('newest');
   const [priceRange, setPriceRange] = useState([0, 50000]);
   const [categories, setCategories] = useState(['All']);
@@ -22,7 +24,8 @@ const ShopPage = ({ location }) => {
       try {
         setLoading(true);
         setError(null);
-        const data = await productAPI.getProducts('', 1);
+        // Use keyword for search if provided
+        const data = await productAPI.getProducts(searchKeyword, 1);
         const productList = data.products || [];
         setProducts(productList);
 
@@ -45,15 +48,17 @@ const ShopPage = ({ location }) => {
     };
 
     fetchProducts();
-  }, []);
+  }, [searchKeyword]);
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
     let filtered = products;
 
-    // Filter by category
+    // Filter by category (case-insensitive)
     if (selectedCategory && selectedCategory !== 'All') {
-      filtered = filtered.filter((p) => p.category === selectedCategory);
+      filtered = filtered.filter((p) => 
+        p.category && p.category.toLowerCase() === selectedCategory.toLowerCase()
+      );
     }
 
     // Filter by price
@@ -127,7 +132,7 @@ const ShopPage = ({ location }) => {
                             type="radio"
                             name="category"
                             value={category}
-                            checked={selectedCategory === category || (selectedCategory === '' && category === 'All')}
+                            checked={selectedCategory.toLowerCase() === category.toLowerCase() || (selectedCategory === '' && category === 'All')}
                             onChange={(e) => setSelectedCategory(e.target.value === 'All' ? '' : e.target.value)}
                             className="w-4 h-4 text-accent"
                           />

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ image, title, slug, icon: Icon }) => {
   return (
-    <Link to={`/shop?category=${slug}`}>
-      <div className="card-base p-8 text-center hover:scale-105 transition-transform cursor-pointer group">
+    <Link to={`/shop?category=${slug}`} className="block text-decoration-none">
+      <div className="card-base p-8 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-md">
         {Icon && (
           <div className="mb-4 flex justify-center">
             <Icon size={48} className="text-accent group-hover:text-secondary transition-colors" />

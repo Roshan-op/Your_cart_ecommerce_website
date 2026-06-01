@@ -84,6 +84,15 @@ export const productAPI = {
     return handleResponse(response);
   },
 
+  // Get product reviews
+  getReviews: async (productId) => {
+    const response = await fetch(`${API_BASE_URL}/products/${productId}/reviews/`, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    return handleResponse(response);
+  },
+
   // Get recommended products
   getRecommendations: async (productId) => {
     const response = await fetch(`${API_BASE_URL}/products/${productId}/recommend/`, {

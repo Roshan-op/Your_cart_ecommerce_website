@@ -7,21 +7,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Soft pastel palette
-        cream: '#FFF9F5',
-        beige: '#F5EDE3',
-        taupe: '#D4C5B9',
-        sage: '#B8C5A0',
-        dusty: '#A89BA3',
-        blush: '#F0D4D4',
-        mint: '#D4E8E0',
-        lavender: '#E8D9E8',
+        // Medieval fantasy color palette
+        cream: '#F4EFE6', // Parchment Cream
+        beige: '#F4EFE6',
+        taupe: '#8E6F3E', // Earthy Ochre
+        sage: '#8E6F3E',
+        dusty: '#12161A', // Obsidian Night
+        blush: '#F4EFE6',
+        mint: '#F4EFE6',
+        lavender: '#F4EFE6',
         
-        // Primary colors
-        primary: '#333333', // Dark charcoal
-        secondary: '#8B7355', // Warm brown
-        accent: '#D4A373', // Gold/tan
-        light: '#F9F7F4',
+        // Primary colors - Medieval Fantasy Theme
+        primary: '#12161A', // Obsidian Night - Deep, powerful backgrounds
+        secondary: '#8E6F3E', // Earthy Ochre - Subheadings & secondary UI
+        accent: '#C59B4E', // Antique Gold - Premium buttons & hover states
+        light: '#F4EFE6', // Parchment Cream - Light sections & contrast
+        crimson: '#661E27', // Crimson Silk - CTAs, notifications, badges
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

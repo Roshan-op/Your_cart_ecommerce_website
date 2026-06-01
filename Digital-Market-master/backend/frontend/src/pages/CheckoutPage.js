@@ -27,6 +27,8 @@ const CheckoutPage = ({ history }) => {
   // Redirect if not authenticated
   React.useEffect(() => {
     if (!isAuthenticated) {
+      // Store redirect URL to shop after login
+      localStorage.setItem('postLoginRedirect', '/shop');
       alert('Please login first');
       if (history) history.push('/login');
       else window.location.href = '/login';

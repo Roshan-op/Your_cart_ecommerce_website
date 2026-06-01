@@ -85,11 +85,22 @@ const LoginPage = ({ history }) => {
         await register(formData.name, formData.email, formData.password);
       }
       
-      // Redirect to home on success
-      if (history) {
-        history.push('/');
+      // Check for post-login redirect URL
+      const redirectUrl = localStorage.getItem('postLoginRedirect');
+      if (redirectUrl) {
+        localStorage.removeItem('postLoginRedirect'); // Clear the stored redirect
+        if (history) {
+          history.push(redirectUrl);
+        } else {
+          window.location.href = redirectUrl;
+        }
       } else {
-        window.location.href = '/';
+        // Default redirect to home
+        if (history) {
+          history.push('/');
+        } else {
+          window.location.href = '/';
+        }
       }
     } catch (err) {
       setLocalError(err.message || `${isLogin ? 'Login' : 'Registration'} failed`);

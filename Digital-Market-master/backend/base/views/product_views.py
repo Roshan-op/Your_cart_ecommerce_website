@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from base.models import Product, Review
-from base.serializer import ProductSerializer
+from base.serializer import ProductSerializer, ReviewSerializer
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework import status
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -131,45 +131,57 @@ def uploadImage(request):
     return Response('Image was uploaded')
 
 
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@api_view(['GET', 'POST'])
 def createProductReview(request, pk):
-    user = request.user
     product = Product.objects.get(_id=pk)
-    data = request.data
-
-    # 1 - Review already exists
-    alreadyExists = product.review_set.filter(user=user).exists()
-    if alreadyExists:
-        content = {'detail': 'Product already reviewed'}
-        return Response(content, status=status.HTTP_400_BAD_REQUEST)
-
-    # 2 - No Rating or 0
-    elif data['rating'] == 0:
-        content = {'detail': 'Please select a rating'}
-        return Response(content, status=status.HTTP_400_BAD_REQUEST)
-
-    # 3 - Create review
-    else:
-        review = Review.objects.create(
-            user=user,
-            product=product,
-            name=user.first_name,
-            rating=data['rating'],
-            comment=data['comment'],
-        )
-
+    
+    # GET - Retrieve reviews for the product (no auth required)
+    if request.method == 'GET':
         reviews = product.review_set.all()
-        product.numReviews = len(reviews)
+        serializer = ReviewSerializer(reviews, many=True)
+        return Response(serializer.data)
+    
+    # POST - Create a new review (auth required)
+    if request.method == 'POST':
+        # Check authentication for POST requests
+        if not request.user.is_authenticated:
+            return Response({'detail': 'Authentication credentials were not provided.'}, status=status.HTTP_401_UNAUTHORIZED)
+        
+        user = request.user
+        data = request.data
 
-        total = 0
-        for i in reviews:
-            total += i.rating
+        # 1 - Review already exists
+        alreadyExists = product.review_set.filter(user=user).exists()
+        if alreadyExists:
+            content = {'detail': 'Product already reviewed'}
+            return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
-        product.rating = total / len(reviews)
-        product.save()
+        # 2 - No Rating or 0
+        elif data['rating'] == 0:
+            content = {'detail': 'Please select a rating'}
+            return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
-        return Response('Review Added')
+        # 3 - Create review
+        else:
+            review = Review.objects.create(
+                user=user,
+                product=product,
+                name=user.first_name,
+                rating=data['rating'],
+                comment=data['comment'],
+            )
+
+            reviews = product.review_set.all()
+            product.numReviews = len(reviews)
+
+            total = 0
+            for i in reviews:
+                total += i.rating
+
+            product.rating = total / len(reviews)
+            product.save()
+
+            return Response('Review Added')
 
     
 similarity = pickle.load(open('similarity9.pkl', 'rb'))
