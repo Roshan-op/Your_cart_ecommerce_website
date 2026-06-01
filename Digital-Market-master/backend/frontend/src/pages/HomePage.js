@@ -49,7 +49,115 @@ const HomePage = () => {
     fetchProducts();
   }, []);
 
+  // Particle canvas for subtle interactive background elements
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const el = heroRef.current;
+    if (!canvas || !el) return;
+
+    // Disable on small screens for performance
+    if (window.innerWidth < 640) return;
+
+    const ctx = canvas.getContext('2d');
+    let dpr = window.devicePixelRatio || 1;
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let rafId = null;
+    const mouse = { x: -9999, y: -9999 };
+
+    function resize() {
+      width = el.clientWidth;
+      height = el.clientHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function createParticles(count = 45) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          size: 0.8 + Math.random() * 2.6,
+          alpha: 0.12 + Math.random() * 0.22,
+        });
+      }
+    }
+
+    function onMove(e) {
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      const rect = el.getBoundingClientRect();
+      mouse.x = clientX - rect.left;
+      mouse.y = clientY - rect.top;
+    }
+
+    function onLeave() {
+      mouse.x = -9999;
+      mouse.y = -9999;
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let p of particles) {
+        // attraction/repel to mouse
+        const dx = mouse.x - p.x;
+        const dy = mouse.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        if (mouse.x > -900 && dist < 140) {
+          const force = (1 - dist / 140) * 0.6;
+          p.vx += (dx / dist) * force;
+          p.vy += (dy / dist) * force;
+        }
+
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vx *= 0.92;
+        p.vy *= 0.92;
+
+        // wrap around edges
+        if (p.x < -10) p.x = width + 10;
+        if (p.x > width + 10) p.x = -10;
+        if (p.y < -10) p.y = height + 10;
+        if (p.y > height + 10) p.y = -10;
+
+        // draw glow
+        const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 6);
+        grd.addColorStop(0, `rgba(197,155,78, ${p.alpha})`);
+        grd.addColorStop(1, `rgba(244,239,230, 0)`);
+        ctx.fillStyle = grd;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      rafId = requestAnimationFrame(animate);
+    }
+
+    resize();
+    createParticles(Math.max(25, Math.floor((el.clientWidth * el.clientHeight) / 100000)));
+    window.addEventListener('resize', resize);
+    el.addEventListener('mousemove', onMove);
+    el.addEventListener('touchmove', onMove, { passive: true });
+    el.addEventListener('mouseleave', onLeave);
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', resize);
+      el.removeEventListener('mousemove', onMove);
+      el.removeEventListener('touchmove', onMove);
+      el.removeEventListener('mouseleave', onLeave);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   const heroRef = useRef(null);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const el = heroRef.current;
@@ -135,9 +243,12 @@ const HomePage = () => {
           }}
         >
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50 pointer-events-none"></div>
-          
-          <div className="container-custom relative z-10">
+            <div className="absolute inset-0 bg-black bg-opacity-50 pointer-events-none z-0"></div>
+
+            {/* Particles canvas (interactive, pointer-events-none so it won't block controls) */}
+            <canvas ref={canvasRef} className="absolute inset-0 z-10 pointer-events-none"></canvas>
+
+            <div className="container-custom relative z-20">
             <div className="max-w-2xl">
               {/* Left Content */}
               <div className="animate-slideUp">
