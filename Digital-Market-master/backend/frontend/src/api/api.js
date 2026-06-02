@@ -47,9 +47,11 @@ export const productAPI = {
     return handleResponse(response);
   },
 
-  // Get all products (no pagination)
-  getAllProducts: async () => {
-    const response = await fetch(`${API_BASE_URL}/products/?all=true`, {
+  // Get all products (no pagination), optional keyword filter
+  getAllProducts: async (keyword = '') => {
+    const params = new URLSearchParams({ all: 'true' });
+    if (keyword) params.append('keyword', keyword);
+    const response = await fetch(`${API_BASE_URL}/products/?${params}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     });

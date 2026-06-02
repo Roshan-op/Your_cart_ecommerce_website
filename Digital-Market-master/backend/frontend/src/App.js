@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Context Providers
 import { CartProvider } from "./context/CartContext";
@@ -33,6 +34,7 @@ function App() {
       <CartProvider>
         <WishlistProvider>
           <Router>
+            <ScrollToTop />
             {/* Modern UI/UX Routing */}
             <Route path="/" component={HomePage} exact />
             <Route path="/shop" component={ShopPage} />

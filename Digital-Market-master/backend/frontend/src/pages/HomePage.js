@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { ChevronRight, Truck, RotateCcw, Headphones, Search } from 'lucide-react';
 import { Navbar, ProductCard, CategoryCard, TestimonialCard, Button, Loading } from '../components';
@@ -6,16 +6,17 @@ import Footer from '../components/Footer';
 import { productAPI } from '../api/api';
 
 const CATEGORIES = [
-  { title: 'Footwear', slug: 'Footwear', icon: null },
-  { title: 'Clothing', slug: 'Clothing', icon: null },
-  { title: 'Watches', slug: 'Watches', icon: null },
-  { title: 'Accessories', slug: 'Accessories', icon: null },
+  { title: 'Footwear',    slug: 'shoes' },
+  { title: 'Clothing',   slug: 'jacket' },
+  { title: 'Watches',    slug: 'watches' },
+  { title: 'Accessories',slug: 'bag' },
 ];
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [featuredProducts, setFeaturedProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,6 +35,7 @@ const HomePage = () => {
         
         // Set featured products (first 6)
         setFeaturedProducts(products.slice(0, 6));
+        setAllProducts(products);
         setFilteredProducts(products);
       } catch (err) {
         console.error('Error fetching products:', err);
@@ -205,13 +207,26 @@ const HomePage = () => {
     };
   }, []);
 
+  // Categories that have at least 2 products, capped at 5, sorted by count
+  const activeCategories = useMemo(() => {
+    const counts = {};
+    allProducts.forEach((p) => {
+      if (p.category) counts[p.category] = (counts[p.category] || 0) + 1;
+    });
+    return Object.entries(counts)
+      .filter(([, count]) => count >= 2)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([cat]) => cat);
+  }, [allProducts]);
+
   const handleFilter = (filter) => {
     setActiveFilter(filter);
     if (filter === 'All') {
-      setFilteredProducts(filteredProducts);
+      setFilteredProducts(allProducts);
     } else {
       setFilteredProducts(
-        filteredProducts.filter((p) => p.category && p.category.toLowerCase() === filter.toLowerCase())
+        allProducts.filter((p) => p.category && p.category.toLowerCase() === filter.toLowerCase())
       );
     }
   };
@@ -379,7 +394,7 @@ const HomePage = () => {
 
               {/* Filter Buttons */}
               <div className="flex flex-wrap justify-center gap-4 mb-12">
-                {['All', 'Women', 'Men', 'Shoes'].map((filter) => (
+                {['All', ...activeCategories].map((filter) => (
                   <button
                     key={filter}
                     onClick={() => handleFilter(filter)}
@@ -448,7 +463,7 @@ const HomePage = () => {
         {/* CTA Banner */}
         <section className="py-20 bg-gradient-to-r from-primary to-secondary text-light">
           <div className="container-custom text-center">
-            <h2 className="font-serif text-4xl font-bold mb-4">Ready to Refresh Your Wardrobe?</h2>
+            <h2 className="font-serif text-4xl font-bold mb-4" style={{ color: '#ffffff' }}>Ready to Refresh Your Wardrobe?</h2>
             <p className="text-light/80 mb-8 text-lg">
               Subscribe to our newsletter and get 20% off your first purchase
             </p>

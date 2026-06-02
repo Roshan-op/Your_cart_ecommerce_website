@@ -12,7 +12,8 @@ const CheckoutPage = ({ history }) => {
   const [paymentMethod, setPaymentMethod] = useState('card');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  
+  const [showLoginPrompt, setShowLoginPrompt] = useState(!isAuthenticated);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -23,17 +24,6 @@ const CheckoutPage = ({ history }) => {
     postalCode: '',
     country: '',
   });
-
-  // Redirect if not authenticated
-  React.useEffect(() => {
-    if (!isAuthenticated) {
-      // Store redirect URL to shop after login
-      localStorage.setItem('postLoginRedirect', '/shop');
-      alert('Please login first');
-      if (history) history.push('/login');
-      else window.location.href = '/login';
-    }
-  }, [isAuthenticated, history]);
 
   // Redirect if cart is empty
   React.useEffect(() => {
@@ -109,13 +99,45 @@ const CheckoutPage = ({ history }) => {
   const shippingPrice = 10;
   const total = subtotal + tax + shippingPrice;
 
-  if (!isAuthenticated) {
+  if (showLoginPrompt && !isAuthenticated) {
     return (
       <div className="min-h-screen bg-light flex flex-col">
         <Navbar />
-        <main className="flex-grow flex items-center justify-center">
-          <p>Redirecting to login...</p>
+        <main className="flex-grow flex items-center justify-center px-4">
+          <div className="bg-white rounded-2xl shadow-xl p-10 max-w-sm w-full text-center">
+            <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h2 className="font-serif text-2xl font-bold text-primary mb-2">Login Required</h2>
+            <p className="text-gray-500 mb-8 text-sm leading-relaxed">
+              You need to be logged in to complete your checkout. Would you like to go to the login page?
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => {
+                  if (history) history.push('/cart');
+                  else window.location.href = '/cart';
+                }}
+                className="flex-1 py-3 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-gray-50 transition-colors"
+              >
+                No, go back
+              </button>
+              <button
+                onClick={() => {
+                  localStorage.setItem('postLoginRedirect', '/cart');
+                  if (history) history.push('/login');
+                  else window.location.href = '/login';
+                }}
+                className="flex-1 py-3 rounded-lg bg-primary text-light font-semibold hover:shadow-lg transition-all"
+              >
+                Yes, login
+              </button>
+            </div>
+          </div>
         </main>
+        <Footer />
       </div>
     );
   }
