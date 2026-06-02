@@ -30,6 +30,15 @@ const ShopPage = ({ location }) => {
   const [priceRange, setPriceRange] = useState([0, 50000]);
   const [categories, setCategories] = useState([]);
 
+  // Sync state when URL params change (e.g. navbar search navigates to /shop?keyword=...)
+  useEffect(() => {
+    const params = new URLSearchParams(location?.search);
+    const kw = params.get('keyword') || '';
+    const cat = params.get('category') || '';
+    setSearchKeyword(kw);
+    if (cat) setSelectedCategory(cat);
+  }, [location?.search]);
+
   // Fetch products from backend
   useEffect(() => {
     const fetchProducts = async () => {

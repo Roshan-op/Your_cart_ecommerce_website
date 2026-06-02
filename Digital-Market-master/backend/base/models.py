@@ -34,6 +34,7 @@ class Product(models.Model):
     additional_images = models.TextField(null=True, blank=True, help_text="JSON array of image URLs")
     
     createdAt = models.DateTimeField(auto_now_add=True)
+    updatedAt = models.DateTimeField(auto_now=True)
     _id = models.AutoField(primary_key=True,editable=False)
 
     def __str__(self):

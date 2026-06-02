@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { ChevronRight, Truck, RotateCcw, Headphones, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronRight, Truck, RotateCcw, Headphones } from 'lucide-react';
 import { Navbar, ProductCard, CategoryCard, TestimonialCard, Button, Loading } from '../components';
 import Footer from '../components/Footer';
 import { productAPI } from '../api/api';
@@ -19,8 +19,6 @@ const HomePage = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const history = useHistory();
 
   // Fetch products from backend
   useEffect(() => {
@@ -231,17 +229,6 @@ const HomePage = () => {
     }
   };
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      if (history) {
-        history.push(`/shop?keyword=${encodeURIComponent(searchQuery)}`);
-      } else {
-        window.location.href = `/shop?keyword=${encodeURIComponent(searchQuery)}`;
-      }
-    }
-  };
-
   return (
     <div className="min-h-screen bg-light flex flex-col">
       <Navbar />
@@ -279,27 +266,6 @@ const HomePage = () => {
                   Discover premium, eco-friendly fashion that doesn't compromise on style. Every piece
                   is carefully curated for the conscious consumer.
                 </p>
-
-                {/* Search Bar */}
-                <form onSubmit={handleSearch} className="mb-8 flex gap-2">
-                  <div className="flex-grow relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-                    <input
-                      type="text"
-                      placeholder="Search for products..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn-primary px-6 flex items-center gap-2"
-                  >
-                    <Search size={20} />
-                    <span>Search</span>
-                  </button>
-                </form>
 
                 <Link to="/shop">
                   <button className="btn-primary flex items-center gap-2 group">
