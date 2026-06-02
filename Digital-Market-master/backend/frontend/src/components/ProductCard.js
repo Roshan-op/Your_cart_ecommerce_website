@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Heart } from 'lucide-react';
 import Badge from './Badge';
 import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
 import { apiUtils } from '../api/api';
 
 const ProductCard = ({ product, badge = null, imageHeight = 'h-60' }) => {
-  const [isWishlisted, setIsWishlisted] = useState(false);
   const { addToCart } = useCart();
+  const { isInWishlist, toggleWishlist } = useWishlist();
+  const wishlisted = isInWishlist(product._id);
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     addToCart(product, 1);
+  };
+
+  const handleWishlist = (e) => {
+    e.preventDefault();
+    toggleWishlist(product);
   };
 
   return (
@@ -25,7 +32,6 @@ const ProductCard = ({ product, badge = null, imageHeight = 'h-60' }) => {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
 
-          {/* Badge */}
           {badge && (
             <div className="absolute top-4 left-4">
               <Badge variant={badge.variant}>{badge.text}</Badge>
@@ -34,34 +40,29 @@ const ProductCard = ({ product, badge = null, imageHeight = 'h-60' }) => {
 
           {/* Wishlist Button */}
           <button
-            onClick={(e) => {
-              e.preventDefault();
-              setIsWishlisted(!isWishlisted);
-            }}
+            onClick={handleWishlist}
+            title={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
             className="absolute top-4 right-4 p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all"
           >
             <Heart
               size={20}
-              className={isWishlisted ? 'fill-red-500 text-red-500' : 'text-primary'}
+              className={wishlisted ? 'fill-red-500 text-red-500' : 'text-primary'}
             />
           </button>
         </div>
 
         {/* Content */}
         <div className="p-4">
-          {/* Category/Brand */}
           {product.category && (
             <p className="text-xs text-taupe uppercase tracking-wide font-semibold mb-2">
               {product.category}
             </p>
           )}
 
-          {/* Product Name */}
           <h3 className="font-serif text-lg text-primary font-bold mb-2 line-clamp-2 group-hover:text-accent transition-colors">
             {product.name}
           </h3>
 
-          {/* Rating */}
           {product.rating && (
             <div className="flex items-center gap-2 mb-3">
               <div className="flex text-yellow-400">
@@ -75,12 +76,10 @@ const ProductCard = ({ product, badge = null, imageHeight = 'h-60' }) => {
             </div>
           )}
 
-          {/* Stock Status */}
           <p className={`text-xs font-semibold mb-3 ${product.countInStock > 0 ? 'text-sage' : 'text-red-500'}`}>
             {product.countInStock > 0 ? `${product.countInStock} in stock` : 'Out of stock'}
           </p>
 
-          {/* Price */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-baseline gap-2">
               <span className="text-2xl font-bold text-primary">Rs. {product.price}</span>
@@ -90,7 +89,6 @@ const ProductCard = ({ product, badge = null, imageHeight = 'h-60' }) => {
             </div>
           </div>
 
-          {/* Add to Cart Button */}
           <button
             onClick={handleAddToCart}
             disabled={product.countInStock === 0}

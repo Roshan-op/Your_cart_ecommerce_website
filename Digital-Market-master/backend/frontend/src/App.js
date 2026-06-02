@@ -19,6 +19,7 @@ import ContactPage from "./pages/ContactPage";
 import AdminPanelEnhanced from "./pages/AdminPanelEnhanced";
 import CustomerPanel from "./pages/CustomerPanel";
 import VendorPanel from "./pages/VendorPanelEnhanced";
+import SizeChartPage from "./pages/SizeChartPage";
 
 // Fallback to old screens for order tracking
 import OrderScreen from "./screens/OrderScreen";
@@ -48,6 +49,7 @@ function App() {
             <Route path="/account" component={CustomerPanel} />
             <Route path="/admin" component={AdminPanelEnhanced} />
             <Route path="/vendor" component={VendorPanel} />
+            <Route path="/size-chart" component={SizeChartPage} />
 
             {/* Order Tracking */}
             <Route path="/order/:id" component={OrderScreen} />

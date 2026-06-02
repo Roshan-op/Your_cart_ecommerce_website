@@ -38,7 +38,7 @@ const ProductDetailPage = () => {
   const [selectedGender, setSelectedGender] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
-  const [colorUnavailableMessage, setColorUnavailableMessage] = useState("");
+  const [linkCopied, setLinkCopied] = useState(false);
 
   // Fetch product details on component mount
   useEffect(() => {
@@ -66,20 +66,8 @@ const ProductDetailPage = () => {
           setSelectedGender(data.gender);
         }
 
-        // Set default color if variants exist
-        const colorVariants = data.name && data.name.toLowerCase().includes('shoes') 
-          ? [
-              { name: 'Default', color: '#94A3B8', image: data.image, available: true },
-              { name: 'Red', color: '#EF4444', image: data.image, available: false },
-              { name: 'Gray', color: '#6B7280', image: data.image, available: false },
-              { name: 'White', color: '#FFFFFF', image: data.image, available: false }
-            ]
-          : [];
-        
-        if (colorVariants.length > 0) {
-          setSelectedColor('Default');
-          setColorUnavailableMessage('');
-        }
+        // Reset color selection for new product
+        setSelectedColor('');
 
         // Fetch recommendations
         try {
@@ -182,31 +170,51 @@ const ProductDetailPage = () => {
     return [];
   };
 
-  // Get color variants for specific products (mainly for shoes and apparel)
+  // Category-based color variants — all available
   const getColorVariants = () => {
     if (!product) return [];
-    
-    // Check if product name contains "Shoes" or "shoes"
-    if (product.name && product.name.toLowerCase().includes('shoes')) {
-      return [
-        { name: 'Default', color: '#94A3B8', image: '/images/Nike_green.avif', available: true },
-        { name: 'Red', color: '#EF4444', image: product.image, available: false },
-        { name: 'Gray', color: '#6B7280', image: product.image, available: false },
-        { name: 'White', color: '#FFFFFF', image: '/images/Nike_white.avif', available: true }
-      ];
-    }
-    
-    // Expand for other clothing items (shirts only)
-    if (product.name && product.name.toLowerCase().includes('shirt')) {
-      return [
-        { name: 'Default', color: '#94A3B8', image: product.image, available: true },
-        { name: 'Red', color: '#EF4444', image: product.image, available: false },
-        { name: 'Gray', color: '#6B7280', image: product.image, available: false },
-        { name: 'White', color: '#FFFFFF', image: product.image, available: false }
-      ];
-    }
-    
+    const cat = product.category?.toLowerCase();
+    if (cat === 'shoes') return [
+      { name: 'Black',  hex: '#1a1a1a' },
+      { name: 'White',  hex: '#f5f5f0' },
+      { name: 'Gray',   hex: '#9ca3af' },
+      { name: 'Brown',  hex: '#92400e' },
+      { name: 'Navy',   hex: '#1e3a5f' },
+    ];
+    if (['jacket', 'hoodie', 't-shirt'].includes(cat)) return [
+      { name: 'Black',  hex: '#1a1a1a' },
+      { name: 'White',  hex: '#f5f5f0' },
+      { name: 'Gray',   hex: '#9ca3af' },
+      { name: 'Navy',   hex: '#1e3a5f' },
+      { name: 'Red',    hex: '#dc2626' },
+    ];
+    if (cat === 'watches') return [
+      { name: 'Silver',    hex: '#c0c0c0' },
+      { name: 'Gold',      hex: '#c59b4e' },
+      { name: 'Black',     hex: '#1a1a1a' },
+      { name: 'Rose Gold', hex: '#b76e79' },
+    ];
+    if (cat === 'bag') return [
+      { name: 'Black', hex: '#1a1a1a' },
+      { name: 'Brown', hex: '#92400e' },
+      { name: 'Tan',   hex: '#d4a96a' },
+      { name: 'Navy',  hex: '#1e3a5f' },
+    ];
+    if (cat === 'bracelet') return [
+      { name: 'Silver', hex: '#c0c0c0' },
+      { name: 'Gold',   hex: '#c59b4e' },
+      { name: 'Black',  hex: '#1a1a1a' },
+    ];
     return [];
+  };
+
+  // Which size-chart type to link to for this product's category
+  const getSizeChartType = () => {
+    const cat = product?.category?.toLowerCase();
+    if (cat === 'shoes') return 'footwear';
+    if (['jacket', 'hoodie', 't-shirt'].includes(cat)) return 'clothing';
+    if (cat === 'bracelet') return 'bracelet';
+    return null;
   };
 
   const getAdditionalImages = () => {
@@ -239,31 +247,18 @@ const ProductDetailPage = () => {
   };
 
   const handleAddToCart = () => {
-    if (product) {
-      // Check if size is required
-      if (getAvailableSizes().length > 0 && !selectedSize) {
-        alert('⚠️ Please select a size');
-        return;
-      }
-      // Check if color is required
-      if (getColorVariants().length > 0 && !selectedColor) {
-        alert('⚠️ Please select a color');
-        return;
-      }
-      
-      // Verify selected color is available
-      const selectedColorOption = getColorVariants().find(c => c.name === selectedColor);
-      if (selectedColorOption && !selectedColorOption.available) {
-        alert(`⚠️ ${selectedColor} color is not available at the moment`);
-        return;
-      }
-      
-      addToCart(product, quantity, selectedSize, selectedGender, selectedColor);
-      // Show confirmation
-      alert(`✓ Added ${quantity} ${quantity > 1 ? 'items' : 'item'} (${selectedColor || 'default'}) to cart!`);
-      // Reset quantity
-      setQuantity(1);
+    if (!product) return;
+    if (getAvailableSizes().length > 0 && !selectedSize) {
+      alert('Please select a size before adding to cart.');
+      return;
     }
+    if (getColorVariants().length > 0 && !selectedColor) {
+      alert('Please select a colour before adding to cart.');
+      return;
+    }
+    addToCart(product, quantity, selectedSize, selectedGender, selectedColor);
+    alert(`Added to cart!${selectedSize ? '  Size: ' + selectedSize : ''}${selectedColor ? '  Colour: ' + selectedColor : ''}`);
+    setQuantity(1);
   };
 
   const handleWishlistToggle = () => {
@@ -307,6 +302,13 @@ const ProductDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-light flex flex-col">
+      {/* Link copied toast */}
+      {linkCopied && (
+        <div className="fixed top-5 right-5 z-[999] bg-gray-900 text-white text-sm px-4 py-2.5 rounded-lg shadow-lg">
+          Link copied to clipboard
+        </div>
+      )}
+
       <Navbar />
 
       <main className="flex-grow py-12">
@@ -428,7 +430,21 @@ const ProductDetailPage = () => {
               {/* Size Selection */}
               {getAvailableSizes().length > 0 && (
                 <div className="mb-6">
-                  <span className="text-primary font-semibold block mb-3">Select Size:</span>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-primary font-semibold">
+                      Select Size:
+                      {selectedSize && <span className="ml-2 text-accent font-bold">{selectedSize}</span>}
+                    </span>
+                    {getSizeChartType() && (
+                      <button
+                        type="button"
+                        onClick={() => window.open(`/size-chart?type=${getSizeChartType()}`, '_blank')}
+                        className="text-xs text-accent underline hover:text-primary transition-colors font-semibold"
+                      >
+                        📏 View Size Chart
+                      </button>
+                    )}
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {getAvailableSizes().map((size) => (
                       <button
@@ -436,8 +452,8 @@ const ProductDetailPage = () => {
                         onClick={() => setSelectedSize(size)}
                         className={`px-4 py-2 rounded-lg font-semibold transition-all ${
                           selectedSize === size
-                            ? 'bg-accent text-white ring-2 ring-offset-2 ring-accent'
-                            : 'border-2 border-primary text-primary hover:bg-beige'
+                            ? 'bg-primary text-light ring-2 ring-offset-2 ring-primary'
+                            : 'border-2 border-gray-300 text-primary hover:border-primary hover:bg-beige'
                         }`}
                       >
                         {size}
@@ -450,52 +466,41 @@ const ProductDetailPage = () => {
               {/* Color Selection */}
               {getColorVariants().length > 0 && (
                 <div className="mb-6">
-                  <span className="text-primary font-semibold block mb-3">Select Color:</span>
+                  <span className="text-primary font-semibold block mb-3">
+                    Color:
+                    {selectedColor && <span className="ml-2 text-accent font-bold">{selectedColor}</span>}
+                  </span>
                   <div className="flex flex-wrap gap-3">
-                    {getColorVariants().map((colorOption) => (
-                      <button
-                        key={colorOption.name}
-                        onClick={() => {
-                          if (colorOption.available) {
-                            setSelectedColor(colorOption.name);
-                            setMainImage(colorOption.image);
-                            setColorUnavailableMessage('');
-                          } else {
-                            setColorUnavailableMessage(`${colorOption.name} is not available at the moment`);
-                            setTimeout(() => setColorUnavailableMessage(''), 3000);
-                          }
-                        }}
-                        disabled={!colorOption.available}
-                        className={`flex items-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all ${
-                          selectedColor === colorOption.name
-                            ? 'bg-accent text-white ring-2 ring-offset-2 ring-accent'
-                            : colorOption.available
-                            ? 'border-2 border-primary text-primary hover:bg-beige'
-                            : 'border-2 border-gray-300 text-gray-400 cursor-not-allowed opacity-60'
-                        }`}
-                      >
-                        {/* Color Circle Indicator */}
-                        <div
-                          className={`w-6 h-6 rounded-full border-2 ${
-                            !colorOption.available ? 'opacity-50' : ''
+                    {getColorVariants().map((colorOption) => {
+                      const isSelected = selectedColor === colorOption.name;
+                      const isLight = colorOption.hex === '#f5f5f0';
+                      return (
+                        <button
+                          key={colorOption.name}
+                          onClick={() => setSelectedColor(colorOption.name)}
+                          title={colorOption.name}
+                          className={`relative w-9 h-9 rounded-full transition-all focus:outline-none ${
+                            isSelected
+                              ? 'ring-2 ring-offset-2 ring-primary scale-110'
+                              : 'ring-1 ring-gray-300 hover:scale-110'
                           }`}
-                          style={{
-                            backgroundColor: colorOption.color,
-                            borderColor: colorOption.color === '#FFFFFF' ? '#000' : colorOption.color,
-                          }}
-                        />
-                        {colorOption.name}
-                        {!colorOption.available && (
-                          <span className="text-xs ml-1 opacity-75">N/A</span>
-                        )}
-                      </button>
-                    ))}
+                          style={{ backgroundColor: colorOption.hex }}
+                        >
+                          {isSelected && (
+                            <span
+                              className="absolute inset-0 flex items-center justify-center text-xs font-black"
+                              style={{ color: isLight ? '#1a1a1a' : '#ffffff' }}
+                            >
+                              ✓
+                            </span>
+                          )}
+                        </button>
+                      );
+                    })}
                   </div>
-                  {colorUnavailableMessage && (
-                    <div className="mt-3 p-3 bg-orange-100 border border-orange-300 rounded-lg text-orange-700 text-sm font-semibold">
-                      ⚠️ {colorUnavailableMessage}
-                    </div>
-                  )}
+                  <p className="mt-2 text-xs text-gray-400">
+                    Colour availability may vary. Final colour will be confirmed before dispatch.
+                  </p>
                 </div>
               )}
 
@@ -517,7 +522,16 @@ const ProductDetailPage = () => {
                 >
                   <Heart size={24} fill={isWishlisted ? 'currentColor' : 'none'} />
                 </button>
-                <button className="p-4 border-2 border-primary rounded-lg hover:bg-primary hover:text-light transition-all">
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                      setLinkCopied(true);
+                      setTimeout(() => setLinkCopied(false), 2000);
+                    });
+                  }}
+                  title="Copy link"
+                  className="p-4 border-2 border-primary rounded-lg hover:bg-primary hover:text-light transition-all"
+                >
                   <Share2 size={24} />
                 </button>
               </div>
