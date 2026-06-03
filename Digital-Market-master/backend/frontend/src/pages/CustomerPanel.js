@@ -10,10 +10,11 @@ const ADDR_KEY = 'savedAddresses';
 
 const blankAddr = { fullName: '', phone: '', address: '', city: '', postalCode: '', country: '' };
 
-const CustomerPanel = ({ history }) => {
+const CustomerPanel = ({ history, location }) => {
   const { user, isAuthenticated, logout, updateProfile } = useAuth();
   const { wishlistItems, removeFromWishlist } = useWishlist();
-  const [activeTab, setActiveTab] = useState('profile');
+  const initialTab = new URLSearchParams(location?.search).get('tab') || 'profile';
+  const [activeTab, setActiveTab] = useState(initialTab);
   const [loading, setLoading] = useState(true);
   const [editMode, setEditMode] = useState(false);
   const [orders, setOrders] = useState([]);

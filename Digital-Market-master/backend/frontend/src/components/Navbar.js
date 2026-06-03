@@ -243,14 +243,14 @@ const Navbar = () => {
                 {isUserMenuOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg overflow-hidden z-10">
                     <Link
-                      to="/account"
+                      to="/account?tab=profile"
                       className="block px-4 py-2 text-primary hover:bg-gray-50 transition-colors"
                       onClick={() => setIsUserMenuOpen(false)}
                     >
                       My Account
                     </Link>
                     <Link
-                      to="/account"
+                      to="/account?tab=orders"
                       className="block px-4 py-2 text-primary hover:bg-gray-50 transition-colors"
                       onClick={() => setIsUserMenuOpen(false)}
                     >

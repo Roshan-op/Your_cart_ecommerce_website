@@ -439,7 +439,7 @@ const ProductDetailPage = () => {
                       <button
                         type="button"
                         onClick={() => window.open(`/size-chart?type=${getSizeChartType()}`, '_blank')}
-                        className="text-xs text-accent underline hover:text-primary transition-colors font-semibold"
+                        className="text-xs text-accent hover:text-primary transition-colors font-semibold"
                       >
                         📏 View Size Chart
                       </button>

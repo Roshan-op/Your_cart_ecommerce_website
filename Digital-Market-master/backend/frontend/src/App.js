@@ -16,6 +16,11 @@ import PaymentSuccessPage from "./pages/PaymentSuccessPage";
 import LoginPage from "./pages/LoginPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import FAQPage from "./pages/FAQPage";
+import ReturnsPage from "./pages/ReturnsPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import EcoPage from "./pages/EcoPage";
+import FairTradePage from "./pages/FairTradePage";
 import AdminPanelEnhanced from "./pages/AdminPanelEnhanced";
 import CustomerPanel from "./pages/CustomerPanel";
 import VendorPanel from "./pages/VendorPanelEnhanced";
@@ -46,6 +51,11 @@ function App() {
             <Route path="/login" component={LoginPage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/contact" component={ContactPage} />
+            <Route path="/faq" component={FAQPage} />
+            <Route path="/returns" component={ReturnsPage} />
+            <Route path="/privacy" component={PrivacyPage} />
+            <Route path="/eco" component={EcoPage} />
+            <Route path="/fair-trade" component={FairTradePage} />
             <Route path="/account" component={CustomerPanel} />
             <Route path="/admin" component={AdminPanelEnhanced} />
             <Route path="/vendor" component={VendorPanel} />

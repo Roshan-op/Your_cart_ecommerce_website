@@ -5,21 +5,15 @@ const WishlistContext = createContext();
 
 // Wishlist Provider Component
 export const WishlistProvider = ({ children }) => {
-  const [wishlistItems, setWishlistItems] = useState([]);
-
-  // Initialize wishlist from localStorage on mount
-  useEffect(() => {
-    const storedWishlist = localStorage.getItem('wishlistItems');
-    if (storedWishlist) {
-      try {
-        setWishlistItems(JSON.parse(storedWishlist));
-      } catch (err) {
-        console.error('Error loading wishlist:', err);
-      }
+  const [wishlistItems, setWishlistItems] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('wishlistItems')) || [];
+    } catch {
+      return [];
     }
-  }, []);
+  });
 
-  // Save wishlist to localStorage whenever it changes
+  // Persist to localStorage whenever wishlist changes
   useEffect(() => {
     localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
   }, [wishlistItems]);
