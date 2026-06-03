@@ -7,11 +7,14 @@ import "./bootstrap.min.css";
 import App from "./App";
 import "./custom.css";
 import reportWebVitals from "./reportWebVitals";
+import { SettingsProvider } from './context/SettingsContext';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <App />
+    <SettingsProvider>
+      <App />
+    </SettingsProvider>
   </Provider>
 );
 
