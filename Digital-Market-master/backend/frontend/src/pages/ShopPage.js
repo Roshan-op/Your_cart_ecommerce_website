@@ -4,6 +4,18 @@ import { Navbar, ProductCard, Loading } from '../components';
 import Footer from '../components/Footer';
 import { productAPI } from '../api/api';
 
+const ALLOWED_CATEGORIES = [
+  { value: 'shoes',    label: 'Shoes' },
+  { value: 'jacket',  label: 'Jacket' },
+  { value: 'clock',   label: 'Clock' },
+  { value: 'hoodie',  label: 'Hoodie' },
+  { value: 'bag',     label: 'Bag' },
+  { value: 'bracelet',label: 'Bracelet' },
+  { value: 't-shirt', label: 'T-Shirt' },
+  { value: 'watches', label: 'Watches' },
+];
+// Note: category matching is case-insensitive in filteredProducts below
+
 const ShopPage = ({ location }) => {
   const searchParams = new URLSearchParams(location?.search);
   const initialCategory = searchParams.get('category') || '';
@@ -16,7 +28,16 @@ const ShopPage = ({ location }) => {
   const [searchKeyword, setSearchKeyword] = useState(initialKeyword);
   const [sortBy, setSortBy] = useState('newest');
   const [priceRange, setPriceRange] = useState([0, 50000]);
-  const [categories, setCategories] = useState(['All']);
+  const [categories, setCategories] = useState([]);
+
+  // Sync state when URL params change (e.g. navbar search navigates to /shop?keyword=...)
+  useEffect(() => {
+    const params = new URLSearchParams(location?.search);
+    const kw = params.get('keyword') || '';
+    const cat = params.get('category') || '';
+    setSearchKeyword(kw);
+    if (cat) setSelectedCategory(cat);
+  }, [location?.search]);
 
   // Fetch products from backend
   useEffect(() => {
@@ -24,14 +45,15 @@ const ShopPage = ({ location }) => {
       try {
         setLoading(true);
         setError(null);
-        // Use keyword for search if provided
-        const data = await productAPI.getProducts(searchKeyword, 1);
+        // Fetch all products so client-side category filter works across the full catalogue
+        const data = await productAPI.getAllProducts(searchKeyword);
         const productList = data.products || [];
         setProducts(productList);
 
-        // Extract unique categories
-        const uniqueCategories = ['All', ...new Set(productList.map(p => p.category).filter(Boolean))];
-        setCategories(uniqueCategories);
+        // Keep only whitelisted categories that actually have products
+        const presentValues = new Set(productList.map(p => p.category?.toLowerCase()).filter(Boolean));
+        const visibleCategories = ALLOWED_CATEGORIES.filter(c => presentValues.has(c.value));
+        setCategories(visibleCategories);
 
         // Update price range based on actual products
         if (productList.length > 0) {
@@ -126,17 +148,30 @@ const ShopPage = ({ location }) => {
                   <div className="mb-8">
                     <h3 className="font-bold text-lg mb-4">Category</h3>
                     <div className="space-y-2">
-                      {categories.map((category) => (
-                        <label key={category} className="flex items-center gap-3 cursor-pointer">
+                      {/* All option */}
+                      <label className="flex items-center gap-3 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="category"
+                          value=""
+                          checked={selectedCategory === ''}
+                          onChange={() => setSelectedCategory('')}
+                          className="w-4 h-4 text-accent"
+                        />
+                        <span className="text-primary hover:text-accent transition-colors font-medium">All</span>
+                      </label>
+
+                      {categories.map(({ value, label }) => (
+                        <label key={value} className="flex items-center gap-3 cursor-pointer">
                           <input
                             type="radio"
                             name="category"
-                            value={category}
-                            checked={selectedCategory.toLowerCase() === category.toLowerCase() || (selectedCategory === '' && category === 'All')}
-                            onChange={(e) => setSelectedCategory(e.target.value === 'All' ? '' : e.target.value)}
+                            value={value}
+                            checked={selectedCategory.toLowerCase() === value}
+                            onChange={() => setSelectedCategory(value)}
                             className="w-4 h-4 text-accent"
                           />
-                          <span className="text-primary hover:text-accent transition-colors">{category}</span>
+                          <span className="text-primary hover:text-accent transition-colors">{label}</span>
                         </label>
                       ))}
                     </div>

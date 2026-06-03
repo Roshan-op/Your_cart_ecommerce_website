@@ -4,15 +4,34 @@ import { useAuth } from '../context/AuthContext';
 import { useWishlist } from '../context/WishlistContext';
 import { Navbar } from '../components';
 import Footer from '../components/Footer';
-import { ShoppingBag, MapPin, LogOut, Edit2, Heart, Trash2 } from 'lucide-react';
+import { ShoppingBag, MapPin, LogOut, Edit2, Heart, Trash2, Plus, X, Check } from 'lucide-react';
 
-const CustomerPanel = ({ history }) => {
+const ADDR_KEY = 'savedAddresses';
+
+const blankAddr = { fullName: '', phone: '', address: '', city: '', postalCode: '', country: '' };
+
+const CustomerPanel = ({ history, location }) => {
   const { user, isAuthenticated, logout, updateProfile } = useAuth();
   const { wishlistItems, removeFromWishlist } = useWishlist();
-  const [activeTab, setActiveTab] = useState('profile');
+  const initialTab = new URLSearchParams(location?.search).get('tab') || 'profile';
+  const [activeTab, setActiveTab] = useState(initialTab);
   const [loading, setLoading] = useState(true);
   const [editMode, setEditMode] = useState(false);
   const [orders, setOrders] = useState([]);
+
+  // Address state
+  const [addresses, setAddresses] = useState(() => {
+    try { return JSON.parse(localStorage.getItem(ADDR_KEY)) || []; } catch { return []; }
+  });
+  const [showAddrForm, setShowAddrForm] = useState(false);
+  const [editingAddrId, setEditingAddrId] = useState(null);
+  const [addrForm, setAddrForm] = useState(blankAddr);
+  const [addrErrors, setAddrErrors] = useState({});
+
+  // Persist addresses to localStorage
+  useEffect(() => {
+    localStorage.setItem(ADDR_KEY, JSON.stringify(addresses));
+  }, [addresses]);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -104,6 +123,34 @@ const CustomerPanel = ({ history }) => {
     logout();
     history.push('/');
   };
+
+  // ── address helpers ──
+  const openAddAddr = () => { setAddrForm(blankAddr); setEditingAddrId(null); setAddrErrors({}); setShowAddrForm(true); };
+  const openEditAddr = (addr) => { setAddrForm({ ...addr }); setEditingAddrId(addr.id); setAddrErrors({}); setShowAddrForm(true); };
+  const closeAddrForm = () => { setShowAddrForm(false); setAddrErrors({}); };
+
+  const validateAddr = () => {
+    const e = {};
+    if (!addrForm.fullName.trim()) e.fullName = 'Name is required';
+    if (!addrForm.phone.trim()) e.phone = 'Phone is required';
+    if (!addrForm.address.trim()) e.address = 'Address is required';
+    if (!addrForm.city.trim()) e.city = 'City is required';
+    if (!addrForm.country.trim()) e.country = 'Country is required';
+    return e;
+  };
+
+  const saveAddress = () => {
+    const errs = validateAddr();
+    if (Object.keys(errs).length) { setAddrErrors(errs); return; }
+    if (editingAddrId) {
+      setAddresses(prev => prev.map(a => a.id === editingAddrId ? { ...addrForm, id: editingAddrId } : a));
+    } else {
+      setAddresses(prev => [...prev, { ...addrForm, id: Date.now() }]);
+    }
+    closeAddrForm();
+  };
+
+  const deleteAddress = (id) => setAddresses(prev => prev.filter(a => a.id !== id));
 
   if (loading) {
     return (
@@ -304,19 +351,6 @@ const CustomerPanel = ({ history }) => {
                           </div>
                         </div>
 
-                        {/* Vendors Section */}
-                        {order.vendors && order.vendors.length > 0 && (
-                          <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                            <p className="text-sm font-semibold text-blue-900 mb-2">Vendors:</p>
-                            <div className="flex flex-wrap gap-2">
-                              {order.vendors.map((vendor, idx) => (
-                                <span key={idx} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                                  📦 {vendor}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
 
                         {/* Items Section */}
                         {order.items && order.items.length > 0 && (
@@ -355,11 +389,6 @@ const CustomerPanel = ({ history }) => {
                                         Subtotal: Rs. {(item.qty * Number(item.price)).toFixed(2)}
                                       </p>
                                     </div>
-                                    {item.vendorName && (
-                                      <p className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded inline-block font-semibold">
-                                        📦 {item.vendorName}
-                                      </p>
-                                    )}
                                   </div>
                                 </div>
                               ))}
@@ -419,14 +448,124 @@ const CustomerPanel = ({ history }) => {
               <div className="animate-fadeIn">
                 <div className="flex justify-between items-center mb-8">
                   <h1 className="text-4xl font-bold text-primary">Saved Addresses</h1>
-                  <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all">
-                    + Add Address
-                  </button>
+                  {!showAddrForm && (
+                    <button
+                      onClick={openAddAddr}
+                      className="flex items-center gap-2 bg-green-600 text-white px-5 py-2 rounded-lg hover:shadow-lg transition-all font-semibold"
+                    >
+                      <Plus size={18} /> Add Address
+                    </button>
+                  )}
                 </div>
-                <div className="bg-white p-12 rounded-xl shadow-md text-center">
-                  <MapPin size={48} className="mx-auto text-gray-300 mb-4" />
-                  <p className="text-gray-600">No addresses saved yet</p>
-                </div>
+
+                {/* Add / Edit form */}
+                {showAddrForm && (
+                  <div className="bg-white rounded-xl shadow-md p-6 mb-6 border border-gray-200">
+                    <div className="flex items-center justify-between mb-5">
+                      <h2 className="text-lg font-bold text-primary">
+                        {editingAddrId ? 'Edit Address' : 'New Address'}
+                      </h2>
+                      <button onClick={closeAddrForm} className="p-1 text-gray-400 hover:text-gray-600">
+                        <X size={20} />
+                      </button>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[
+                        { name: 'fullName', label: 'Full Name', placeholder: 'John Doe' },
+                        { name: 'phone',    label: 'Phone',     placeholder: '+977 98XXXXXXXX' },
+                      ].map(({ name, label, placeholder }) => (
+                        <div key={name}>
+                          <label className="block text-sm font-semibold text-gray-700 mb-1">{label}</label>
+                          <input
+                            type="text" value={addrForm[name]} placeholder={placeholder}
+                            onChange={e => { setAddrForm(p => ({ ...p, [name]: e.target.value })); setAddrErrors(p => ({ ...p, [name]: '' })); }}
+                            className={`w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-400 ${addrErrors[name] ? 'border-red-400 bg-red-50' : 'border-gray-300'}`}
+                          />
+                          {addrErrors[name] && <p className="text-xs text-red-500 mt-1">{addrErrors[name]}</p>}
+                        </div>
+                      ))}
+
+                      <div className="sm:col-span-2">
+                        <label className="block text-sm font-semibold text-gray-700 mb-1">Street Address</label>
+                        <input
+                          type="text" value={addrForm.address} placeholder="123 Main Street"
+                          onChange={e => { setAddrForm(p => ({ ...p, address: e.target.value })); setAddrErrors(p => ({ ...p, address: '' })); }}
+                          className={`w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-400 ${addrErrors.address ? 'border-red-400 bg-red-50' : 'border-gray-300'}`}
+                        />
+                        {addrErrors.address && <p className="text-xs text-red-500 mt-1">{addrErrors.address}</p>}
+                      </div>
+
+                      {[
+                        { name: 'city', label: 'City', placeholder: 'Kathmandu' },
+                        { name: 'postalCode', label: 'Postal Code', placeholder: '44600' },
+                        { name: 'country', label: 'Country', placeholder: 'Nepal' },
+                      ].map(({ name, label, placeholder }) => (
+                        <div key={name}>
+                          <label className="block text-sm font-semibold text-gray-700 mb-1">{label}</label>
+                          <input
+                            type="text" value={addrForm[name]} placeholder={placeholder}
+                            onChange={e => { setAddrForm(p => ({ ...p, [name]: e.target.value })); setAddrErrors(p => ({ ...p, [name]: '' })); }}
+                            className={`w-full px-4 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-400 ${addrErrors[name] ? 'border-red-400 bg-red-50' : 'border-gray-300'}`}
+                          />
+                          {addrErrors[name] && <p className="text-xs text-red-500 mt-1">{addrErrors[name]}</p>}
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex gap-3 mt-5">
+                      <button onClick={saveAddress}
+                        className="flex items-center gap-2 bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all">
+                        <Check size={16} /> {editingAddrId ? 'Save Changes' : 'Add Address'}
+                      </button>
+                      <button onClick={closeAddrForm}
+                        className="px-6 py-2 border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 transition-all">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Address list */}
+                {addresses.length === 0 && !showAddrForm ? (
+                  <div className="bg-white p-12 rounded-xl shadow-md text-center">
+                    <MapPin size={48} className="mx-auto text-gray-300 mb-4" />
+                    <p className="text-gray-500 mb-4">No addresses saved yet</p>
+                    <button onClick={openAddAddr}
+                      className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2 rounded-lg font-semibold hover:shadow-lg transition-all">
+                      <Plus size={16} /> Add your first address
+                    </button>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {addresses.map((addr) => (
+                      <div key={addr.id} className="bg-white rounded-xl shadow-md p-5 border border-gray-100 hover:shadow-lg transition-all">
+                        <div className="flex items-start justify-between mb-3">
+                          <div className="flex items-center gap-2">
+                            <MapPin size={18} className="text-green-600 flex-shrink-0 mt-0.5" />
+                            <span className="font-bold text-primary">{addr.fullName}</span>
+                          </div>
+                          <div className="flex gap-1">
+                            <button onClick={() => openEditAddr(addr)}
+                              className="p-1.5 text-gray-400 hover:text-primary hover:bg-gray-100 rounded-lg transition-colors">
+                              <Edit2 size={15} />
+                            </button>
+                            <button onClick={() => deleteAddress(addr.id)}
+                              className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors">
+                              <Trash2 size={15} />
+                            </button>
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-600 space-y-0.5 pl-7">
+                          <p>{addr.address}</p>
+                          <p>{addr.city}{addr.postalCode ? `, ${addr.postalCode}` : ''}</p>
+                          <p>{addr.country}</p>
+                          <p className="mt-1 text-gray-500">{addr.phone}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 

@@ -34,10 +34,14 @@ const VendorPanelEnhanced = () => {
       history.push('/login');
       return;
     }
+    if (!authLoading && isAuthenticated && !user?.isVendor && !user?.isAdmin) {
+      history.push('/');
+      return;
+    }
     if (isAuthenticated) {
       fetchAllData();
     }
-  }, [isAuthenticated, authLoading, activeTab, orderFilter]);
+  }, [isAuthenticated, authLoading, user, activeTab, orderFilter]);
 
   const fetchAllData = async () => {
     try {

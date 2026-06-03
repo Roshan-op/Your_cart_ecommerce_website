@@ -8,7 +8,8 @@ from rest_framework import status
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.models import User
 import requests
-import pickle,pandas as pd
+import pickle, pandas as pd
+import os
 from rest_framework import viewsets
 
 
@@ -18,7 +19,7 @@ def getProducts(request):
     query = request.query_params.get('keyword')
     if query == None:
         query = ''
-    products = Product.objects.filter(name__icontains=query)
+    products = Product.objects.filter(name__icontains=query).order_by('-updatedAt')
     page = request.query_params.get('page')
     # support returning all products when requested by frontend
     all_param = request.query_params.get('all')
@@ -184,7 +185,8 @@ def createProductReview(request, pk):
             return Response('Review Added')
 
     
-similarity = pickle.load(open('similarity9.pkl', 'rb'))
+_pkl_path = os.path.join(os.path.dirname(__file__), '..', '..', 'similarity9.pkl')
+similarity = pickle.load(open(os.path.abspath(_pkl_path), 'rb'))
 
 
 @api_view(['GET'])

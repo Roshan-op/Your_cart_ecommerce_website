@@ -61,6 +61,25 @@ def addOrderItems(request):
             product.save()
 
         serializer = OrderSerializer(order, many=False)
+
+        # Send order confirmation emails (non-blocking — failures don't affect the response)
+        try:
+            from base.services.email_service import send_order_confirmation
+            email_items = [
+                {'name': i['name'], 'qty': i['qty'], 'price': i['price']}
+                for i in orderItems
+            ]
+            order_data = {
+                '_id': order._id,
+                'totalPrice': order.totalPrice,
+                'shippingPrice': order.shippingPrice,
+                'paymentMethod': order.paymentMethod,
+            }
+            user_name = user.get_full_name() or user.username or user.email
+            send_order_confirmation(order_data, email_items, user_name, user.email)
+        except Exception as e:
+            logger.error(f'Order confirmation email error: {e}')
+
         return Response(serializer.data)
 
 
@@ -92,17 +111,25 @@ def getMyOrders(request):
         vendors_set = set()
         
         for item in items:
-            vendor = item.product.user
+            vendor = item.product.user if item.product else None
             if vendor:  # Check if vendor exists
                 vendors_set.add(vendor.email)
-            
+
+            # Prefer the current product's image URL over the cached one
+            image_url = item.image
+            if item.product and item.product.image:
+                try:
+                    image_url = item.product.image.url
+                except Exception:
+                    pass
+
             order_dict['items'].append({
                 'name': item.name,
                 'qty': item.qty,
                 'price': float(item.price),
                 'vendor': vendor.email if vendor else 'Unknown',
                 'vendorName': (vendor.get_full_name() or vendor.username) if vendor else 'Unknown',
-                'image': item.image
+                'image': image_url
             })
         
         # Add unique vendors to order
