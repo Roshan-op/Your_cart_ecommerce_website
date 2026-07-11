@@ -88,24 +88,6 @@ const ContactPage = () => {
         <section className="py-20">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-<<<<<<< HEAD
-              {[
-                { icon: Mail, label: 'Email', value: 'hello@your-cart.com', href: 'mailto:hello@your-cart.com' },
-                { icon: Phone, label: 'Phone', value: '+977 9821097622', href: 'tel:+9779821097622' },
-                { icon: MapPin, label: 'Address', value: 'Kathmandu, Nepal' },
-              ].map(({ icon: Icon, label, value, href }, idx) => (
-                <div key={idx} className="card-base p-8 text-center hover:shadow-lg transition-shadow">
-                  <Icon size={48} className="text-accent mx-auto mb-4" />
-                  <h3 className="font-bold text-lg mb-2">{label}</h3>
-                  {href ? (
-                    <a href={href} className="text-gray-600 hover:text-accent transition-colors">
-                      {value}
-                    </a>
-                  ) : (
-                    <p className="text-gray-600">{value}</p>
-                  )}
-                </div>
-=======
               {contacts.map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}
@@ -118,7 +100,7 @@ const ContactPage = () => {
                   <h3 className="font-bold text-lg mb-2 text-primary">{label}</h3>
                   <p className="text-gray-600 group-hover:text-accent transition-colors">{value}</p>
                 </a>
->>>>>>> fd5804172397520a7185582d3ad2bc37afef889c
+
               ))}
             </div>
 
